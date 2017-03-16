@@ -47,7 +47,7 @@ namespace Convert.Factor
             foreach (DataColumn column in dt.Columns)
             {
                 string isString = column.DataType == typeof(string) ? "" : ".ToString() ";
-                sb += @"              yield return new NameValue() { Name = """ + column.ColumnName + @" "", Value = entity." + column.ColumnName + isString + @" };";
+                sb += @"              yield return new NameValue() { Name = """ + column.ColumnName + @""", Value = entity." + column.ColumnName + isString + @" };";
                 sb += (Environment.NewLine);
             }
             str = str.Replace(rep, sb);
