@@ -1,0 +1,10 @@
+﻿  <object id="Repository.@PB.HEAD@" type="TwoPositions.Biz.DAO.@PB.HEAD@Dao, TwoPositions.Biz" parent="TwoPositionsBaseDao">
+    <property name="HibernateTemplate" ref="TwoPositionsHibernateTemplate"/>
+  </object>
+  <object id="Manager.@PB.HEAD@" parent="TwoPositionsBaseTransactionManager">
+    <property name="Target">
+      <object type="TwoPositions.Biz.Service.@PB.HEAD@ServiceImpl, TwoPositions.Biz">
+        <property name="CurrentRepository" ref="Repository.@PB.HEAD@"/>
+      </object>
+    </property>
+  </object>

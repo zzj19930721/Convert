@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<appconfig app="fox">
+  <!--GRT_ASK_FORM申请表表头-->
+  <message key="autoform_GRT01_GRT_ASK_FORM_001.title" value="担保申请" />
+  <message key="autoform_GRT01_GRT_ASK_FORM_001.Frm_GRT01_GRT_ASK_FORM.title" value="担保申请" />
+  <message key="table.GRT_ASK_FORM.OID" value="OID" />
+  <message key="table.GRT_ASK_FORM.CHK_STATUS" value="单据状态" />
+  <message key="table.GRT_ASK_FORM.RET_CHANNEL" value="全程通道" />
+  <message key="table.GRT_ASK_FORM.SEQ_NO" value="单据编号" />
+  <message key="table.GRT_ASK_FORM.DECLARE_MARK" value="申报方式" />
+  <message key="table.GRT_ASK_FORM.CUSTOMS_CODE" value="关区代码" />
+  <message key="table.GRT_ASK_FORM.DOC_TYPE" value="单据代码" />
+  <message key="table.GRT_ASK_FORM.AREA_CODE" value="监管场所" />
+  <message key="table.GRT_ASK_FORM.GRT_TYPE" value="保函类型" />
+  <message key="table.GRT_ASK_FORM.GRT_NO" value="担保金编号" />
+  <message key="table.GRT_ASK_FORM.TRADE_CO" value="担保企业海关编码" />
+  <message key="table.GRT_ASK_FORM.TRADE_NAME" value="担保企业名称" />
+  <message key="table.GRT_ASK_FORM.REGR_ER" value="申请人" />
+  <message key="table.GRT_ASK_FORM.TEL" value="联系方式" />
+  <message key="table.GRT_ASK_FORM.GRT_ACCOUNT" value="担保金额" />
+  <message key="table.GRT_ASK_FORM.RE_ACCOUNT" value="担保金余额" />
+  <message key="table.GRT_ASK_FORM.GRT_CURR" value="币制" />
+  <message key="table.GRT_ASK_FORM.BEGIN_DATE" value="担保起始日期" />
+  <message key="table.GRT_ASK_FORM.END_DATE" value="担保终止日期" />
+  <message key="table.GRT_ASK_FORM.CANCEL_DATE" value="核销日期" />
+  <message key="table.GRT_ASK_FORM.IS_VALID" value="当前状态是否有效" />
+  <message key="table.GRT_ASK_FORM.NOTE_S" value="备注" />
+  <message key="table.GRT_ASK_FORM.POS_CODE" value="审批岗位" />
+  <message key="table.GRT_ASK_FORM.CHK_TIME" value="审批日期" />
+  <message key="table.GRT_ASK_FORM.DEC_TIME" value="申报日期" />
+  <message key="table.GRT_ASK_FORM.INPUTER_CODE " value="操作人" />
+  <message key="table.GRT_ASK_FORM.INPUT_COP_NO" value="申报单位组织机构代码" />
+  <message key="table.GRT_ASK_FORM.INPUT_COP_NAME" value="申报单位名称" />
+  <message key="table.GRT_ASK_FORM.MOD_NUM" value="变更次数" />
+  <message key="table.GRT_ASK_FORM.I_E_FLAG" value="进出口标识" />
+
+  <message key="table.GRT_ASK_FORM.GUARANTY_NO" value="保函注册号" />
+  <message key="table.GRT_ASK_FORM.OWER_BANK" value="开证银行" />
+  <message key="table.GRT_ASK_FORM.PERSON" value="联系人" />
+  <message key="table.GRT_ASK_FORM.PHONE" value="联系电话" />
+  <message key="table.GRT_ASK_FORM.ISSUE_DATE" value="发证日期" />
+  <message key="table.GRT_ASK_FORM.IS_CROSS" value="是否跨区使用" />
+  <message key="table.GRT_ASK_FORM.IS_REPEATED" value="是否重复使用" />
+  <message key="table.GRT_ASK_FORM.INPUT_TIME" value="录入日期" />
+  <message key="table.GRT_ASK_FORM.ISCANCEL" value="是否注销" />
+
+  <!--GRT_DEDUC_BILL申请表表体-->
+  <message key="table.GRT_DEDUC_BILL.REF_SEQ_NO" value="核放单号" />
+  <message key="table.GRT_DEDUC_BILL.BIZ_TYPE" value="业务类型" />
+  <message key="table.GRT_DEDUC_BILL.D_DATE" value="进出口日期" />
+  <message key="table.GRT_DEDUC_BILL.GRT_CURR" value="币制" />
+  <message key="table.GRT_DEDUC_BILL.ADD_MNY" value="核增" />
+  <message key="table.GRT_DEDUC_BILL.CUT_MNY" value="核扣" />
+  <message key="table.GRT_DEDUC_BILL.RE_ACCOUNT" value="担保金余额" />
+  <message key="table.GRT_DEDUC_BILL.OID" value="OID" />
+  <message key="table.GRT_DEDUC_BILL.SEQ_NO" value="担保申请编号" />
+  <message key="table.GRT_DEDUC_BILL.DOC_TYPE" value="单据类型代码" />
+  <message key="table.GRT_DEDUC_BILL.GRT_NO" value="担保申请表号" />
+
+  <!--GRT_USE_FORM保函使用备案-->
+  <message key="table.GRT_USE_FORM" value="保函使用备案" />
+  <message key="table.GRT_USE_FORM.SEQ_NO" value="预录入号" />
+  <message key="table.GRT_USE_FORM.OPER_STATUS" value="操作状态" />
+  <message key="table.GRT_USE_FORM.CHK_STATUS" value="单据状态" />
+  <message key="table.GRT_USE_FORM.RET_CHANNEL" value="全程通道" />
+  <message key="table.GRT_USE_FORM.DECLARE_MARK" value="申报类型" />
+  <message key="table.GRT_USE_FORM.DOC_TYPE" value="单据类型" />
+  <message key="table.GRT_USE_FORM.INPUTER_NAME" value="操作员" />
+  <message key="table.GRT_USE_FORM.INPUT_COP_NO" value="录入单位代码" />
+  <message key="table.GRT_USE_FORM.INPUT_COP_NAME" value="录入单位名称" />
+  <message key="table.GRT_USE_FORM.AREA_CODE" value="监管场所" />
+  <message key="table.GRT_USE_FORM.CUSTOMS_CODE" value="关区代码" />
+  <message key="table.GRT_USE_FORM.DEC_TIME" value="申报时间" />
+  <message key="table.GRT_USE_FORM.CHK_TIME " value="审批时间" />
+  <message key="table.GRT_USE_FORM.GUARANTY_NO" value="保金保函编号" />
+  <message key="table.GRT_USE_FORM.ENT_CODE" value="担保企业海关编号" />
+  <message key="table.GRT_USE_FORM.ENT_NAME" value="担保企业名称" />
+  <message key="table.GRT_USE_FORM.GUARANTY_AMOUNT" value="使用金额" />
+  <message key="table.GRT_USE_FORM.GRT_ENTRYID" value="报关单号" />
+  <message key="table.GRT_USE_FORM.GRT_TYPE" value="担保环节" />
+  <message key="table.GRT_USE_FORM.BEGIN_DATE" value="担保起始日期" />
+  <message key="table.GRT_USE_FORM.END_DATE" value="担保终止日期" />
+  <message key="table.GRT_USE_FORM.SEND_TIME" value="系统发送时间" />
+  <message key="table.GRT_USE_FORM.RECEIVE_TIME" value="系统接收时间" />
+  <message key="table.GRT_USE_FORM.CHK_LEVEL" value="审批级次" />
+  <message key="table.GRT_USE_FORM.CHANGE_CHK_USERCODE" value="转岗审批人代码" />
+  <message key="table.GRT_USE_FORM.CHANGE_CHK_USERNAME" value="转岗审批人" />
+  <message key="table.GRT_USE_FORM.CHK_USERCODE" value="审批人代码" />
+  <message key="table.GRT_USE_FORM.CHK_USERNAME" value="审批人" />
+  <message key="table.GRT_USE_FORM.NOTE" value="备注" />
+  <message key="table.GRT_USE_FORM.ISCANCEL" value="是否注销" />
+  <message key="table.GRT_USE_FORM.OID" value="主键" />
+
+  <!--XMS_STEP_LOG回执-->
+  <message key="table.XMS_STEP_LOG.DECLARE_TYPE" value="申报类型" />
+  <message key="table.XMS_STEP_LOG.CHK_MARK" value="回执通道" />
+  <message key="table.XMS_STEP_LOG.RESULT_INFO" value="回执处理结果" />
+  <message key="table.XMS_STEP_LOG.INPUTER" value="操作员名称" />
+  <message key="table.XMS_STEP_LOG.INPUTER_TIME" value="操作时间" />
+  <message key="table.XMS_STEP_LOG.NOTE" value="备注" />
+  <message key="table.XMS_STEP_LOG.MESSAGE_FN" value="回执报文名称" />
+
+  <!-- 工作流转日志表 -->
+  <message key="table.APP_SYS_WORKLOG" value="日志表" />
+  <message key="table.APP_SYS_WORKLOG.CHANNEL" value="环节名称" />
+  <message key="table.APP_SYS_WORKLOG.PROC_DATE" value="操作时间" />
+  <message key="table.APP_SYS_WORKLOG.PROC_OP_ID" value="操作人" />
+  <message key="table.APP_SYS_WORKLOG.OP_NOTES" value="处理结果" />
+</appconfig>

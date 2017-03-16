@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<appconfig app="fox">
+  <!-- 工作流转日志表 -->
+  <message key="table.APP_SYS_WORKLOG" value="日志表" />
+  <message key="table.APP_SYS_WORKLOG.CHANNEL" value="环节名称" />
+  <message key="table.APP_SYS_WORKLOG.PROC_DATE" value="操作时间" />
+  <message key="table.APP_SYS_WORKLOG.PROC_OP_ID" value="操作人" />
+  <message key="table.APP_SYS_WORKLOG.OP_NOTES" value="处理结果" />
+  <!--异常处理表-->
+  <message key="table.ERR_EXCEPTION" value="异常处理表" />
+  <message key="table.ERR_EXCEPTION.OID" value="主键" />
+  <message key="table.ERR_EXCEPTION.SEQ_NO" value="单据编号" />
+  <message key="table.ERR_EXCEPTION.CHK_STATUS" value="单据状态" />
+  <message key="table.ERR_EXCEPTION.RET_CHANNEL" value="回执状态（通道）" />
+  <message key="table.ERR_EXCEPTION.DECLARE_MARK" value="申报方式(备案/变更)" />
+  <message key="table.ERR_EXCEPTION.CUSTOMS_CODE" value="主管海关" />
+  <message key="table.ERR_EXCEPTION.AREA_CODE" value="监管场所" />
+  <message key="table.ERR_EXCEPTION.DOC_TYPE" value="单据类别" />
+  <message key="table.ERR_EXCEPTION.POS_CODE" value="待审岗位编号" />
+  <message key="table.ERR_EXCEPTION.CHK_TIME" value="审批时间" />
+  <message key="table.ERR_EXCEPTION.DEC_TIME" value="申报（录入）日期" />
+  <message key="table.ERR_EXCEPTION.INPUTER_CODE" value="申报(录入)人代码" />
+  <message key="table.ERR_EXCEPTION.INPUTER_NAME" value="申报(录入)人名称" />
+  <message key="table.ERR_EXCEPTION.INPUT_COP_NO" value="申报(录入)企业代码" />
+  <message key="table.ERR_EXCEPTION.INPUT_COP_NAME" value="申报(录入)企业名称" />
+  <message key="table.ERR_EXCEPTION.CHK_TYPE" value="异常单据类型" />
+  <message key="table.ERR_EXCEPTION.EXC_SEQ_NO" value="异常单据编号" />
+  <message key="table.ERR_EXCEPTION.OPERA_TYPE" value="操作类型" />
+  <message key="table.ERR_EXCEPTION.REMARK" value="申报理由" />
+  <message key="table.ERR_EXCEPTION.CHECKFLAG" value="选择" />
+  <message key="table.ERR_EXCEPTION.BIZ_TYPE_NAME" value="业务类型" />
+  <message key="table.ERR_EXCEPTION.I_E_AREA_NAME" value="进出区标识" />
+
+  <!--BLS_CHK_HEAD核放单表头-->
+  <message key="table.BLS_CHK_HEAD" value="核放单表头" />
+  <message key="table.BLS_CHK_HEAD.OID" value="OID" />
+  <message key="table.BLS_CHK_HEAD.CHK_STATUS" value="单据状态" />
+  <message key="table.BLS_CHK_HEAD.RET_CHANNEL" value="全程通道" />
+  <message key="table.BLS_CHK_HEAD.DECLARE_MARK" value="申报方式" />
+  <message key="table.BLS_CHK_HEAD.DOC_TYPE" value="单据类型" />
+  <message key="table.BLS_CHK_HEAD.INPUTER_CODE" value="操作人名称" />
+  <message key="table.BLS_CHK_HEAD.INPUT_COP_NO" value="录入单位代码" />
+  <message key="table.BLS_CHK_HEAD.INPUT_COP_NAME" value="录入单位名称" />
+  <message key="table.BLS_CHK_HEAD.INPUTER_NAME" value="操作人" />
+  <message key="table.BLS_CHK_HEAD.SEQ_NO" value="单据编号" />
+  <message key="table.BLS_CHK_HEAD.SEQ_NO_NEW" value="核放单编号" />
+  <message key="table.BLS_CHK_HEAD.AREA_CODE" value="监管场所" />
+  <message key="table.BLS_CHK_HEAD.CUSTOMS_CODE" value="主管海关" />
+  <message key="table.BLS_CHK_HEAD.BIZ_TYPE" value="业务类型" />
+  <message key="table.BLS_CHK_HEAD.FLOW_TYPE" value="货物流向" />
+  <message key="table.BLS_CHK_HEAD.DEC_MODE" value="报关方式" />
+  <message key="table.BLS_CHK_HEAD.I_E_AREA" value="进出区标识" />
+  <message key="table.BLS_CHK_HEAD.REF_FLAG" value="引用标识" />
+  <message key="table.BLS_CHK_HEAD.EMS_NO" value="电子账册号" />
+  <message key="table.BLS_CHK_HEAD.EMS_TYPE" value="帐册类型" />
+  <message key="table.BLS_CHK_HEAD.REF_DOC_NO" value="申请单编号" />
+  <message key="table.BLS_CHK_HEAD.REF_ASK_DOC_NO" value="申请表编号" />
+  <message key="table.BLS_CHK_HEAD.REF_DEC_DOC_NO" value="报关申请单编号" />
+  <message key="table.BLS_CHK_HEAD.TRAF_MODE" value="运输方式" />
+  <message key="table.BLS_CHK_HEAD.IC_REG_NO" value="IC卡的制卡登记编号" />
+  <message key="table.BLS_CHK_HEAD.IC_CODE" value="车辆持IC卡号" />
+  <message key="table.BLS_CHK_HEAD.CARRY_TYPE" value="空重标识" />
+  <message key="table.BLS_CHK_HEAD.EMPTY_SIGN" value="集装箱空重标识" />
+  <message key="table.BLS_CHK_HEAD.VE_NAME" value="运输车牌号" />
+  <message key="table.BLS_CHK_HEAD.DRIVER_NAME" value="司机名称" />
+  <message key="table.BLS_CHK_HEAD.DRIVER_TEL" value="司机电话" />
+  <message key="table.BLS_CHK_HEAD.CONTA_ID1" value="集装箱号1" />
+  <message key="table.BLS_CHK_HEAD.CONTA_TYPE1" value="集装箱1类型" />
+  <message key="table.BLS_CHK_HEAD.SEAL_NO1" value="封志号1" />
+  <message key="table.BLS_CHK_HEAD.SEAL_CLASS1" value="封志类型1" />
+  <message key="table.BLS_CHK_HEAD.SEAL_PERSON1" value="施封人1" />
+  <message key="table.BLS_CHK_HEAD.CONTA_ID2" value="集装箱号2" />
+  <message key="table.BLS_CHK_HEAD.CONTA_TYPE2" value="集装箱2类型" />
+  <message key="table.BLS_CHK_HEAD.SEAL_NO2" value="封志号2" />
+  <message key="table.BLS_CHK_HEAD.SEAL_CLASS2" value="封志类型2" />
+  <message key="table.BLS_CHK_HEAD.SEAL_PERSON2" value="施封人2" />
+  <message key="table.BLS_CHK_HEAD.PACK_QTY" value="货物包装数量" />
+  <message key="table.BLS_CHK_HEAD.WRAP_TYPE" value="包装方式" />
+  <message key="table.BLS_CHK_HEAD.GROSS_WT" value="毛重" />
+  <message key="table.BLS_CHK_HEAD.NET_WT" value="净重" />
+  <message key="table.BLS_CHK_HEAD.NOTE" value="备注" />
+  <message key="table.BLS_CHK_HEAD.TRADE_CODE" value="区内企业海关代码" />
+  <message key="table.BLS_CHK_HEAD.TRADE_NAME" value="区内企业名称" />
+  <message key="table.BLS_CHK_HEAD.OWER_CODE" value="区外企业海关代码" />
+  <message key="table.BLS_CHK_HEAD.OWER_NAME" value="区外企业名称" />
+  <message key="table.BLS_CHK_HEAD.POS_CODE" value="审批岗位" />
+  <message key="table.BLS_CHK_HEAD.CHK_TIME " value="审批时间" />
+  <message key="table.BLS_CHK_HEAD.DEC_TIME" value="申报时间" />
+  <message key="table.BLS_CHK_HEAD.INPUTER_CODE" value="操作员名称" />
+  <message key="table.BLS_CHK_HEAD.INPUT_COP_NO" value="申报单位代码" />
+  <message key="table.BLS_CHK_HEAD.INPUT_COP_NAME" value="申报单位名称" />
+  <message key="table.BLS_CHK_HEAD.CONFIRM_TIME" value="确认时间" />
+  <message key="table.BLS_CHK_HEAD.CONFIRM_ER" value="确认人" />
+  <message key="table.BLS_CHK_HEAD.CONFIRM_COP_NO" value="确认单位代码" />
+  <message key="table.BLS_CHK_HEAD.CONFIRM_COP_NAME" value="确认单位名称" />
+  <message key="table.BLS_CHK_HEAD.TRADE_TYPE" value="运输类别" />
+  <message key="table.BLS_CHK_HEAD.ASSEMBLING_CODE" value="拼车企业代码" />
+  <message key="table.BLS_CHK_HEAD.ASSEMBLING_SEQ_NO" value="核放单编号" />
+  <message key="table.BLS_CHK_HEAD.CONTA_WT1" value="集装箱1空重" />
+  <message key="table.BLS_CHK_HEAD.CONTA_WT2" value="集装箱2空重" />
+  <message key="table.BLS_CHK_HEAD.CONTA_SIZE1" value="集装箱1尺寸" />
+  <message key="table.BLS_CHK_HEAD.CONTA_SIZE2" value="集装箱2尺寸" />
+  <message key="table.BLS_CHK_HEAD.CONTA_NUM" value="集装箱标准数量" />
+  <message key="table.BLS_CHK_HEAD.ENTRY_ID" value="报关单号" />
+  <message key="table.BLS_CHK_HEAD.TRANSPORT_CODE" value="运输公司代码" />
+  <message key="table.BLS_CHK_HEAD.DEC_DATETIME" value="日期时间戳" />
+  <message key="table.BLS_CHK_HEAD.G_MARK" value="料件成品标识" />
+  <message key="table.BLS_CHK_HEAD.MOD_NUM" value="变更次数" />
+  <message key="table.BLS_CHK_HEAD.CHECKFLAG" value="选择" />
+  <message key="table.BLS_CHK_HEAD.IC_NO" value="IC卡号" />
+  <message key="table.BLS_CHK_HEAD.CARRY_TIME" value="出入卡口时间" />
+  <message key="table.BLS_CHK_HEAD.TRANS_TYPE" value="运输类型" />
+  <message key="table.BLS_CHK_HEAD.INOUT_CUSTOMS_CODE" value="进/出境地海关" />
+  <message key="table.BLS_CHK_HEAD.BILL_NO" value="提单号" />
+  <message key="table.BLS_CHK_HEAD.TRANS_NAME" value="运输工具名称" />
+  <message key="table.BLS_CHK_HEAD.VOY_NO" value="航次" />
+  <message key="table.BLS_CHK_HEAD.OLD_CHK_NO" value="关联核放单编号" />
+
+
+  <!--BLS_CHK_ORG_GLIST核放单商品表体归并前-->
+  <message key="table.BLS_CHK_ORG_GLIST.OID" value="OID" />
+  <message key="table.BLS_CHK_ORG_GLIST.SEQ_NO" value="关联主表" />
+  <message key="table.BLS_CHK_ORG_GLIST.ITEM_NO" value="序号" />
+  <message key="table.BLS_CHK_ORG_GLIST.CODE_TS" value="商品编码" />
+  <message key="table.BLS_CHK_ORG_GLIST.COP_G_NO" value="物料号" />
+  <message key="table.BLS_CHK_ORG_GLIST.G_NO" value="归并序号" />
+  <message key="table.BLS_CHK_ORG_GLIST.G_NAME" value="商品名称" />
+  <message key="table.BLS_CHK_ORG_GLIST.G_MODEL" value="商品规格" />
+  <message key="table.BLS_CHK_ORG_GLIST.QTY" value="数量" />
+  <message key="table.BLS_CHK_ORG_GLIST.QTY_1" value="法定数量" />
+  <message key="table.BLS_CHK_ORG_GLIST.QTY_2" value="第二单位数量" />
+  <message key="table.BLS_CHK_ORG_GLIST.PACK_QTY" value="件数" />
+  <message key="table.BLS_CHK_ORG_GLIST.NET_WT" value="净重" />
+  <message key="table.BLS_CHK_ORG_GLIST.GROSS_WT" value="毛重" />
+  <message key="table.BLS_CHK_ORG_GLIST.UNIT" value="申报单位" />
+  <message key="table.BLS_CHK_ORG_GLIST.UNIT_1" value="法定单位" />
+  <message key="table.BLS_CHK_ORG_GLIST.UNIT_2" value="第二单位" />
+  <message key="table.BLS_CHK_ORG_GLIST.DECL_PRICE" value="申报单价" />
+  <message key="table.BLS_CHK_ORG_GLIST.DECL_TOTAL" value="申报总价" />
+  <message key="table.BLS_CHK_ORG_GLIST.CURR" value="币制" />
+  <message key="table.BLS_CHK_ORG_GLIST.CUS_STATUS" value="放行状态" />
+  <message key="table.BLS_CHK_ORG_GLIST.CIQ_STATUS" value="放行状态" />
+  <message key="table.BLS_CHK_ORG_GLIST.REG_STATUS" value="放行状态" />
+  <message key="table.BLS_CHK_ORG_GLIST.WRAP_TYPE" value="包装类型" />
+  <message key="table.BLS_CHK_ORG_GLIST.NOTE" value="备注" />
+  <message key="table.BLS_CHK_ORG_GLIST.DECL_TOTAL_RMB" value="申报总价(人民币)" />
+  <message key="table.BLS_CHK_ORG_GLIST.DECL_TOTAL_DOLLAR" value="申报总价(美元)" />
+  <message key="table.BLS_CHK_ORG_GLIST.BEGIN_DATE" value="BOM版本号" />
+  <message key="table.BLS_CHK_ORG_GLIST.CON_VERSION" value="单损耗版本号" />
+
+  <!--BLS_CHK_GLIST核放单商品表体-->
+  <message key="table.BLS_CHK_GLIST" value="核放单商品表体" />
+  <message key="table.BLS_CHK_GLIST.OID" value="OID" />
+  <message key="table.BLS_CHK_GLIST.SEQ_NO_NEW" value="关联主表" />
+  <message key="table.BLS_CHK_GLIST.ITEM_NO" value="序号" />
+  <message key="table.BLS_CHK_GLIST.CODE_TS" value="商品编码" />
+  <message key="table.BLS_CHK_GLIST.COP_G_NO" value="货号" />
+  <message key="table.BLS_CHK_GLIST.G_NO" value="归并序号" />
+  <message key="table.BLS_CHK_GLIST.G_NAME" value="商品名称" />
+  <message key="table.BLS_CHK_GLIST.G_MODEL" value="商品规格" />
+  <message key="table.BLS_CHK_GLIST.QTY" value="申报数量" />
+  <message key="table.BLS_CHK_GLIST.QTY_1" value="法定数量" />
+  <message key="table.BLS_CHK_GLIST.QTY_2" value="第二单位数量" />
+  <message key="table.BLS_CHK_GLIST.PACK_QTY" value="件数" />
+  <message key="table.BLS_CHK_GLIST.NET_WT" value="净重" />
+  <message key="table.BLS_CHK_GLIST.GROSS_WT" value="毛重" />
+  <message key="table.BLS_CHK_GLIST.UNIT" value="申报单位" />
+  <message key="table.BLS_CHK_GLIST.UNIT_1" value="法定单位" />
+  <message key="table.BLS_CHK_GLIST.UNIT_2" value="第二单位" />
+  <message key="table.BLS_CHK_GLIST.DECL_PRICE" value="单价" />
+  <message key="table.BLS_CHK_GLIST.DECL_TOTAL" value="总价" />
+  <message key="table.BLS_CHK_GLIST.CURR" value="币制" />
+  <message key="table.BLS_CHK_GLIST.CUS_STATUS" value="放行状态（海关端）" />
+  <message key="table.BLS_CHK_GLIST.CIQ_STATUS" value="放行状态（检验端）" />
+  <message key="table.BLS_CHK_GLIST.REG_STATUS" value="放行状态（监管场所）" />
+  <message key="table.BLS_CHK_GLIST.CHK_DATETIME" value="日期时间戳" />
+  <message key="table.BLS_CHK_GLIST.WRAP_TYPE" value="包装类型" />
+  <message key="table.BLS_CHK_GLIST.NOTE" value="备注" />
+  <!--BLS_ASK_HEAD申请表表头-->
+  <message key="table.BLS_ASK_HEAD.OID" value="OID" />
+  <message key="table.BLS_ASK_HEAD.CHK_STATUS" value="单据状态" />
+  <message key="table.BLS_ASK_HEAD.RET_CHANNEL" value="全程通道" />
+  <message key="table.BLS_ASK_HEAD.DECLARE_MARK" value="申报方式" />
+  <message key="table.BLS_ASK_HEAD.DOC_TYPE" value="单据类型" />
+  <message key="table.BLS_ASK_HEAD.INPUTER_CODE" value="操作人名称" />
+  <message key="table.BLS_ASK_HEAD.AREA_CODE" value="监管场所" />
+  <message key="table.BLS_ASK_HEAD.CUSTOMS_CODE" value="主管海关" />
+  <message key="table.BLS_ASK_HEAD.SEQ_NO" value="申请表编号" />
+  <message key="table.BLS_ASK_HEAD.SEQ_NO_NEW" value="申请表编号" />
+  <message key="table.BLS_ASK_HEAD.BIZ_TYPE" value="业务类型" />
+  <message key="table.BLS_ASK_HEAD.FLOW_TYPE" value="货物流向" />
+  <message key="table.BLS_ASK_HEAD.I_E_AREA" value="进出卡口标志" />
+  <message key="table.BLS_ASK_HEAD.EMS_NO" value="电子账册号" />
+  <message key="table.BLS_ASK_HEAD.EMS_TYPE" value="帐册类别" />
+  <message key="table.BLS_ASK_HEAD.TRADE_CODE" value="区内企业海关编码" />
+  <message key="table.BLS_ASK_HEAD.TRADE_NAME" value="区内企业名称" />
+  <message key="table.BLS_ASK_HEAD.OWER_CODE" value="区外企业海关编码" />
+  <message key="table.BLS_ASK_HEAD.OWER_NAME" value="区外企业名称" />
+  <message key="table.BLS_ASK_HEAD.GRT_ASK_SEQ_NO" value="保金保函编号" />
+  <message key="table.BLS_ASK_HEAD.GUARANTEE_TYPE" value="担保类型" />
+  <message key="table.BLS_ASK_HEAD.GUARANTEE_AMOUNT" value="担保金额" />
+  <message key="table.BLS_ASK_HEAD.CONSUME_AMOUNT" value="已核扣担保金额" />
+  <message key="table.BLS_ASK_HEAD.TOTAL_PACK_NO" value="总件数" />
+  <message key="table.BLS_ASK_HEAD.TOTAL_NET_WT" value="总净重" />
+  <message key="table.BLS_ASK_HEAD.TOTAL_GROSS_WT" value="总毛重" />
+  <message key="table.BLS_ASK_HEAD.POS_CODE" value="审批岗位" />
+  <message key="table.BLS_ASK_HEAD.CHK_TIME " value="审批时间" />
+  <message key="table.BLS_ASK_HEAD.DEC_TIME" value="申报时间" />
+  <message key="table.BLS_ASK_HEAD.INPUTER_CODE" value="操作员名称" />
+  <message key="table.BLS_ASK_HEAD.INPUTER_NAME" value="操作员名称" />
+  <message key="table.BLS_ASK_HEAD.INPUT_COP_NO" value="申报单位代码" />
+  <message key="table.BLS_ASK_HEAD.INPUT_COP_NAME" value="申报单位名称" />
+  <message key="table.BLS_ASK_HEAD.CONFIRM_TIME" value="确认时间" />
+  <message key="table.BLS_ASK_HEAD.CONFIRM_ER" value="确认人" />
+  <message key="table.BLS_ASK_HEAD.CONFIRM_COP_NO" value="确认单代码" />
+  <message key="table.BLS_ASK_HEAD.CONFIRM_COP_NAME" value="确认单位名称" />
+  <message key="table.BLS_ASK_HEAD.NOTE" value="备注" />
+  <message key="table.BLS_ASK_HEAD.G_MARK" value="料件成品标识" />
+  <message key="table.BLS_ASK_HEAD.REF_FLAG" value="引用标识" />
+  <message key="table.BLS_ASK_HEAD.P_NO" value="引用该记录的单据编号：" />
+  <message key="table.BLS_ASK_HEAD.ASK_DATETIME" value="日期时间戳" />
+  <message key="table.BLS_ASK_HEAD.MOD_NUM" value="变更次数" />
+  <message key="table.BLS_ASK_HEAD.DEC_MODE" value="报关方式" />
+  <!--BLS_DEC_HEAD报关申请单表头-->
+  <message key="table.BLS_DEC_HEAD" value="报关申请单表头" />
+  <message key="table.BLS_DEC_HEAD.OID" value="OID" />
+  <message key="table.BLS_DEC_HEAD.CHK_STATUS" value="单据状态" />
+  <message key="table.BLS_DEC_HEAD.RET_CHANNEL" value="全程通道" />
+  <message key="table.BLS_DEC_HEAD.DECLARE_MARK" value="申报方式" />
+  <message key="table.BLS_DEC_HEAD.DOC_TYPE" value="单据类型" />
+  <message key="table.BLS_DEC_HEAD.INPUTER_CODE" value="操作员名称" />
+  <message key="table.BLS_DEC_HEAD.INPUTER_NAME" value="操作员名称" />
+  <message key="table.BLS_DEC_HEAD.INPUT_COP_NO" value="录入单位代码" />
+  <message key="table.BLS_DEC_HEAD.INPUT_COP_NAME" value="录入单位名称" />
+  <message key="table.BLS_DEC_HEAD.SEQ_NO" value="单据编号" />
+  <message key="table.BLS_DEC_HEAD.SEQ_NO_NEW" value="单据编号：" />
+  <message key="table.BLS_DEC_HEAD.AREA_CODE" value="监管场所" />
+  <message key="table.BLS_DEC_HEAD.CUSTOMS_CODE" value="主管海关" />
+  <message key="table.BLS_DEC_HEAD.BIZ_TYPE" value="业务类型" />
+  <message key="table.BLS_DEC_HEAD.FLOW_TYPE" value="货物流向" />
+  <message key="table.BLS_DEC_HEAD.I_E_AREA" value="进出区标识" />
+  <message key="table.BLS_DEC_HEAD.EMS_NO" value="电子账册号" />
+  <message key="table.BLS_DEC_HEAD.EMS_TYPE" value="帐册类型" />
+  <message key="table.BLS_DEC_HEAD.TRADE_CODE" value="区内企业海关代码" />
+  <message key="table.BLS_DEC_HEAD.TRADE_NAME" value="区内企业名称" />
+  <message key="table.BLS_DEC_HEAD.OWER_CODE" value="区外企业海关代码" />
+  <message key="table.BLS_DEC_HEAD.OWER_NAME" value="区外企业名称" />
+  <message key="table.BLS_DEC_HEAD.GUARANTEE_TYPE" value="担保类型" />
+  <message key="table.BLS_DEC_HEAD.GUARANTEE_AMOUNT" value="担保金额" />
+  <message key="table.BLS_DEC_HEAD.CONSUME_AMOUNT" value="已核扣担保金额" />
+  <message key="table.BLS_DEC_HEAD.POS_CODE" value="审批岗位" />
+  <message key="table.BLS_DEC_HEAD.CHK_TIME " value="审批时间" />
+  <message key="table.BLS_DEC_HEAD.DEC_TIME" value="申报时间" />
+  <message key="table.BLS_DEC_HEAD.CONFIRM_TIME" value="确认时间" />
+  <message key="table.BLS_DEC_HEAD.CONFIRM_ER" value="确认人" />
+  <message key="table.BLS_DEC_HEAD.CONFIRM_COP_NO" value="确认单位代码" />
+  <message key="table.BLS_DEC_HEAD.CONFIRM_COP_NAME" value="确认单位名称" />
+  <message key="table.BLS_DEC_HEAD.NOTE" value="备注" />
+  <message key="table.BLS_DEC_HEAD.REF_FLAG" value="引用标识" />
+  <message key="table.BLS_DEC_HEAD.P_NO" value="引用该记录的单据编号" />
+  <message key="table.BLS_DEC_HEAD.DEC_DATETIME" value="日期时间戳" />
+  <message key="table.BLS_DEC_HEAD.GRT_ASK_SEQ_NO" value="保金保函编号" />
+  <message key="table.BLS_DEC_HEAD.PACK_QTY" value="件数" />
+  <message key="table.BLS_DEC_HEAD.NET_WT" value="净重" />
+  <message key="table.BLS_DEC_HEAD.GROSS_WT" value="毛重" />
+  <message key="table.BLS_DEC_HEAD.G_MARK" value="料件成品标识" />
+  <message key="table.BLS_DEC_HEAD.MOD_NUM" value="变更次数" />
+  <message key="table.BLS_DEC_HEAD.DEC_MODE" value="报关方式" />
+  <message key="table.BLS_DEC_HEAD.REF_DEC_DOC_NO" value="报关申请单编号" />
+  <message key="table.BLS_DEC_HEAD.ENTRY_ID" value="报关单号" />
+  <message key="table.BLS_DEC_HEAD.CONTA_ID1" value="集装箱号1" />
+  <message key="table.BLS_DEC_HEAD.CONTA_ID2" value="集装箱号2" />
+  <message key="table.BLS_DEC_HEAD.INOUT_CUSTOMS_CODE" value="进/出境地海关" />
+  <message key="table.BLS_DEC_HEAD.BILL_NO" value="提单号" />
+  <message key="table.BLS_DEC_HEAD.TRANS_NAME" value="运输工具名称" />
+  <message key="table.BLS_DEC_HEAD.VOY_NO" value="航次" />
+  
+  <!--简单加工 资格申请-->
+  <message key="table.MNL_ASK_HEAD.SEQ_NO" value="单据编号"/>
+  <message key="table.MNL_ASK_HEAD.CHK_STATUS" value="单据状态"/>
+  <message key="table.MNL_ASK_HEAD.RET_CHANNEL" value="回执状态"/>
+  <message key="table.MNL_ASK_HEAD.DECLARE_MARK" value="申报类型"/>
+  <message key="table.MNL_ASK_HEAD.CUSTOMS_CODE" value="关区代码"/>
+  <message key="table.MNL_ASK_HEAD.AREA_CODE" value="监管场所"/>
+  <message key="table.MNL_ASK_HEAD.DOC_TYPE" value="单据类型"/>
+  <message key="table.MNL_ASK_HEAD.POS_CODE" value="待审岗位编号"/>
+  <message key="table.MNL_ASK_HEAD.CHK_TIME" value="审批时间"/>
+  <message key="table.MNL_ASK_HEAD.DEC_TIME" value="操作时间"/>
+  <message key="table.MNL_ASK_HEAD.INPUTER_CODE" value="操作员代码"/>
+  <message key="table.MNL_ASK_HEAD.INPUTER_NAME" value="操作员名称"/>
+  <message key="table.MNL_ASK_HEAD.INPUT_COP_NO" value="录入单位代码"/>
+  <message key="table.MNL_ASK_HEAD.INPUT_COP_NAME" value="录入单位名称"/>
+  <message key="table.MNL_ASK_HEAD.OID" value=""/>
+  <message key="table.MNL_ASK_HEAD.SEQ_NO_NEW" value="新单据编号"/>
+  <message key="table.MNL_ASK_HEAD.BIZ_TYPE" value="业务类型"/>
+  <message key="table.MNL_ASK_HEAD.EMS_NO" value="帐册编号"/>
+  <message key="table.MNL_ASK_HEAD.EMS_TYPE" value="帐册类别"/>
+  <message key="table.MNL_ASK_HEAD.PROC_TYPE" value="加工方式"/>
+  <message key="table.MNL_ASK_HEAD.HOUSE_NO" value="仓库编号"/>
+  <message key="table.MNL_ASK_HEAD.STORE_TYPE" value="仓库类型"/>
+  <message key="table.MNL_ASK_HEAD.STORE_NAME" value="仓库名称"/>
+  <message key="table.MNL_ASK_HEAD.TRADE_CODE" value="经营单位代码"/>
+  <message key="table.MNL_ASK_HEAD.TRADE_NAME" value="经营单位名称"/>
+  <message key="table.MNL_ASK_HEAD.DECLARE_CODE" value="申报单位代码"/>
+  <message key="table.MNL_ASK_HEAD.DECLARE_NAME" value="申报单位名称"/>
+  <message key="table.MNL_ASK_HEAD.OWNER_CODE" value="加工单位代码"/>
+  <message key="table.MNL_ASK_HEAD.OWNER_NAME" value="加工单位名称"/>
+  <message key="table.MNL_ASK_HEAD.NOTE" value="备注"/>
+  <message key="table.MNL_ASK_HEAD.ENDDATE" value="有效期"/>
+  <message key="table.MNL_ASK_HEAD.VER_STATUS" value="核销标识"/>
+  <message key="table.MNL_ASK_HEAD.VER_DATE" value="核销时间"/>
+  <message key="table.MNL_ASK_HEAD.COP_EMS_NO" value="内部编号" />
+  
+  <!--简单加工 领料单 入库单-->
+  <message key="table.MNL_CHK_HEAD.SEQ_NO" value="单据编号"/>
+  <message key="table.MNL_CHK_HEAD.CHK_STATUS" value="单据状态"/>
+  <message key="table.MNL_CHK_HEAD.RET_CHANNEL" value="回执状态"/>
+  <message key="table.MNL_CHK_HEAD.DECLARE_MARK" value="申报类型"/>
+  <message key="table.MNL_CHK_HEAD.CUSTOMS_CODE" value="关区代码"/>
+  <message key="table.MNL_CHK_HEAD.AREA_CODE" value="监管场所"/>
+  <message key="table.MNL_CHK_HEAD.DOC_TYPE" value="单据类型"/>
+  <message key="table.MNL_CHK_HEAD.POS_CODE" value="待审岗位编号"/>
+  <message key="table.MNL_CHK_HEAD.CHK_TIME" value="审批时间"/>
+  <message key="table.MNL_CHK_HEAD.DEC_TIME" value="操作时间"/>
+  <message key="table.MNL_CHK_HEAD.INPUTER_CODE" value="操作员代码"/>
+  <message key="table.MNL_CHK_HEAD.INPUTER_NAME" value="操作员名称"/>
+  <message key="table.MNL_CHK_HEAD.INPUT_COP_NO" value="录入单位代码"/>
+  <message key="table.MNL_CHK_HEAD.INPUT_COP_NAME" value="录入单位名称"/>
+  <message key="table.MNL_CHK_HEAD.OID" value=""/>
+  <message key="table.MNL_CHK_HEAD.SEQ_NO_NEW" value="新单据编号"/>
+  <message key="table.MNL_CHK_HEAD.BIZ_TYPE" value="业务类型"/>
+  <message key="table.MNL_CHK_HEAD.EMS_NO" value="帐册编号"/>
+  <message key="table.MNL_CHK_HEAD.EMS_TYPE" value="帐册类别"/>
+  <message key="table.MNL_CHK_HEAD.PROC_TYPE" value="加工方式"/>
+  <message key="table.MNL_CHK_HEAD.HOUSE_NO" value="仓库编号"/>
+  <message key="table.MNL_CHK_HEAD.STORE_TYPE" value="仓库类型"/>
+  <message key="table.MNL_CHK_HEAD.STORE_NAME" value="仓库名称"/>
+  <message key="table.MNL_CHK_HEAD.TRADE_CODE" value="经营单位代码"/>
+  <message key="table.MNL_CHK_HEAD.TRADE_NAME" value="经营单位名称"/>
+  <message key="table.MNL_CHK_HEAD.DECLARE_CODE" value="申报单位代码"/>
+  <message key="table.MNL_CHK_HEAD.DECLARE_NAME" value="申报单位名称"/>
+  <message key="table.MNL_CHK_HEAD.OWNER_CODE" value="加工单位代码"/>
+  <message key="table.MNL_CHK_HEAD.OWNER_NAME" value="加工单位名称"/>
+  <message key="table.MNL_CHK_HEAD.NOTE" value="备注"/>
+  <message key="table.MNL_CHK_HEAD.ENDDATE" value="有效期"/>
+  <message key="table.MNL_CHK_HEAD.VER_STATUS" value="核销标识"/>
+  <message key="table.MNL_CHK_HEAD.VER_DATE" value="核销时间"/>
+  <message key="table.MNL_CHK_HEAD.COP_EMS_NO" value="内部编号" />
+  <message key="table.MNL_CHK_HEAD.ASK_SEQ_NO" value="资格申请编号" />
+  <message key="table.MNL_CHK_HEAD.NET_WT" value="净重" />
+  <message key="table.MNL_CHK_HEAD.GROSS_WT" value="毛重" />
+  <message key="table.MNL_CHK_HEAD.PACK_NUM" value="件数" />
+  <message key="table.MNL_CHK_HEAD.WRAP_TYPE" value="包装种类" />
+
+  <message key="table.MNL_CHK_GLIST.SEQ_NO" value="单据编号"/>
+  <message key="table.MNL_CHK_GLIST.ASK_SEQ_NO" value="资格编号"/>
+  <message key="table.MNL_CHK_GLIST.OID" value=""/>
+  <message key="table.MNL_CHK_GLIST.EMS_NO" value="帐册编号"/>
+  <message key="table.MNL_CHK_GLIST.SEQ_NO_NEW" value="新单据编号"/>
+  <message key="table.MNL_CHK_GLIST.ITEM_NO" value="序号"/>
+  <message key="table.MNL_CHK_GLIST.G_NO" value="归并序号"/>
+  <message key="table.MNL_CHK_GLIST.CODE_TS" value="商品编码"/>
+  <message key="table.MNL_CHK_GLIST.COP_G_NO" value="物料号"/>
+  <message key="table.MNL_CHK_GLIST.G_NAME" value="商品名称"/>
+  <message key="table.MNL_CHK_GLIST.G_MODEL" value="规格型号"/>
+  <message key="table.MNL_CHK_GLIST.UNIT" value="申报单位"/>
+  <message key="table.MNL_CHK_GLIST.UNIT_1" value="法定单位"/>
+  <message key="table.MNL_CHK_GLIST.UNIT_2" value="第二单位"/>
+  <message key="table.MNL_CHK_GLIST.QTY" value="申报数量"/>
+  <message key="table.MNL_CHK_GLIST.DEC_PRICE" value="申报单价"/>
+  <message key="table.MNL_CHK_GLIST.DEC_PRICE_RMB" value="申报总价RMB"/>
+  <message key="table.MNL_CHK_GLIST.CURR" value="币制"/>
+  <message key="table.MNL_CHK_GLIST.FACTOR_1" value="法定数量"/>
+  <message key="table.MNL_CHK_GLIST.FACTOR_2" value="第二数量"/>
+  <message key="table.MNL_CHK_GLIST.APPR_AMT" value="总价"/>
+  <message key="table.MNL_CHK_GLIST.NET_WT" value="净重"/>
+  <message key="table.MNL_CHK_GLIST.GROSS_WT" value="毛重"/>
+  <message key="table.MNL_CHK_GLIST.PACK_NUM" value="件数"/>
+  <message key="table.MNL_CHK_GLIST.WRAP_TYPE" value="包装方式"/>
+  <message key="table.MNL_CHK_GLIST.NOTE" value="备注"/>
+  <message key="table.MNL_CHK_GLIST.SURE_NUM" value="结存数量"/>
+  <message key="table.MNL_CHK_GLIST.SURE_DATE" value="记账时间"/>
+  <message key="table.MNL_CHK_GLIST.USE_NUM" value="领用数量"/>
+  <message key="table.MNL_CHK_GLIST.USE_DATE" value="领用时间"/>
+  <message key="table.MNL_CHK_GLIST.RETURN_NUM" value="还料数量"/>
+  <message key="table.MNL_CHK_GLIST.RETURN_DATE" value="还料时间"/>
+</appconfig>

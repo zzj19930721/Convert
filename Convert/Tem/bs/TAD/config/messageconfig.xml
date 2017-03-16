@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<appconfig app="fox">
+  <!--BLS_TradingGoods_LIST-->
+  <message key="table.BLS_TradingGoods_LIST.OID" value="OID"/>
+  <message key="table.BLS_TradingGoods_LIST.SEQ_NO" value="单据编号"/>
+  <message key="table.BLS_TradingGoods_LIST.CHK_STATUS" value="审批状态"/>
+  <message key="table.BLS_TradingGoods_LIST.status" value="状态"/>
+  <message key="table.BLS_TradingGoods_LIST.RET_CHANNEL" value="全程通道"/>
+  <message key="table.BLS_TradingGoods_LIST.DECLARE_MARK" value="申报标志"/>
+  <message key="table.BLS_TradingGoods_LIST.customs_code" value="主管海关"/>
+  <message key="table.BLS_TradingGoods_LIST.area_code" value="监管场所"/>
+  <message key="table.BLS_TradingGoods_LIST.DOC_TYPE" value="单据类型"/>
+  <message key="table.BLS_TradingGoods_LIST.POS_CODE" value="审核人"/>
+  <message key="table.BLS_TradingGoods_LIST.CHK_TIME" value="审批时间"/>
+  <message key="table.BLS_TradingGoods_LIST.DEC_TIME" value="申报日期"/>
+  <message key="table.BLS_TradingGoods_LIST.inputer_code" value="组织结构代码"/>
+  <message key="table.BLS_TradingGoods_LIST.inputer_name" value="录入人"/>
+  <message key="table.BLS_TradingGoods_LIST.INPUT_COP_NO" value="录入单位代码"/>
+  <message key="table.BLS_TradingGoods_LIST.INPUT_COP_NAME" value="录入单位名称"/>
+  <message key="table.BLS_TradingGoods_LIST.TradingCenterID" value="交易中心编号"/>
+  <message key="table.BLS_TradingGoods_LIST.TradeOrgCode" value="组织机构代码"/>
+  <message key="table.BLS_TradingGoods_LIST.MasterCustoms" value="主管海关"/>
+  <message key="table.BLS_TradingGoods_LIST.TradeCode" value="企业海关编号"/>
+  <message key="table.BLS_TradingGoods_LIST.TradeName" value="企业名称"/>
+  <message key="table.BLS_TradingGoods_LIST.CopEMSNo" value="区内企业账册号"/>
+  <message key="table.BLS_TradingGoods_LIST.CommodityCode" value="商品货号"/>
+  <message key="table.BLS_TradingGoods_LIST.CommodityCUSCode" value="商品海关货号编码"/>
+  <message key="table.BLS_TradingGoods_LIST.EANCode" value="商品国际代码"/>
+  <message key="table.BLS_TradingGoods_LIST.HSCode" value="商品海关编码"/>
+  <message key="table.BLS_TradingGoods_LIST.CommodityNameCN" value="中文名称"/>
+  <message key="table.BLS_TradingGoods_LIST.CommodityModelCN" value="中文规格型号"/>
+  <message key="table.BLS_TradingGoods_LIST.CommodityNameEN" value="英文名称"/>
+  <message key="table.BLS_TradingGoods_LIST.CommodityModelEN" value="英文规格型号"/>
+  <message key="table.BLS_TradingGoods_LIST.SalesUnit" value="商品销售单位"/>
+  <message key="table.BLS_TradingGoods_LIST.StoreUnit" value="商品仓库计量单位"/>
+  <message key="table.BLS_TradingGoods_LIST.Unit" value="保税计量单位"/>
+  <message key="table.BLS_TradingGoods_LIST.Unit_1" value="商品法定单位"/>
+  <message key="table.BLS_TradingGoods_LIST.Unit_2" value="商品第二单位"/>
+  <message key="table.BLS_TradingGoods_LIST.SalesFactory" value="销售单位比率"/>
+  <message key="table.BLS_TradingGoods_LIST.Factory" value="申报单位比率"/>
+  <message key="table.BLS_TradingGoods_LIST.Factory_1" value="法定单位比率"/>
+  <message key="table.BLS_TradingGoods_LIST.Factory_2" value="第二单位比率"/>
+  <message key="table.BLS_TradingGoods_LIST.SalesQty" value="销售数量"/>
+  <message key="table.BLS_TradingGoods_LIST.StoreQty" value="仓储入仓数量"/>
+  <message key="table.BLS_TradingGoods_LIST.Qty" value="申报数量"/>
+  <message key="table.BLS_TradingGoods_LIST.Qty_1" value="法定单位数量"/>
+  <message key="table.BLS_TradingGoods_LIST.Qty_2" value="第二单位数量"/>
+  <message key="table.BLS_TradingGoods_LIST.BLSDutiableFlag" value="完税商品标志"/>
+  <message key="table.BLS_TradingGoods_LIST.StoreHouseNO" value="存储仓库号"/>
+  <message key="table.BLS_TradingGoods_LIST.StorePosition" value="仓位"/>
+  <message key="table.BLS_TradingGoods_LIST.ValidDate" value="有效期"/>
+  <message key="table.BLS_TradingGoods_LIST.TradingDate" value="交易日期"/>
+  <message key="table.BLS_TradingGoods_LIST.SEQNo" value="交易单编号"/>
+  <message key="table.BLS_TradingGoods_LIST.CashRegisterID" value="收银机编号"/>
+  <message key="table.BLS_TradingGoods_LIST.Price" value="单价"/>
+  <message key="table.BLS_TradingGoods_LIST.PriceTotal" value="总价"/>
+  <message key="table.BLS_TradingGoods_LIST.Note" value="备注"/>
+
+  <message key="table.VIEW_BLS_TRADINGGOODS_LIST.CommodityCode" value="商品货号"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_LIST.HSCode" value="商品海关编码"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_LIST.CommodityNameCN" value="中文名称"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_LIST.SalesQty" value="交易数量"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_LIST.EQty" value="出区数量"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_LIST.IQty" value="复入区数量"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_LIST.Qty" value="报关数量"/>
+  
+  <!--VIEW_BLS_TRADINGGOODS_CONTRAST-->
+  <message key="table.VIEW_BLS_TRADINGGOODS_CONTRAST.CommodityCode" value="商品货号"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_CONTRAST.HSCode" value="商品海关编码"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_CONTRAST.CommodityNameCN" value="中文名称"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_CONTRAST.SalesQty" value="交易数量"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_CONTRAST.EQty" value="出区数量"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_CONTRAST.IQty" value="复入区数量"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_CONTRAST.IStoreQty" value="入仓数量"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_CONTRAST.EStoreQty" value="出仓数量"/>
+
+  <!--VIEW_BLS_TRADINGGOODS_RISK-->
+  <message key="table.VIEW_BLS_TRADINGGOODS_RISK.CommodityCode" value="商品货号"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_RISK.HSCode" value="商品海关编码"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_RISK.CommodityNameCN" value="中文名称"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_RISK.SalesQty" value="交易数量"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_RISK.EQty" value="出区数量"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_RISK.IQty" value="复入区数量"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_RISK.LossQty" value="报损数量"/>
+  <message key="table.VIEW_BLS_TRADINGGOODS_RISK.StoreQty" value="盘点数量"/>
+
+  <!--XMS_STEP_LOG-->
+  <message key="table.XMS_STEP_LOG.DECLARE_TYPE" value="申报类型"/>
+  <message key="table.XMS_STEP_LOG.CHK_MARK" value="回执通道"/>
+  <message key="table.XMS_STEP_LOG.RESULT_INFO" value="回执处理结果"/>
+  <message key="table.XMS_STEP_LOG.INPUTER" value="操作员名称"/>
+  <message key="table.XMS_STEP_LOG.INPUTER_TIME" value="操作时间"/>
+  <message key="table.XMS_STEP_LOG.NOTE" value="备注"/>
+  <message key="table.XMS_STEP_LOG.MESSAGE_FN" value="回执报文名称"/>
+
+  <!-- 工作流转日志表 -->
+  <message key="table.APP_SYS_WORKLOG" value="日志表" />
+  <message key="table.APP_SYS_WORKLOG.CHANNEL" value="环节名称" />
+  <message key="table.APP_SYS_WORKLOG.PROC_DATE" value="操作时间" />
+  <message key="table.APP_SYS_WORKLOG.PROC_OP_ID" value="操作人" />
+  <message key="table.APP_SYS_WORKLOG.OP_NOTES" value="处理结果" />
+</appconfig>

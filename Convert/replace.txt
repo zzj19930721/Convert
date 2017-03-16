@@ -1,0 +1,21 @@
+﻿            str = str.Replace("@PB.NAME_SPACE@", model.nameSpace);
+            str = str.Replace("@PB.MODUAL@", model.module);
+            str = str.Replace("@PB.MENU@", model.menu);
+            str = str.Replace("@PB.HEAD@", model.Head);
+            str = str.Replace("@PB.LIST@", model.List.First());
+            str = replaceValue(str, model, model.ListTableValue[0], "@PB.HEAD_VALUE@");
+            str = replaceValue(str, model, model.ListTableValue[1], "@PB.LIST_VALUE@");
+
+
+			路径配置：
+			BIZ:
+			    /DAO/MENU/DAO.cs
+				/Resource:
+				/Service/Implement/MENU/   IMPL.cs
+
+		    IService
+			   /Service
+
+//20170306
+1.生成configBiz.xml,objects.xml 
+2.生成model * 2 界面

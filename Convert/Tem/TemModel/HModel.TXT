@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="@PB.NAME_SPACE@.Model" namespace="@PB.NAME_SPACE@.Model">
+	<class name="@PB.HEAD@" table="@PB.HEAD@">
+    <id name="OID" unsaved-value="null" column="OID" type="string" length="40">
+    </id>
+@PB.MODEL@
+	</class>
+</hibernate-mapping>

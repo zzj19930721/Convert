@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>基于jQuery UI和Bootstrap的元素拖拽DEMO演示</title>
+
+    <link href="/Content/Css/jquery-ui.css" rel="stylesheet" />
+    <link href="/Content/Css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/Css/style.css" rel="stylesheet" />
+
+    <script src="/Content/Javascript/jquery.js"></script>
+    <!--<script src="/Content/Javascript/bootstrap.min.js"></script>-->
+    <script src="/Content/Javascript/jquery-ui.js"></script>
+
+    <script src="/Content/Javascript/index.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+  <h1>Drag'n Drop Demo <small>jQuery UI and Bootstrap</small></h1>
+  <form role="form">
+    <div class="form-group">
+      <input class="form-control" type="text" name="name" placeholder="Title" />
+    </div>
+    <details>
+      <div class="form-group">
+        <input class="form-control" type="text" name="blah" placeholder="Additional details here" />
+      </div>
+    </details>
+  </form>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="modules">
+        <p class="drag"><a class="btn btn-default">Text</a></p>
+
+        <p class="drag"><a class="btn btn-default">Textarea</a></p>
+
+        <p class="drag"><a class="btn btn-default">Number</a></p>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div id="dropzone"></div>
+      <button class="btn btn-primary pull-right">Save</button>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;clear:both">
+
+</div>
+</body>
+
+</html>

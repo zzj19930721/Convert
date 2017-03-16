@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<appconfig app="fox">
+  <!--BLS_TradingCheckWriteOff_Head-->
+  <message key="table.BLS_TradingCheckWriteOff_Head.OID" value="OID"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.CHK_STATUS" value="单据状态"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.STATUS" value="状态"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.RET_CHANNEL" value="全程通道"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.DECLARE_MARK" value="申报标志"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.CUSTOMS_CODE" value="主管海关"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.AREA_CODE" value="监管场所"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.DOC_TYPE" value="单据类型"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.POS_CODE" value="待审岗位编号"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.CHK_TIME" value="审批时间"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.DEC_TIME" value="申报日期"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.INPUTER_CODE" value="申报(录入)人代码"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.INPUTER_NAME" value="申报(录入)人名称"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.INPUT_COP_NO" value="录入单位代码"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.INPUT_COP_NAME" value="企业名称"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.SEQ_NO" value="单据编号"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.SEQNo" value="核销单编号"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.TradingCenterID" value="交易中心编号"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.TradeOrgCode" value="交易中心机构代码"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.MasterCustoms" value="主管海关"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.CopOrgCode" value="组织机构代码"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.OwnerCode" value="货主海关编码"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.OwnerOrgCode" value="组织机构代码"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.OwnerName" value="企业名称"/>
+
+  <message key="table.BLS_TradingCheckWriteOff_Head.CopEMSNO" value="区内企业账册号"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.InputOrgCode" value="单位组织机构代码"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.InputTradeCode" value="单位海关代码"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.InputTradeName" value="单位名称"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.CheckWriteOffNum" value="核销次数"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.BeginDate" value="核销开始时间"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.EndDate" value="核销结束时间"/>
+  
+  <message key="table.BLS_TradingCheckWriteOff_Head.InputDate" value="单据时间"/>
+
+  <message key="table.BLS_TradingCheckWriteOff_Head.InventoryDate" value="盘点时间"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.LossDate" value="报损时间"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.TrandingSumDate" value="汇总时间"/>
+  
+  <message key="table.BLS_TradingCheckWriteOff_Head.InputName" value="录入人姓名"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.Note" value="备注"/>
+
+  <message key="table.BLS_TradingCheckWriteOff_Head.RN" value="记录号"/>
+  <message key="table.BLS_TradingCheckWriteOff_Head.TrandingSumTime" value="汇总时间"/>
+  <!--BLS_TradingCheckWriteOff_List-->
+  <message key="table.BLS_TradingCheckWriteOff_List.OID" value="OID"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.SEQ_NO" value="单据编号"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.TradingCenterID" value="交易中心编号"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.TradeOrgCode" value="交易中心机构代码"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.MasterCustoms" value="主管海关"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.TradeCode" value="经营单位代码"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.TradeName" value="企业名称"/>
+
+  <message key="table.BLS_TradingCheckWriteOff_List.CopOrgCode" value="单位组织机构代码"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.OwnerCode" value="海关编码"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.OwnerOrgCode" value="货主组织机构代码"/>
+  
+  <message key="table.BLS_TradingCheckWriteOff_List.CopEMSNo" value="区内企业账册号"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.CommodityCode" value="商品货号"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.CommodityCUSCode" value="商品海关货号编码"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.EANCode" value="商品国际代码"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.HSCode" value="商品海关编码"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.CommodityNameCN" value="中文名称"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.CommodityModelCN" value="中文规格型号"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.CommodityNameEN" value="英文名称"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.CommodityModelEN" value="英文规格型号"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.SalesUnit" value="商品销售单位"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.StoreUnit" value="仓库计量单位"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.Unit" value="保税计量单位"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.Unit_1" value="法定单位"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.Unit_2" value="第二单位"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.SalesFactory" value="销售单位比率"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.Factory" value="申报单位比率"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.Factory_1" value="法定单位比率"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.Factory_2" value="第二单位比率"/>
+
+  <message key="table.BLS_TradingCheckWriteOff_List.SumQty" value="汇总数量"/>
+  
+  <message key="table.BLS_TradingCheckWriteOff_List.SalesQty" value="销售数量"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.StoreQty" value="仓储入仓数量"/>
+
+  <message key="table.BLS_TradingCheckWriteOff_List.LossQty" value="报损数量"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.InitialQuantity" value="期初数量"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.SumBillQty" value="出区清单数量汇总"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.SumReturnBillQty" value="复入区数量汇总"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.SumLossQty" value="报损汇总数量"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.SumSalesQty" value="交易汇总数量"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.BenQiYingCunQty" value="本期应剩余数量"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.BenQiShiCunQty" value="本期实际剩余数量"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.LiLunShiJiChaYiQty" value="应存与实存差异"/>
+  
+  <message key="table.BLS_TradingCheckWriteOff_List.Qty" value="申报数量"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.Qty_1" value="法定单位数量"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.Qty_2" value="第二单位数量"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.BLSDutiableFlag" value="完税商品标志"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.StoreHouseNO" value="存储仓库号"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.StorePosition" value="仓位"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.ValidDate" value="有效期"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.SEQNo" value="汇总单编号"/>
+
+  <message key="table.BLS_TradingCheckWriteOff_List.TradingSEQNo" value="交易单据号"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.SerialNumber" value="交易单流水号"/>
+  
+  <message key="table.BLS_TradingCheckWriteOff_List.ENTRYDate" value="报关时间"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.ENTRYID" value="报关单编号"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.ShelfLfeDate" value="保质日期"/>
+  <message key="table.BLS_TradingCheckWriteOff_List.Note" value="备注"/>
+
+  <!--XMS_STEP_LOG-->
+  <message key="table.XMS_STEP_LOG.DECLARE_TYPE" value="申报类型"/>
+  <message key="table.XMS_STEP_LOG.CHK_MARK" value="回执通道"/>
+  <message key="table.XMS_STEP_LOG.RESULT_INFO" value="回执处理结果"/>
+  <message key="table.XMS_STEP_LOG.INPUTER" value="操作员名称"/>
+  <message key="table.XMS_STEP_LOG.INPUTER_TIME" value="操作时间"/>
+  <message key="table.XMS_STEP_LOG.NOTE" value="备注"/>
+  <message key="table.XMS_STEP_LOG.MESSAGE_FN" value="回执报文名称"/>
+
+
+
+  <!-- 工作流转日志表 -->
+  <message key="table.APP_SYS_WORKLOG" value="日志表" />
+  <message key="table.APP_SYS_WORKLOG.CHANNEL" value="环节名称" />
+  <message key="table.APP_SYS_WORKLOG.PROC_DATE" value="操作时间" />
+  <message key="table.APP_SYS_WORKLOG.PROC_OP_ID" value="操作人" />
+  <message key="table.APP_SYS_WORKLOG.OP_NOTES" value="处理结果" />
+  
+</appconfig>

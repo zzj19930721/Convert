@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Framework.Biz.Model;
+using @PB.NAME_SPACE@.Model;
+using Framework.IService;
+
+namespace @PB.NAME_SPACE@.IService.Service
+{
+    public interface I@PB.HEAD@Service : IGenericService<@PB.HEAD@>
+    {
+    }
+}

@@ -1,0 +1,463 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using NHibernate.Criterion;
+using @PB.NAME_SPACE@.Model;
+using @PB.NAME_SPACE@.IService.Service;
+using Framework.Biz.Model;
+using @PB.NAME_SPACE@.Ent.Web.Controllers;
+using @PB.NAME_SPACE@.Ent.Web.Authorize;
+using @PB.NAME_SPACE@.Ent.Web.Models;
+
+namespace @PB.NAME_SPACE@.Ent.Web.Areas.@PB.MODUAL@.Controllers
+{
+    public class @PB.MENU@Controller : BasePageMultiController
+    {
+        #region 业务逻辑层TestHead1Service
+        public I@PB.HEAD@Service @PB.HEAD@Service { get; set; }
+        public I@PB.LIST@Service @PB.LIST@Service { get; set; }
+        #endregion
+
+        #region 表头列表 
+
+        public ActionResult Index()
+        {
+            return View(new @PB.HEAD@());//new model为了获取界面表格标题
+        }
+
+        [RoleAuthorize(FuncCode = @PB.NAME_SPACE@.Ent.Web.Services.MenuManager.@PB.MENU@)]
+        public string QueryHead()
+        {
+            object obj = Request.Form;
+            //base.FilterDeptData = true;//开启机构部门数据过滤
+            //base.FilterDeptDataType = FilterType.FilterDeptDataType.DeptCode;
+            return base.QueryList<@PB.HEAD@>(false, delegate (@PB.HEAD@ entity) { return GetHead(entity); }, null);
+        }
+
+        protected IEnumerable<NameValue> GetHead(@PB.HEAD@ entity)
+        {
+@PB.HEAD_VALUE@
+        }
+
+        public string DeleteHead(string p)
+        {
+            ExecResult ret = new ExecResult();
+            try
+            {
+                this.@PB.HEAD@Service.Delete(p);
+                ret.Success = true;
+            }
+            catch (Exception ex)
+            {
+                ret.Success = false;
+                ret.ErrMsg = ex.Message;
+            }
+            string result = JsonConvert.SerializeObject(ret);
+            return result;
+        }
+
+        public ActionResult DetailsHead(string p)
+        {
+            return RedirectToAction("EditHead", new { p = p, details = ActionType.Details });
+        }
+
+        public ActionResult AddHead()
+        {
+            return RedirectToAction("EditHead");
+        }
+
+        public ActionResult EditHead(string p, string details)
+        {
+            @PB.HEAD@ currModel = null;
+            if (string.IsNullOrWhiteSpace(p))
+            {
+                ViewBag.OperationType = ActionType.Add;
+            }
+            else if (details == ActionType.Details)
+            {
+                ViewBag.OperationType = ActionType.Details;
+            }
+            else
+            {
+                ViewBag.OperationType = ActionType.Edit;
+            }
+            //
+            if (ViewBag.OperationType == ActionType.Details || ViewBag.OperationType == ActionType.Edit)
+            {
+                currModel = @PB.HEAD@Service.Get(p);
+                if (currModel != null)
+                {
+                    //ViewBag.ComplexId2_Text = Framework.Biz.Service.Common.DropdownMgr.DropdownList("ddlb_ComplexCode").GetTextByValue(currModel.ComplexId2);//用于加载原来的值
+                }
+                else
+                {
+                    //ViewBag.ComplexId2_Text = currModel.ComplexId2 + " 对应的数据丢失";
+                }
+            }
+            else
+            {
+                currModel = new @PB.HEAD@();
+                //新增时,对象初始值
+                //currModel.RegDate = currModel.TestDate = DateTime.Now;
+            }
+            return View(currModel);
+        }
+
+        public string SaveHead(string p, @PB.HEAD@ entity)
+        {
+            //check标签 对应的 bool类型需要特别处理
+            if (entity != null)
+            {
+                //entity.STATUS = GetPageParams("STATUS");
+            }
+            object obj = Request.Form;
+            ExecResult ret = new ExecResult();
+            try
+            {
+                //检查名称是否存在
+                var existsObj = @PB.HEAD@Service.Get(entity.OID);
+                if (existsObj != null && existsObj.OID != entity.OID)
+                {
+                    ret.Success = false;
+                    ret.ErrMsg = "名称已存在";
+                    return ret.ToJson();
+                }
+                //
+                if (p == ActionType.Add)
+                {
+                    //添加
+                    entity.OID = System.Guid.NewGuid().ToString();
+                    //添加时,默认值
+                    entity.CREATE_TIME = DateTime.Now;
+                    //entity.SEQ_NO = this.@PB.HEAD@Service.CreateSeqNo();
+                    //entity.LAST_MODIFY_TIME = DateTime.Now;
+                    //entity.CREATE_USER = entity.LAST_MODIFY_USER = string.Empty;
+                    //
+                    @PB.HEAD@Service.Save(entity);
+                }
+                else
+                {
+
+                    //原来的数据
+                    @PB.HEAD@ original = this.@PB.HEAD@Service.Get(entity.OID);
+                    //entity.LAST_MODIFY_TIME = DateTime.Now;
+                    //entity.CREATE_TIME = original.CREATE_TIME;
+                    //entity.CREATE_USER = original.CREATE_USER;
+                    //修改
+                    @PB.HEAD@Service.Update(original);
+                }
+                ret.DataId = entity.OID;
+                ret.Success = true;
+            }
+            catch (Exception ex)
+            {
+                ret.Success = false;
+                ret.ErrMsg = ex.Message;
+            }
+            return ret.ToJson();
+        }
+        #endregion
+
+        #region 表体列表
+        //[RoleAuthorize(FuncCode = @PB.NAME_SPACE@.Ent.Web.Services.MenuManager.MENU_TEST2)]
+        public ActionResult IndexList(string p)
+        {
+            ViewBag.pid = p;
+            ViewBag.OperationType = GetPageStringParams("details");
+            return View(new @PB.LIST@());//new model为了获取界面表格标题
+        }
+
+        //[RoleAuthorize(FuncCode = @PB.NAME_SPACE@.Ent.Web.Services.MenuManager.@PB.MENU@)]
+        public string QueryList(string p)
+        {
+            object obj = Request.Form;
+            List<ICriterion> conds = new List<ICriterion>();
+            conds.Add(Restrictions.Eq("SEQ_NO", p));
+            return base.QueryList<@PB.LIST@>(false, delegate (@PB.LIST@ entity) { return GetList(entity); }, conds);
+        }
+
+        protected IEnumerable<NameValue> GetList(@PB.LIST@ entity)
+        {
+@PB.LIST_VALUE@
+        }
+
+        public string DeleteList(string p)
+        {
+            ExecResult ret = new ExecResult();
+            try
+            {
+                this.@PB.LIST@Service.Delete(p);
+                ret.Success = true;
+            }
+            catch (Exception ex)
+            {
+                ret.Success = false;
+                ret.ErrMsg = ex.Message;
+            }
+            string result = JsonConvert.SerializeObject(ret);
+            return result;
+        }
+
+        public ActionResult DetailsList(string p)
+        {
+            return RedirectToAction("EditList", new { p = p, details = ActionType.Details });
+        }
+
+
+        public ActionResult AddList(string  p )
+        {
+            return RedirectToAction("EditList" , new { seq_no = p });
+        }
+
+        public ActionResult EditList(string p, string details,string seq_no)
+        {
+            @PB.LIST@ currModel = null;
+            if (string.IsNullOrWhiteSpace(p))
+            {
+                ViewBag.OperationType = ActionType.Add;
+            }
+            else if (details == ActionType.Details)
+            {
+                ViewBag.OperationType = ActionType.Details;
+            }
+            else
+            {
+                ViewBag.OperationType = ActionType.Edit;
+            }
+            //
+            if (ViewBag.OperationType == ActionType.Details || ViewBag.OperationType == ActionType.Edit)
+            {
+                currModel = @PB.LIST@Service.Get(p);
+                if (currModel != null)
+                {
+                    //ViewBag.ComplexId2_Text = Framework.Biz.Service.Common.DropdownMgr.DropdownList("ddlb_ComplexCode").GetTextByValue(currModel.ComplexId2);//用于加载原来的值
+                }
+                else
+                {
+                    //ViewBag.ComplexId2_Text = currModel.ComplexId2 + " 对应的数据丢失";
+                }
+            }
+            else
+            {
+                currModel = new @PB.LIST@();
+                currModel.SEQ_NO = seq_no;
+                //新增时,对象初始值
+                //currModel.RegDate = currModel.TestDate = DateTime.Now;
+            }
+            return View(currModel);
+        }
+
+
+        public string SaveList(string p, @PB.LIST@ entity)
+        {
+            //check标签 对应的 bool类型需要特别处理
+            if (entity != null)
+            {
+                //entity.STATUS = GetPageParams("STATUS");
+            }
+            object obj = Request.Form;
+            ExecResult ret = new ExecResult();
+            try
+            {
+                //检查名称是否存在
+                var existsObj = @PB.LIST@Service.Get(entity.OID);
+                if (existsObj != null && existsObj.OID != entity.OID)
+                {
+                    ret.Success = false;
+                    ret.ErrMsg = "名称已存在";
+                    return ret.ToJson();
+                }
+                //
+                if (p == ActionType.Add)
+                {
+                    //添加
+                    entity.OID = System.Guid.NewGuid().ToString();
+                    //添加时,默认值
+                    //entity.START_DATE = DateTime.Now;
+                    //entity.SEQ_NO = 
+                    //entity.LAST_MODIFY_TIME = DateTime.Now;
+                    //entity.CREATE_USER = entity.LAST_MODIFY_USER = string.Empty;
+
+                    @PB.LIST@Service.Save(entity);
+                }
+                else
+                {
+
+                    //原来的数据
+                    @PB.LIST@ original = this.@PB.LIST@Service.Get(entity.OID);
+                    //entity.LAST_MODIFY_TIME = DateTime.Now;
+                    //entity.CREATE_TIME = original.CREATE_TIME;
+                    //entity.CREATE_USER = original.CREATE_USER;
+                    //修改
+
+                    //entity.EFFECTIVE_FLAG = "1";
+                    //entity.WAREHOUSE_FLAG = "1";
+                    @PB.LIST@Service.Update(entity);
+                }
+                ret.DataId = entity.OID;
+                ret.Success = true;
+            }
+            catch (Exception ex)
+            {
+                ret.Success = false;
+                ret.ErrMsg = ex.Message;
+            }
+            return ret.ToJson();
+        }
+        #endregion
+
+
+        #region 表体2列表
+        //[RoleAuthorize(FuncCode = TwoPositions.Services.MenuManager.MENU_TEST2)]
+        public ActionResult IndexList2(string p)
+        {
+            ViewBag.pid = p;
+            ViewBag.OperationType = GetPageStringParams("details");
+            return View(new @PB.LIST@());//new model为了获取界面表格标题
+        }
+
+        //[RoleAuthorize(FuncCode = TwoPositions.Services.MenuManager.IBONDED_002)]
+        public string QueryList2(string p)
+        {
+            object obj = Request.Form;
+            List<ICriterion> conds = new List<ICriterion>();
+            conds.Add(Restrictions.Eq("SEQ_NO", p));
+            return base.QueryList<@PB.LIST@>(false, delegate (@PB.LIST@ entity) { return GetList2(entity); }, conds);
+        }
+
+        protected IEnumerable<NameValue> GetList2(@PB.LIST@ entity)
+        {
+@PB.LIST2_VALUE@
+        }
+
+        public string DeleteList2(string p)
+        {
+            ExecResult ret = new ExecResult();
+            try
+            {
+                this.@PB.LIST@Service.Delete(p);
+                ret.Success = true;
+            }
+            catch (Exception ex)
+            {
+                ret.Success = false;
+                ret.ErrMsg = ex.Message;
+            }
+            string result = JsonConvert.SerializeObject(ret);
+            return result;
+        }
+
+        public ActionResult DetailsList2(string p)
+        {
+            return RedirectToAction("EditList2", new { p = p, details = ActionType.Details });
+        }
+
+
+        public ActionResult AddList2(string p)
+        {
+            return RedirectToAction("EditList2", new { seq_no = p });
+        }
+
+        public ActionResult EditList2(string p, string details, string seq_no)
+        {
+            @PB.LIST@ currModel = null;
+            if (string.IsNullOrWhiteSpace(p))
+            {
+                ViewBag.OperationType = ActionType.Add;
+            }
+            else if (details == ActionType.Details)
+            {
+                ViewBag.OperationType = ActionType.Details;
+            }
+            else
+            {
+                ViewBag.OperationType = ActionType.Edit;
+            }
+            //
+            if (ViewBag.OperationType == ActionType.Details || ViewBag.OperationType == ActionType.Edit)
+            {
+                currModel = @PB.LIST@Service.Get(p);
+                if (currModel != null)
+                {
+                    //ViewBag.ComplexId2_Text = Framework.Biz.Service.Common.DropdownMgr.DropdownList2("ddlb_ComplexCode").GetTextByValue(currModel.ComplexId2);//用于加载原来的值
+                }
+                else
+                {
+                    //ViewBag.ComplexId2_Text = currModel.ComplexId2 + " 对应的数据丢失";
+                }
+            }
+            else
+            {
+                currModel = new @PB.LIST@();
+                currModel.SEQ_NO = seq_no;
+                //新增时,对象初始值
+                //currModel.RegDate = currModel.TestDate = DateTime.Now;
+            }
+            return View(currModel);
+        }
+
+
+        public string SaveList2(string p, @PB.LIST@ entity)
+        {
+            //check标签 对应的 bool类型需要特别处理
+            if (entity != null)
+            {
+                //entity.STATUS = GetPageParams("STATUS");
+            }
+            object obj = Request.Form;
+            ExecResult ret = new ExecResult();
+            try
+            {
+                //检查名称是否存在
+                var existsObj = @PB.LIST@Service.Get(entity.OID);
+                if (existsObj != null && existsObj.OID != entity.OID)
+                {
+                    ret.Success = false;
+                    ret.ErrMsg = "名称已存在";
+                    return ret.ToJson();
+                }
+                //
+                if (p == ActionType.Add)
+                {
+                    //添加
+                    entity.OID = System.Guid.NewGuid().ToString();
+                    //添加时,默认值
+                    //entity.START_DATE = DateTime.Now;
+                    //entity.SEQ_NO = 
+                    //entity.LAST_MODIFY_TIME = DateTime.Now;
+                    //entity.CREATE_USER = entity.LAST_MODIFY_USER = string.Empty;
+
+                    @PB.LIST@Service.Save(entity);
+                }
+                else
+                {
+
+                    //原来的数据
+                    @PB.LIST@ original = this.@PB.LIST@Service.Get(entity.OID);
+                    //entity.LAST_MODIFY_TIME = DateTime.Now;
+                    //entity.CREATE_TIME = original.CREATE_TIME;
+                    //entity.CREATE_USER = original.CREATE_USER;
+                    //修改
+
+                    //entity.EFFECTIVE_FLAG = "1";
+                    //entity.WAREHOUSE_FLAG = "1";
+                    @PB.LIST@Service.Update(entity);
+                }
+                ret.DataId = entity.OID;
+                ret.Success = true;
+            }
+            catch (Exception ex)
+            {
+                ret.Success = false;
+                ret.ErrMsg = ex.Message;
+            }
+            return ret.ToJson();
+        }
+        #endregion
+    }
+}

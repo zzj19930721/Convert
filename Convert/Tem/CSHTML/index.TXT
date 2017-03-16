@@ -1,0 +1,88 @@
+﻿@model @PB.NAME_SPACE@.Model.@PB.HEAD@
+@{
+    Layout = "~/Views/Shared/_Layout_Page.cshtml";
+}
+@section Styles{
+
+}
+<div class="easyui-layout" data-options="fit:true">
+    <div data-options="region:'north',split:false,border:true" style="height:92px;overflow:hidden;">
+        <div class="query-condition" id="searchDiv" style="height: 60px;">
+            <div style="height: 5px;">
+            </div>
+            @{ Html.RenderAction("Index", "QueryField", new { area = "", QueryName = "@PB.MENU@", TableId = "tabList" });}
+        </div>
+    </div>
+    <div data-options="region:'center',border:false">
+        <div id="tb" style="padding:5px;height:auto">
+            <div style="margin-bottom:0px">
+                @Html.Raw(@PB.NAME_SPACE@.Ent.Web.Services.ButtonsManager.GetRoleFuncLinkbutton(@PB.NAME_SPACE@.Ent.Web.Services.MenuManager.@PB.MENU@))
+            </div>
+        </div>
+        <table id="tabList" class="easyui-datagrid"  toolbar="#tb"></table>
+    </div>
+</div>
+<div id="editDiv" style="width: 700px; height: 400px; display: none;">
+    <iframe id="editFrame" frameborder="0" src="" scrolling="no" style="width: 100%;height: 100%;border:0;"></iframe>
+</div>
+
+@section scripts{
+
+<script type="text/javascript">
+    //打开方式
+    var showEditWinMode = 'tab';//dialog  tab
+    //当前模块的名称(唯一)
+    var currModuleName = "企业信息";
+    $(function () {
+
+        //按钮事件
+        $('@@PB.NAME_SPACE@.Ent.Web.Services.ButtonsManager.BTN_REFRESH').click(function () {
+            reloadGrid();
+        });
+        $('#@@PB.NAME_SPACE@.Ent.Web.Services.ButtonsManager.BTN_BROWSE').click(function () {
+            DialogUtils.showDetails(currModuleName, 'tabList', "/@PB.MODUAL@/@PB.MENU@/DetailsHead/{OID}?" + Math.random(), showEditWinMode, 'editDiv', 'editFrame');
+        });
+        $('#@@PB.NAME_SPACE@.Ent.Web.Services.ButtonsManager.BTN_ADD').click(function () {
+            DialogUtils.showAdd(currModuleName, 'tabList', "/@PB.MODUAL@/@PB.MENU@/AddHead?t=" + Math.random(), showEditWinMode, 'editDiv', 'editFrame');
+        });
+        $('#@@PB.NAME_SPACE@.Ent.Web.Services.ButtonsManager.BTN_EDIT').click(function () {
+            DialogUtils.showUpdate(currModuleName, 'tabList', "/@PB.MODUAL@/@PB.MENU@/EditHead/{OID}?" + Math.random(), showEditWinMode, 'editDiv', 'editFrame');
+        });
+        $('#@@PB.NAME_SPACE@.Ent.Web.Services.ButtonsManager.BTN_DEL').click(function () {
+            DialogUtils.execDelete('tabList', "/@PB.MODUAL@/@PB.MENU@/DeleteHead/{OID}?" + Math.random());
+        });
+        $('#@@PB.NAME_SPACE@.Ent.Web.Services.ButtonsManager.BTN_BACK').click(function () {
+            parent.window.closeCurTab();
+        });
+        /*以下为表格属性*/
+        //固定的列
+        var fCol = [[{ field: 'ck', checkbox: true, width: 100 }]];
+        //其他显示的列
+        var cols = [[
+            { field: 'OID', title: '@Html.DisplayNameFor(model => model.OID)', width: 100 },
+
+        ]];
+
+        //表格构造
+        var getlist_url = '/@PB.MODUAL@/@PB.MENU@/QueryHead';
+
+        //加载列表数据
+        DataGridUtils.createDefaultDataGridWithnotToolbar('tabList', getlist_url, window.paras, fCol, cols, null, showViewDialog);
+
+    })
+
+    //重新从服务端加载当前页中表格的数据,请勿删除或者更名,由框架最上层页面调用
+    function reloadGrid() {
+        DataGridUtils.refreshData("tabList");//刷新列表
+    }
+
+    //双击数据行，显示函数
+    function showViewDialog(rowIndex, rowData) {
+        $("#@@PB.NAME_SPACE@.Ent.Web.Services.ButtonsManager.BTN_BROWSE").trigger("click");
+    }
+
+</script>
+
+
+
+}

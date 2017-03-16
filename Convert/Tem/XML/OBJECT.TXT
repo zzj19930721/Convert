@@ -1,0 +1,6 @@
+﻿  <object type="TwoPositions.Ent.Web.Areas.@PB.MODUAL@.Controllers.@PB.MENU@, TwoPositions.Ent.Web" singleton="false" >
+    <property name="DropdownListService" ref="Repository.ddl"></property>
+@PB.Value@
+    <property name="@PB.HEAD@Service" ref="Manager.@PB.HEAD@"/>
+    <property name="@PB.LIST@Service" ref="Manager.@PB.LIST@"/>
+  </object>

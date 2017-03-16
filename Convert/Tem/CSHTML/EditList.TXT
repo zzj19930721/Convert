@@ -1,0 +1,69 @@
+﻿@model @PB.NAME_SPACE@.Model.@PB.LIST@
+@{
+    ViewBag.Title = "表体编辑";
+    Layout = "~/Views/Shared/_Layout_Page.cshtml";
+    //用于服务端加载下拉数据
+    //string testCbxOption = Framework.Biz.Service.Common.DropdownMgr.DropdownList("ddlb_Dmode").ToHtml(true, Model.DmodeCode);
+}
+<div class="easyui-layout" data-options="fit:true">
+    <form id="formHead">
+        <div data-options="region:'north',split:false,border:false" style="height:32px;overflow:hidden;">
+
+            <input type="hidden" id="OperationType" name="OperationType" value="@ViewBag.OperationType" /><!--当前操作类型-->
+            <input type="hidden" id="OID" name="OID" value="@Model.OID" /><!--主键-->
+            <input type="hidden" id="SEQ_NO" name="SEQ_NO" value="@Model.SEQ_NO" /><!--主键-->
+            <div class="toolbar" id="toolbarPanel" style="height: 30px; line-height: 30px; background: #efefef;">
+                <a href="#" ID="saveBtn" class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="return SaveData();">保存</a>
+                <a href="#" class="easyui-linkbutton" iconcls="icon-back" plain="true" onclick="parent.window.closeEditCurTab('tabDivList');">返回</a>
+            </div>
+        </div>
+        <div data-options="region:'center',border:false">
+            <table class="form-tb">
+
+            </table>
+</div>
+    </form>
+</div>
+@section scripts{
+    <script type="text/javascript">
+
+        var optype = '@ViewBag.OperationType';
+
+        var ddl_data;
+        window.onload = function () {
+            ddl_data = PageUtils.initComboBox();
+            if (optype == 'Details') {
+                $('#saveBtn').hide();
+                PageUtils.renderViewMode(); //查阅页面
+            }
+        }
+        function SaveData() {
+            //自动数据收集提交
+            var url = "/@PB.MODUAL@/@PB.MENU@/SaveList/" + optype + "/?" + Math.random();
+            if (jQuery("#formHead").form("validate")) {
+                $("#saveBtn").linkbutton("disable");
+                //
+                $.post(url, $('#formHead').serialize(), function (data) {
+                    data = JSON.parse(data);
+                    //alert(JSON.stringify(data));
+                    if (data.Success == true) {
+                        //保存成功后,刷新父级页面,重定向到编辑状态
+                        //DialogUtils.saveAndRefresh('editDiv', 'editFrame', 'tabList', "/Demo1/TestHead1/EditTestHead1/" + data.DataId + "?" + Math.random(), '保存成功！', currModuleName, 'TestHead1 Manage','tabDivList');
+                        //保存成功后,刷新父级页面,关闭当前
+                        DialogUtils.saveAndClose('tabList', 'editDiv', '保存成功！', '', 'List1', 'tabDivList');
+                    }
+                    else {
+                        $.messager.alert('提示', "保存失败," + data.ErrMsg);
+                    }
+                    $("#saveBtn").linkbutton("enable");
+                });
+                return true
+            }
+            else {
+                $.messager.alert('提示', '请检查必填项,或者录入格式!', 'error');
+                return false;
+            }
+            return true;
+        }
+    </script>
+}

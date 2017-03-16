@@ -1,0 +1,140 @@
+﻿@model @PB.NAME_SPACE@.Model.@PB.LIST@
+@{
+    Layout = "~/Views/Shared/_Layout_Page.cshtml";
+}
+
+
+@section Styles{}
+
+<div class="easyui-layout" data-options="fit:true">
+    <div data-options="region:'center',border:false">
+        <table id="tabList" class="easyui-datagrid"></table>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        var optype = '@ViewBag.OperationType';
+        $(function () {
+            var currModuleName = "表体编辑";
+
+            /*以下为表格属性*/
+            //固定的列
+            var fCol = [[{ field: 'ck', checkbox: true, width: 100 }]];
+            //其他显示的列
+            var cols = [[                          
+            ]];
+
+            //定义表格的工具栏按钮
+            var tBar = [{
+                text: '刷新',
+                iconCls: 'icon-reload',
+                handler: function () {
+                    DataGridUtils.refreshData("tabList");//刷新列表
+                }
+            }, '-', {
+                text: '查看',
+                iconCls: 'icon-search',
+                handler: function () {
+                    showDetails();
+                }
+            }, '-', {
+                text: '新增',
+                iconCls: 'icon-add',
+                handler: function () {
+                    showAdd();
+                }
+            }, '-', {
+                text: '修改',
+                iconCls: 'icon-edit',
+                handler: function () {
+                    showUpdate();
+                }
+            }, '-', {
+                text: '删除',
+                iconCls: 'icon-remove',
+                handler: function () {
+                    execDelete();
+                }
+            }];
+
+            //表格构造
+            var getlist_url = '/@PB.MODUAL@/@PB.MENU@/QueryList/@ViewBag.pid';
+            //双击数据行，显示函数
+            function showViewDialog(rowIndex, rowData) {
+                showDetails();
+            }
+            //查看
+            function showDetails() {
+                if (!DataGridUtils.hasSingleDataRowsSelected('tabList')) {
+                    return;
+                }
+
+                var url = "/@PB.MODUAL@/@PB.MENU@/DetailsList/" + DataGridUtils.getDataRowsSelected('tabList')[0].OID + "?" + Math.random();
+                parent.window.addEditTab('tabDivList', currModuleName, url, true, true);
+            }
+            //新增
+            function showAdd() {
+                var url = "/@PB.MODUAL@/@PB.MENU@/AddList/@ViewBag.pid?t=" + Math.random();
+                parent.window.addEditTab('tabDivList', currModuleName, url, true, true);
+            }
+            //修改
+            function showUpdate() {
+                if (!DataGridUtils.hasSingleDataRowsSelected('tabList')) {
+                    return;
+                }
+
+                var url = "/@PB.MODUAL@/@PB.MENU@/EditList/" + DataGridUtils.getDataRowsSelected('tabList')[0].OID + "?" + Math.random();
+                parent.window.addEditTab('tabDivList', currModuleName, url, true, true);
+            }
+            //删除
+            function execDelete() {
+                if (!DataGridUtils.hasSingleDataRowsSelected('tabList')) {
+                    return;
+                }
+                $.messager.confirm('提示', '确定删除选中记录吗?', function (b) {
+                    if (!b) return; //如果取消就不执行以下删除代码
+                    //alert(rows[0].OID);
+                    var aj = $.ajax({
+                        url: "/@PB.MODUAL@/@PB.MENU@/DeleteList/" + DataGridUtils.getDataRowsSelected('tabList')[0].OID + "?" + Math.random(),// 跳转到 action
+                        data: {
+                            OID: rows[0].OID
+                        },
+                        type: 'post',
+                        cache: false,
+                        dataType: 'json',
+                        success: function (data) {
+                            //alert(JSON.stringify(data));
+                            if (data.Success == true) {
+                                $.messager.alert('提示', "删除成功！");
+                                $(tabList).datagrid('reload'); //列表刷新
+                            }
+                            else {
+                                $.messager.alert('提示', "删除失败," + data.ErrMsg);
+                            }
+                        },
+                        error: function () {
+                            alert("操作异常！");
+                        }
+                    });
+                });
+            }
+            //加载列表数据
+            DataGridUtils.createDefaultDataGrid('tabList', getlist_url, window.paras, fCol, cols, tBar, showViewDialog);
+            //按钮显示控制
+            if ('@ViewBag.pid' == '') {
+                //新增表头时
+                $('div.datagrid-toolbar a').eq(2).hide();//隐藏新增
+                $('div.datagrid-toolbar div').eq(1).hide();//隐藏新增前面的分隔线
+            }
+            if (optype == 'Details') {
+                $('div.datagrid-toolbar a').eq(2).hide();
+                $('div.datagrid-toolbar a').eq(3).hide();
+                $('div.datagrid-toolbar a').eq(4).hide();
+
+                $('div.datagrid-toolbar div').eq(1).hide();
+                $('div.datagrid-toolbar div').eq(2).hide();
+                $('div.datagrid-toolbar div').eq(3).hide();
+            }
+        })
+    </script>
+}

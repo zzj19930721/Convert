@@ -1,0 +1,129 @@
+﻿@model @PB.NAME_SPACE@.Model.@PB.HEAD@
+@{
+    Layout = "~/Views/Shared/_Layout_Edit.cshtml";
+    //用于服务端加载下拉数据
+
+
+}
+
+<div style="overflow:hidden; width:100%;min-height:650px; height:100%">
+    <div class="easyui-layout" data-options="fit:true">
+        <form id="formHead">
+            <input type="hidden" id="OperationType" name="OperationType" value="@ViewBag.OperationType" /><!--当前操作类型-->
+            <input type="hidden" id="OID" name="OID" value="@Model.OID" /><!--主键-->
+            <div data-options="region:'north',split:true,border:false" style="height:340px;overflow:hidden;">
+                <div class="toolbar" id="toolbarPanel" style="height: 30px; line-height: 30px; background: #efefef;">
+                    <a href="#" ID="saveBtn" class="easyui-linkbutton" iconCls="icon-save" onclick="return SaveData();">保存</a>
+                    <a href="#" class="easyui-linkbutton" iconcls="icon-back" plain="true" onclick="if (parent.window.showEditWinMode == 'dialog') { parent.$('#editDiv').dialog('close'); } else { parent.window.closeCurTab(); }">返回</a>
+                </div>
+                <div class="easyui-tabs" id="tabDiv" data-options="fit:true,border:false">
+                    <div title="表头" style="padding:10px; " >
+                        <table class="form-tb" style="padding-bottom:20px;"></table>
+</div>
+                 </div>
+            </div>
+
+            <div data-options="region:'center',border:false" >
+
+                <div class="easyui-tabs" id="tabDivList" data-options="fit:true,border:false">
+                    <div id="List1" title="表体" style="padding:4px; overflow:hidden;">
+                        <iframe id="List1Frame" scrolling="no" frameborder="0" src="/@PB.MODUAL@/@PB.MENU@/IndexList/@Model.SEQ_NO?details=@ViewBag.OperationType" style="width: 100%;height: 100%;border:0;"></iframe>
+                    </div>
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+    @section scripts{
+        <script type="text/javascript">
+        var currModuleName = "企业信息";
+        var optype = '@ViewBag.OperationType';
+
+        var ddl_data;
+        window.onload = function () {
+            //加载下拉数据
+            ddl_data = PageUtils.initComboBox();
+
+            //修改时禁止修改业务编号
+            if (optype != '@@PB.NAME_SPACE@.Ent.Web.Models.ActionType.Add') {
+                $('#SEQ_NO').validatebox({ 'editable': false });//或者使用  $('#SeqNo').attr('', true);
+                $('#SEQ_NO').css("background-color", "#EFEFEF");
+            }
+            if (optype == 'Details') {
+                $('#saveBtn').hide();
+                PageUtils.renderViewMode(); //查阅页面
+            }
+            //调整中间分隔宽度,重新计算底下panel中表格的高度
+            var southPanel = $("#bodylayout").layout("panel", "south"); //获取底下panel对象
+            southPanel.panel({
+                onResize: function (w, h) {
+                    //alert("w:" + w + ' h:' + h);
+                    if ($('#List1').find('iframe').length > 0) {
+                        var curFrameWin = $('#List1').find('iframe')[0].contentWindow;
+                        if (curFrameWin && curFrameWin.Resise) {
+                            //alert("w:" + w + ' h:' + h);
+                            curFrameWin.Resise(h - 33, w);//减去tab title的高度
+                        }
+                    }
+                    if ($('#List2').find('iframe').length > 0) {
+                        var curFrameWin = $('#List2').find('iframe')[0].contentWindow;
+                        if (curFrameWin && curFrameWin.Resise) {
+                            //alert("w:" + w + ' h:' + h);
+                            curFrameWin.Resise(h - 33, w);
+                        }
+                    }
+                }
+            });
+
+            //tab事件
+            $("#tabDivList").tabs('select', 'List1');
+            $("#tabDivList").tabs({
+                onSelect: function (title) {
+                    //var southPanel = $("#bodylayout").layout("panel", "south"); //获取底下panel对象
+                    //var w = southPanel.panel('options').width;
+                    //var h = southPanel.panel('options').height;
+                      if (title == '表体') {
+                        //打开页面
+                        if ($("#List1Frame").attr("src") == '') {
+                            var strUrl = '/@PB.MODUAL@/@PB.MENU@/ListIndex/@Model.SEQ_NO?details=@ViewBag.OperationType';
+                            $("#List1Frame").attr("src", strUrl);
+                        }
+                    }
+                }
+            });
+        }
+        //保存数据
+        function SaveData() {
+            //自动数据收集提交
+            var url = "/@PB.MODUAL@/@PB.MENU@/SaveHead/" + optype + "/?" + Math.random();
+            if (jQuery("#formHead").form("validate")) {
+                $("#saveBtn").linkbutton("disable");
+                //
+                $.post(url, $('#formHead').serialize(), function (data) {
+                    data = JSON.parse(data);
+                    //alert(JSON.stringify(data));
+                    if (data.Success == true) {
+                        //保存成功后,刷新父级页面,重定向到编辑状态
+                        DialogUtils.saveAndRefresh('editDiv', 'editFrame', 'tabList', "/@PB.MODUAL@/@PB.MENU@/EditHead/" + data.DataId + "?" + Math.random(), '保存成功！', currModuleName, '@Html.Raw(@PB.NAME_SPACE@.Ent.Web.Services.AuthorizationManager.GetFuncNameByCode(@PB.NAME_SPACE@.Ent.Web.Services.MenuManager.MENU_TEST2))', 'mainTab');
+
+                        //保存成功后,刷新父级页面,关闭当前
+                        //DialogUtils.saveAndClose('tabList', 'editDiv', '保存成功！', currModuleName, '@Html.Raw(@PB.NAME_SPACE@.Ent.Web.Services.AuthorizationManager.GetFuncNameByCode(@PB.NAME_SPACE@.Ent.Web.Services.MenuManager.MENU_TEST2))', 'mainTab');
+                    }
+                    else {
+                        $.messager.alert('提示', "保存失败," + data.ErrMsg);
+                    }
+                    $("#saveBtn").linkbutton("enable");
+                });
+                return true
+            }
+            else {
+                $.messager.alert('提示', '请检查必填项,或者录入格式!', 'error');
+                return false;
+            }
+            return true;
+        }
+        </script>
+    }
+

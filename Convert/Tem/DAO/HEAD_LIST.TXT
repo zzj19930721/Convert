@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Linq.Dynamic;
+using Framework.Biz.Model;
+using Framework.Biz.DAO;
+using Framework.Data;
+using @PB.NAME_SPACE@.Model;
+
+namespace @PB.NAME_SPACE@.Biz.DAO
+{
+    public class @PB.HEAD@Dao : SqlBaseDao<@PB.HEAD@>
+    {
+    }
+}
