@@ -148,6 +148,7 @@
     <Content Include="Content\Javascript\jquery-1.7.1.min.js" />
     <Content Include="index.html" />
     <Content Include="index1.html" />
+    <Content Include="MessageToSql.aspx" />
     <Content Include="replace.txt" />
     <Content Include="Tem\Controller\HEAD_2LIST.TXT" />
     <Content Include="Tem\tableconfig.xml" />
@@ -187,6 +188,13 @@
     <Compile Include="Factory\List\H\CreateHController.cs" />
     <Compile Include="Factory\List\CreateSDO.cs" />
     <Compile Include="Factory\Type\FacHeadAndManyList.cs" />
+    <Compile Include="MessageToSql.aspx.cs">
+      <DependentUpon>MessageToSql.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageToSql.aspx.designer.cs">
+      <DependentUpon>MessageToSql.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Model\HeadAndListTem.cs" />
     <Content Include="Tem\Controller\HEAD_LIST.TXT" />
     <Content Include="Tem\DAO\HEAD_LIST.TXT" />
