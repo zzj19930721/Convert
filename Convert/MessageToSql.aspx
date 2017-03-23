@@ -10,7 +10,20 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+    <table>
+        <tr>
+            <td>文件目录</td>
+            <td><asp:TextBox ID="fileDir" runat="server"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>生成文件名</td>
+            <td><asp:TextBox ID="fileName" runat="server"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td colspan="2"><asp:Button ID="Btn_Ok" Text="提交" runat="server" OnClick="Btn_Ok_Click" /></td>
+
+        </tr>
+    </table>
     </div>
     </form>
 </body>

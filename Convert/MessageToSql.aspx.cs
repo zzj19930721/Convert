@@ -19,11 +19,16 @@ namespace Convert
     public partial class MessageToSql : BaseOpen
     {
         
-        private string IFilePath = "/test/";
-        private string OFilePath = "/test/1.txt";
+        private string IFilePath ;
+        private string OFilePath ;
         protected void Page_Load(object sender, EventArgs e)
         {
-            TestConn();
+            if (!IsPostBack)
+            {
+                fileDir.Text = "/test";
+                fileName.Text = "/test/1.txt";
+            }
+           
         }
         private class DtXml
         {
@@ -75,11 +80,6 @@ namespace Convert
                 List<DtXml> entity = AddTableRemark();
                 StringBuilder sb = new StringBuilder();
 
-                db = new DbHelper(model.Db);
-                DtXml temModel = new DtXml();
-
-                int count = 1;
-                int num = 0;
                 foreach (var m in entity)
                 {
                     sb.Append(m.GetSql);
@@ -94,6 +94,13 @@ namespace Convert
                 isVal = false;
             }
             return isVal;
+        }
+
+        protected void Btn_Ok_Click(object sender, EventArgs e)
+        {
+            IFilePath = fileDir.Text;
+            OFilePath = fileName.Text;
+            TestConn();
         }
     }
 }
