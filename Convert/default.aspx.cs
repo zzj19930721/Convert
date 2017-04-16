@@ -46,7 +46,8 @@ namespace Convert
 
             string[] model = msg.Split('|');
             for (int i = 0; i < model.Length; i++)
-            {     
+            {
+                //text += "{ field: '" + model[i] + "', title: '', width: 100 }";
                 text += "{ field: '"+ model[i] +"', title: '@Html.DisplayNameFor(model => model." + model[i] + ")', width: 100 }";
                 if (i < model.Length - 1) text += ",";
                 text += Environment.NewLine; ;
@@ -88,15 +89,44 @@ namespace Convert
                 {             
                     int num = (int)colView[k]["col_ID"];
 
+                    //10 - 10
+                    //if (num % 2 == 0)
+                    //{
+                    //    rowValue = lab.Select("col_ID = " + num + "")[0]["dbname"] as string;
+                    //    sb.AppendFormat(@"<td class=""label-bg"" style=""width: 100px; "">{0}</td>", rowValue);
+                    //}
+                    //else
+                    //{
+                    //    rowValue = edit.Select("col_ID = " + num + "")[0]["dbname"] as string;
+                    //    sb.AppendFormat(@"<td>  <input type=""text"" size=""10"" id=""{0}"" name=""{0}"" value=""<%=head.{0}%>""/> </td>", rowValue);
+                    //}
+
+
+                    //10 - > 2015
+
                     if (num % 2 == 0)
                     {
-                        rowValue = lab.Select("col_ID = "+ num  +"")[0]["dbname"] as string;
+                        rowValue = lab.Select("col_ID = " + num + "")[0]["dbname"] as string;
                         sb.AppendFormat(@"<td style='width: 100px;' class='label-bg'> @Html.LabelFor( x => x.{0}) </td>", rowValue);
                     }
                     else
-                    {                       
-                        rowValue = edit.Select("col_ID = " + num + "")[0]["dbname"] as string;
-                        sb.AppendFormat(@"<td> <input type='text' id='{0}' name ='{0}' class='easyui-validatebox tb' data-options='required: true' value = '@Model.{0}' /> </td>", rowValue);
+                    {
+                        var temModel = edit.Select("col_ID = " + num + "")[0];
+                        rowValue = temModel["dbname"] as string;
+                        if (temModel["controltype"].ToString() == "UltraTextEditor")
+                        {
+                            sb.AppendFormat(@"<td> <input type='text' id='{0}' name ='{0}' class='easyui-validatebox tb' data-options='required: true' value = '@Model.{0}' /> </td>", rowValue);
+                        }
+                        else
+                        {
+                            sb.AppendFormat(@" <td>                                <select id=""{0}"" name=""{0}""  class=""easyui-combobox"" style =""width: 200px; height: 27px; ""
+                                            title = ""@Html.DisplayNameFor(model => model.{0})"" panelwidth = ""300"" data-options = ""required:true""
+                                            panelheight = '200' >
+                                        <option id = """" value = """" ></option >
+                                           @Html.Raw({0})
+                                       </select> </td>", rowValue);
+                        }
+
                     }
                     sb.Append(Environment.NewLine);
                 }   

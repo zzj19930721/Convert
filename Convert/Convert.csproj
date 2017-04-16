@@ -146,8 +146,6 @@
     <Content Include="Fac.aspx" />
     <Content Include="Content\Javascript\bootstrap.min.js" />
     <Content Include="Content\Javascript\jquery-1.7.1.min.js" />
-    <Content Include="index.html" />
-    <Content Include="index1.html" />
     <Content Include="MessageToSql.aspx" />
     <Content Include="replace.txt" />
     <Content Include="Tem\Controller\HEAD_2LIST.TXT" />

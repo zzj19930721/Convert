@@ -17,7 +17,6 @@
             <asp:ListItem Text="编辑页面" Value="list"></asp:ListItem>
         </asp:DropDownList>
         <asp:Button ID="Button1" runat="server" Text="转换" OnClick="Button1_Click" />
-
         <asp:TextBox ID="text2" runat="server" Height="600px" Width="43%" TextMode="MultiLine"></asp:TextBox>    
     </div>
 
