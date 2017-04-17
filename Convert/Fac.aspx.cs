@@ -20,14 +20,7 @@ namespace Convert
     public partial class Fac : BaseOpen
     {
 
-        protected void Page_Load(object sender, EventArgs e)
-        {            
-            if(!IsPostBack)
-            {
-                Binding();
-            }
-        }
-        private void Binding()
+        protected override void Binding()
         {
             //生成类型           
             drop_type.DataSource = GetEnumToDic<TypeModel>();          

@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!-- 定义一个带grid的基础数据维护窗口 -->
+<autoforms>
+  <!-- 集装箱提货申请 -->
+  <form name="autoform_imp_contasend">
+    <grid>grid_TPT_CHK_HEAD</grid>
+    <userclass>TPT.FormTptCHKClientService</userclass>
+    <addform>TPT.Frm_IMP_CONTASEND_ADD</addform>
+    <modiform>TPT.Frm_IMP_CONTASEND_ADD</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_IMP_CONTASEND_ADD</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_imp_contasend.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>TPT.FormChkContaSearch?QueryName=TptApprQueryConta^DOC_TYPE=TPT02</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+  <!-- 集装箱提货查询 -->
+  <form name="autoform_imp_contasend_query">
+    <grid>grid_TPT_CHK_HEAD_middle</grid>
+    <userclass>TPT.FormTptCHKClientService</userclass>
+    <addform>TPT.Frm_IMP_CONTASEND_ADD</addform>
+    <modiform>TPT.Frm_IMP_CONTASEND_ADD</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>ITF.Frm_IMP_CONTASEND_ADD_JGPT_MIDDLE</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_imp_contasend_query.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>TPT.FormChkContaSearchWithoutFilter?QueryName=TptApprOnlyQueryConta^DOC_TYPE=TPT02</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+  <!-- 集装箱提货维护 -->
+  <form name="autoform_contasend_modi">
+    <grid>grid_TPT_CHK_HEAD_modi</grid>
+    <userclass>TPT.FormTptExpTransClientService</userclass>
+    <addform>TPT.Frm_IMP_CONTA_MODI</addform>
+    <modiform>TPT.Frm_IMP_CONTA_MODI</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_IMP_CONTA_MODI</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_contasend_modi.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>TPT.FormChkContaSearch?QueryName=TptCHKCOPQuery^DOC_TYPE=TPT02</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+  
+  <!-- 集装箱运货申请 -->
+  <form name="autoform_exp_contasend">
+    <grid>grid_TPT_CHK_HEAD</grid>
+    <userclass>TPT.FormTptCHK_E_ClientService</userclass>
+    <addform>TPT.Frm_EXG_CONTASEND_ADD</addform>
+    <modiform>TPT.Frm_EXG_CONTASEND_ADD</modiform>
+    <detailform>TPT.Frm_EXG_CONTASEND_ADD</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_exp_contasend.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>TPT.FormChkContaSearch?QueryName=TptApprQueryConta^DOC_TYPE=TPT04</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+  <!-- 集装箱运货维护 -->
+  <form name="autoform_exp_contasend_modi">
+    <grid>grid_TPT_CHK_HEAD</grid>
+    <userclass>TPT.FormTptExpTransClientService</userclass>
+    <addform>TPT.Frm_EXP_CONTA_MODI</addform>
+    <modiform>TPT.Frm_EXP_CONTA_MODI</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_EXP_CONTA_MODI</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_exp_contasend_modi.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>TPT.FormChkContaSearch?QueryName=TptCHKCOPQuery^DOC_TYPE=TPT04</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+  <!-- 集装箱运货查询 -->
+  <form name="autoform_exp_contasend_query">
+    <grid>grid_TPT_CHK_HEAD_middle</grid>
+    <userclass>TPT.FormTptCHK_E_ClientService</userclass>
+    <addform>TPT.Frm_EXG_CONTASEND_ADD</addform>
+    <modiform>TPT.Frm_EXG_CONTASEND_ADD_JGPT_MIDDLE</modiform>
+    <detailform>ITF.Frm_EXG_CONTASEND_ADD_JGPT_MIDDLE</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_exp_contasend_query.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>TPT.FormChkContaSearchWithoutFilter?QueryName=TptApprOnlyQueryConta^DOC_TYPE=TPT04</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+  <!-- 散货运货申请 -->
+  <form name="autoform_exp_bulksend">
+    <grid>grid_TPT_CHK_HEAD_BULK</grid>
+    <userclass>TPT.FormExpBulkSendService</userclass>
+    <addform>TPT.Frm_EXP_BULKSEND_ADD</addform>
+    <modiform>TPT.Frm_EXP_BULKSEND_ADD</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_EXP_BULKSEND_ADD</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_exp_bulksend.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=TptApprQueryBulk^DOC_TYPE=TPT05</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+
+  <!-- 散货运货查询 -->
+  <form name="autoform_exp_bulk_query">
+    <grid>grid_TPT_CHK_HEAD_BULK</grid>
+    <userclass>TPT.FormTptCHK_E_ClientService</userclass>
+    <addform>TPT.Frm_EXP_BULKSEND_ADD</addform>
+    <modiform>TPT.Frm_EXP_BULKSEND_ADD</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_EXP_BULKSEND_ADD</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_exp_bulk_query.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=TptApprImpQueryBulk^DOC_TYPE=TPT05</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- 散货运货维护 -->
+  <form name="autoform_exp_bluk_modi">
+    <grid>grid_TPT_CHK_HEAD_BULK</grid>
+    <userclass>TPT.FormTptExpTransClientService</userclass>
+    <addform>TPT.Frm_EXP_BULK_MODI</addform>
+    <modiform>TPT.Frm_EXP_BULK_MODI</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_EXP_BULK_MODI</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_exp_bluk_modi.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=TptApprImpQueryBulk^DOC_TYPE=TPT05</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- 散货提货申请 --><!--
+  <form name="autoform_imp_bulksend">
+    <grid>grid_TPT_CHK_HEAD_BULK</grid>
+    <userclass></userclass>
+    <addform>TPT.Frm_IMP_BULKSEND_ADD</addform>
+    <modiform>TPT.Frm_IMP_BULKSEND_ADD</modiform>
+    --><!-- 详细数据窗口 --><!--
+    <detailform>TPT.Frm_IMP_BULKSEND_ADD</detailform>
+    <toolbar>toolbar.AutoFormListBar</toolbar>
+    <title>{autoform_imp_bulksend.title}</title>
+    <pagesize>20</pagesize>
+    --><!-- 简便查询对应的用户控件名称 --><!--
+    <simplesearch>Common.FormSearchTemplate?QueryName=TptApprQuery^DOC_TYPE=TPT03</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>-->
+  
+  <!-- 散货提货申请 -->
+  <form name="autoform_imp_bulksend">
+    <grid>grid_TPT_CHK_HEAD_BULK</grid>
+    <userclass>TPT.FormBulkSendService</userclass>
+    <addform>TPT.Frm_IMP_BULKSEND_ADD</addform>
+    <modiform>TPT.Frm_IMP_BULKSEND_ADD</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_IMP_BULKSEND_ADD</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_imp_bulksend.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=TptApprQueryBulk^DOC_TYPE=TPT03</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- 散货提货查询 -->
+  <form name="autoform_imp_bulk_query">
+    <grid>grid_TPT_CHK_HEAD_BULK</grid>
+    <userclass>TPT.FormTptCHKClientService</userclass>
+    <addform>TPT.Frm_IMP_BULKSEND_ADD</addform>
+    <modiform>TPT.Frm_IMP_BULKSEND_ADD</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_IMP_BULKSEND_ADD</detailform>
+    <toolbar>toolbar.AutoFormListBar</toolbar>
+    <title>{autoform_imp_bulk_query.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=TptApprImpQueryBulk^DOC_TYPE=TPT03</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- 散货提货维护 -->
+  <form name="autoform_bulk_modi">
+    <grid>grid_TPT_CHK_HEAD_BULK</grid>
+    <userclass>TPT.FormTptExpTransClientService</userclass>
+    <addform>TPT.Frm_IMP_BULK_MODI</addform>
+    <modiform>TPT.Frm_IMP_BULK_MODI</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_IMP_BULK_MODI</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_bulk_modi.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=TptChkQueryBulk^DOC_TYPE=TPT03</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  
+  
+  
+
+  <!-- 装运申请—表头 -->
+  <form name="autoform_tpt_loaddec">
+    <grid>grid_TPT_SHIP_HEAD</grid>
+    <userclass>TPT.FrmShipLoadClientService</userclass>
+    <addform>TPT.FrmShipLoadAddNew</addform>
+    <modiform>TPT.FrmShipLoadAddNew</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.FrmShipLoadAddNew</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_tpt_loaddec.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=LoadDecQuery</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- TPT运抵报告 -->
+  <form name="autoform_tpt_reachreport">
+    <grid>grid_reachnotice_arr_tpt</grid>
+    <userclass>TPT.EXP.Services.FormReachReportService</userclass>
+    <addform>TPT.EXP.FormReachReport</addform>
+    <modiform>TPT.EXP.FormReachReport</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.EXP.FormReachReport</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_reachreport.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>TPT.EXP.autoform_tpt_reachreport_FormSearch?QueryName=ReachNoticeAlter^I_E_FLAG=E^DOC_TYPE=TPT06</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+
+  <!-- TPT运抵报告 拆单-->
+  <form name="autoform_tpt_reachreport_CD">
+    <grid>grid_reachnotice_arr_tpt</grid>
+    <userclass>TPT.EXP.Services.FormReachReportService</userclass>
+    <addform>TPT.EXP.FormReachReportCD</addform>
+    <modiform>TPT.EXP.FormReachReportCD</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.EXP.FormReachReportCD</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{FormReachReportCD.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>TPT.EXP.autoform_tpt_reachreport_FormSearch?QueryName=ReachNoticeAlter^I_E_FLAG=E^DOC_TYPE=TPT06</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+
+  <!-- TPT运抵报告 并单-->
+  <form name="autoform_tpt_reachreport_BD">
+    <grid>grid_reachnotice_arr_tpt</grid>
+    <userclass>TPT.EXP.Services.FormReachReportService</userclass>
+    <addform>TPT.EXP.FormReachReportBD</addform>
+    <modiform>TPT.EXP.FormReachReportBD</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.EXP.FormReachReportBD</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_reachreportBD.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>TPT.EXP.autoform_tpt_reachreport_FormSearch?QueryName=ReachNoticeAlter^I_E_FLAG=E^DOC_TYPE=TPT06</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+
+  <!-- TPT运抵报告确认 -->
+  <form name="autoform_tpt_reachreport_confirm">
+    <grid>grid_reachnotice_arr_tpt</grid>
+    <userclass>TPT.EXP.Services.FormReachReportService</userclass>
+    <addform>TPT.EXP.FormReachReport</addform>
+    <modiform>TPT.EXP.FormReachReport</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.EXP.FormReachReport</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_tpt_reachreport_confirm.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=ReachNoticeConfirm_TPT^I_E_FLAG=E^DOC_TYPE=TPT06</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+
+
+  <!-- TPT到货通知 -->
+  <form name="autoform_tpt_reachnotice">
+    <grid>grid_reachnotice_tpt</grid>
+    <userclass>TPT.IMP.Services.FormReachNoticeService</userclass>
+    <addform>TPT.IMP.FormReachNotice</addform>
+    <modiform>TPT.IMP.FormReachNotice</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.IMP.FormReachNotice</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_reachnotice_maintain.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=ReachNoticeAlter^I_E_FLAG=I^DOC_TYPE=TPT01</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+
+
+
+  <!-- TPT到货通知  拆单业务 -->
+  <form name="autoform_tpt_reachnotice_CD">
+    <grid>grid_reachnotice_tpt</grid>
+    <userclass>TPT.IMP.Services.FormReachNoticeService</userclass>
+    <addform>TPT.IMP.FormReachNoticeCD</addform>
+    <modiform>TPT.IMP.FormReachNoticeCD</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.IMP.FormReachNoticeCD</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_reachnotice_maintainCD.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=ReachNoticeAlter^I_E_FLAG=I^DOC_TYPE=TPT01</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- TPT到货通知  并单业务 -->
+  <form name="autoform_tpt_reachnotice_BD">
+    <grid>grid_reachnotice_tpt</grid>
+    <userclass>TPT.IMP.Services.FormReachNoticeService</userclass>
+    <addform>TPT.IMP.FormReachNoticeBD</addform>
+    <modiform>TPT.IMP.FormReachNoticeBD</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.IMP.FormReachNoticeBD</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_reachnotice_maintainBD.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=ReachNoticeAlter^I_E_FLAG=I^DOC_TYPE=TPT01</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- TPT到货通知查询 -->
+  <form name="autoform_tpt_reachnotice_query">
+    <grid>grid_reachnotice_tpt_middle</grid>
+    <userclass></userclass>
+    <addform>TPT.IMP.FormReachNotice</addform>
+    <modiform>TPT.IMP.FormReachNotice</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>ITF.IMP.FormReachNotice_JGPT_MIDDLE</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_tpt_reachnotice_query.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>TPT.IMP.FormReachNoticeSearch?QueryName=ReachNotice_JGPT_MIDDLE^I_E_FLAG=I^DOC_TYPE=TPT01</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- TPT到货通知确认 -->
+  <form name="autoform_tpt_reachnotice_confirm">
+    <grid>grid_reachnotice_tpt</grid>
+    <userclass>TPT.IMP.Services.FormReachNoticeService</userclass>
+    <addform>TPT.IMP.FormReachNotice</addform>
+    <modiform>TPT.IMP.FormReachNotice</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.IMP.FormReachNotice</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_tpt_reachnotice_confirm.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=ReachNoticeConfirm_TPT^I_E_FLAG=I^DOC_TYPE=TPT01</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- TPT集装箱退场 -->
+  <form name="autoform_tpt_contaback">
+    <grid>grid_reachnotice_arr_tpt</grid>
+    <userclass>TPT.EXP.Services.FormContaBackService</userclass>
+    <addform>TPT.EXP.FormContaBack</addform>
+    <modiform>TPT.EXP.FormContaBack</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.EXP.FormContaBack</detailform>
+    <toolbar>toolbar.reachnotice</toolbar>
+    <title>{autoform_contaback.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=ReachNotice^I_E_FLAG=E^DOC_TYPE=TPT07</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- TPT散货退场 -->
+  <form name="autoform_tpt_bulkback">
+    <grid>grid_reachnotice_arr_tpt</grid>
+    <userclass>TPT.EXP.Services.FormBulkBackService</userclass>
+    <addform>TPT.EXP.FormBulkBack</addform>
+    <modiform>TPT.EXP.FormBulkBack</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.EXP.FormBulkBack</detailform>
+    <toolbar>toolbar.reachnotice</toolbar>
+    <title>{autoform_bulkback.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=ReachNotice^I_E_FLAG=E^DOC_TYPE=TPT08</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- TPT贸易类型转换 -->
+  <form name="autoform_tpt_tradechange">
+    <grid>grid_reachnotice_arr_tpt</grid>
+    <userclass>TPT.EXP.Services.FormTradeChangeService</userclass>
+    <addform>TPT.EXP.FormTradeChange</addform>
+    <modiform>TPT.EXP.FormTradeChange</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.EXP.FormTradeChange</detailform>
+    <toolbar>toolbar.reachnotice</toolbar>
+    <title>{autoform_tradechange.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=ReachNotice^I_E_FLAG=E^DOC_TYPE=TPT09</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- 进境舱单状态 -->
+  <form name="autoform_mft_manifest_info_i">
+    <grid>grid_MFT_MENIFEST_HEAD</grid>
+    <userclass></userclass>
+    <addform>TPT.FrmManifestInfoIAddNew</addform>
+    <modiform>TPT.FrmManifestInfoIAddNew</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.FrmManifestInfoIAddNew</detailform>
+    <toolbar>toolbar.AutoFormListBar</toolbar>
+    <title>{autoform_mft_manifest_info_i.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=MenifestQuery^I_O_FLAG=I</simplesearch>
+    <width>990</width>
+    <height>600</height>
+  </form>
+
+  <!-- 出境舱单状态 -->
+  <form name="autoform_mft_manifest_info_e">
+    <grid>grid_MFT_MENIFEST_HEAD</grid>
+    <userclass></userclass>
+    <addform>TPT.FrmManifestInfoEAddNew</addform>
+    <modiform>TPT.FrmManifestInfoEAddNew</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.FrmManifestInfoEAddNew</detailform>
+    <toolbar>toolbar.AutoFormListBar</toolbar>
+    <title>{autoform_mft_manifest_info_e.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=MenifestQuery^I_O_FLAG=E</simplesearch>
+    <width>990</width>
+    <height>600</height>
+  </form>
+
+  <!-- 散货提货大计划申请 -->
+  <form name="autoform_TPT13_TPT_LPLAN_HEAD_002">
+    <grid>grid_TPT13_TPT_LPLAN_HEAD_002</grid>
+    <userclass></userclass>
+    <addform>TPT.Frm_TPT_TPT_LPLAN_HEAD_002</addform>
+    <modiform>TPT.Frm_TPT_TPT_LPLAN_HEAD_002</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT_TPT_LPLAN_HEAD_002</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT13_TPT_LPLAN_HEAD_002.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=grid_TPT13_TPT_LPLAN_HEAD_002</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- 散货提货大计划查询 -->
+  <form name="autoform_TPT16_TPT_LPLAN_HEAD_002">
+    <grid>grid_TPT16_TPT_LPLAN_HEAD_002</grid>
+    <userclass></userclass>
+    <addform>TPT.Frm_TPT_TPT_LPLAN_HEAD_002</addform>
+    <modiform>TPT.Frm_TPT_TPT_LPLAN_HEAD_002</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT_TPT_LPLAN_HEAD_002</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT16_TPT_LPLAN_HEAD_002.title}</title>
+    <pagesize>20</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=grid_TPT16_TPT_LPLAN_HEAD_002</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- 集装箱提货大计划申请 -->
+  <form name="autoform_TPT12_TPT_LPLAN_HEAD_001">
+    <grid>grid_TPT12_TPT_LPLAN_HEAD_001</grid>
+    <userclass>TPT.ClientAutoFormTpt12Service</userclass>
+    <addform>TPT.Frm_TPT_TPT_LPLAN_HEAD_001</addform>
+    <modiform>TPT.Frm_TPT_TPT_LPLAN_HEAD_001</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT_TPT_LPLAN_HEAD_001</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT12_TPT_LPLAN_HEAD_001.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=Query_TPT12_TPT_LPLAN_HEAD_001</simplesearch>
+    <width>990</width>
+    <height>600</height>
+  </form>
+  <!-- 集装箱提货大计划查询 -->
+  <form name="autoform_TPT12_TPT_LPLAN_HEAD_002">
+    <grid>grid_TPT12_TPT_LPLAN_HEAD_001_middle</grid>
+    <userclass></userclass>
+    <addform></addform>
+    <modiform></modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>ITF.Frm_TPT_TPT_LPLAN_HEAD_001_JGPT_MIDDLE</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT12_TPT_LPLAN_HEAD_002.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=Query_TPT12_TPT_LPLAN_HEAD_002</simplesearch>
+    <width>990</width>
+    <height>600</height>
+  </form>
+  
+
+  <!-- 集装箱运货大计划申请 -->
+  <form name="autoform_TPT15_TPT_LPLAN_HEAD_001">
+    <grid>grid_TPT15_TPT_LPLAN_HEAD_001</grid>
+    <userclass>TPT.ClientAutoFormTpt15Service</userclass>
+    <addform>TPT.Frm_TPT_TPT_LPLAN_HEAD_002</addform>
+    <modiform>TPT.Frm_TPT_TPT_LPLAN_HEAD_002</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT_TPT_LPLAN_HEAD_002</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT15_TPT_LPLAN_HEAD_001.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=Query_TPT12_TPT_LPLAN_HEAD_001</simplesearch>
+    <width>990</width>
+    <height>600</height>
+  </form>
+
+  <!-- 集装箱运货大计划 查询 -->
+  <form name="autoform_TPT15_TPT_LPLAN_HEAD_002">
+    <grid>grid_TPT15_TPT_LPLAN_HEAD_001_middle</grid>
+    <userclass></userclass>
+    <addform></addform>
+    <modiform></modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>ITF.Frm_TPT_TPT_LPLAN_HEAD_002_JGPT_MIDDLE</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT15_TPT_LPLAN_HEAD_002.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=Query_TPT12_TPT_LPLAN_HEAD_002</simplesearch>
+    <width>990</width>
+    <height>600</height>
+  </form>
+	<!-- TPT整车到货通知 -->
+  <form name="autoform_TPT11_MFT_ARR_HEAD_001">
+    <grid>grid_TPT11_MFT_ARR_HEAD_001</grid>
+    <userclass>TPT.Frm_TPT11_MFT_ARR_HEAD_001Service</userclass>
+    <addform>TPT.Frm_TPT11_MFT_ARR_HEAD_001</addform>
+    <modiform>TPT.Frm_TPT11_MFT_ARR_HEAD_001</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT11_MFT_ARR_HEAD_001</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT11_MFT_ARR_HEAD_001.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=ReachNoticeAlter^I_E_FLAG=I^DOC_TYPE=TPT11</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- TPT整车到货通知查询 -->
+  <form name="autoform_TPT11_MFT_ARR_HEAD_001_query">
+    <grid>grid_TPT11_MFT_ARR_HEAD_001</grid>
+    <userclass></userclass>
+    <addform>TPT.Frm_TPT11_MFT_ARR_HEAD_001</addform>
+    <modiform>TPT.Frm_TPT11_MFT_ARR_HEAD_001</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT11_MFT_ARR_HEAD_001</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT11_MFT_ARR_HEAD_001_query.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>TPT.IMP.FormReachNoticeSearch?QueryName=ReachNotice^I_E_FLAG=I^DOC_TYPE=TPT11</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- TPT整车到货通知确认 -->
+  <form name="autoform_TPT11_MFT_ARR_HEAD_001_confirm">
+    <grid>grid_reachnotice_tpt</grid>
+    <userclass>TPT.IMP.Services.FormReachNoticeService</userclass>
+    <addform>TPT.IMP.FormReachNotice</addform>
+    <modiform>TPT.IMP.FormReachNotice</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.IMP.FormReachNotice</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_tpt_reachnotice_confirm.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=ReachNoticeConfirm_TPT^I_E_FLAG=I^DOC_TYPE=TPT11</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- TPT整车提货大计划 -->
+  <form name="autoform_TPT14_TPT_LPLAN_HEAD_001">
+    <grid>grid_TPT14_TPT_LPLAN_HEAD_001</grid>
+    <userclass>TPT.Frm_TPT14_MFT_ARR_HEAD_001Service</userclass>
+    <addform>TPT.Frm_TPT14_TPT_LPLAN_HEAD_001</addform>
+    <modiform>TPT.Frm_TPT14_TPT_LPLAN_HEAD_001</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT14_TPT_LPLAN_HEAD_001</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{table.TPT_LPLAN_HEAD.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=Query_TPT14_TPT_LPLAN_HEAD_001^DOC_TYPE=TPT14</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <!-- TPT整车提货大计划查询 -->
+  <form name="autoform_TPT14_TPT_LPLAN_HEAD_001_query">
+    <grid>grid_TPT14_TPT_LPLAN_HEAD_001</grid>
+    <userclass></userclass>
+    <addform>TPT.Frm_TPT14_TPT_LPLAN_HEAD_001</addform>
+    <modiform>TPT.Frm_TPT14_TPT_LPLAN_HEAD_001</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT14_TPT_LPLAN_HEAD_001</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{table.TPT_LPLAN_HEAD_query.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=Query_TPT14_TPT_LPLAN_HEAD_001_query^DOC_TYPE=TPT14</simplesearch>
+    <width>990</width>
+    <height>595</height>
+  </form>
+
+  <form name="autoform_TPT13_TPT_LPLAN_HEAD_003">
+    <grid>grid_TPT13_TPT_LPLAN_HEAD_003</grid>
+    <userclass>TPT.ClientAutoFormTpt13Service</userclass>
+    <addform>TPT.Frm_TPT_TPT_LPLAN_HEAD_003</addform>
+    <modiform>TPT.Frm_TPT_TPT_LPLAN_HEAD_003</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT_TPT_LPLAN_HEAD_003</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT13_TPT_LPLAN_HEAD_003.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=Query_TPT13_TPT_LPLAN_HEAD_003</simplesearch>
+    <width>990</width>
+    <height>600</height>
+  </form>
+  <form name="autoform_TPT13_TPT_LPLAN_HEAD_001">
+    <grid>grid_TPT13_TPT_LPLAN_HEAD_003_middle</grid>
+    <userclass></userclass>
+    <addform></addform>
+    <modiform></modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT_TPT_LPLAN_HEAD_003</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT13_TPT_LPLAN_HEAD_001.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=Query_TPT13_TPT_LPLAN_HEAD_001</simplesearch>
+    <width>990</width>
+    <height>600</height>
+  </form>
+  <!-- 散货运货大计划申请 -->
+  <form name="autoform_TPT16_TPT_LPLAN_HEAD_004">
+    <grid>grid_TPT16_TPT_LPLAN_HEAD_004</grid>
+    <userclass>TPT.ClientAutoFormTpt16Service</userclass>
+    <addform>TPT.Frm_TPT_TPT_LPLAN_HEAD_004</addform>
+    <modiform>TPT.Frm_TPT_TPT_LPLAN_HEAD_004</modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT_TPT_LPLAN_HEAD_004</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT16_TPT_LPLAN_HEAD_004.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=Query_TPT16_TPT_LPLAN_HEAD_004</simplesearch>
+    <width>990</width>
+    <height>600</height>
+  </form>
+  <!-- 集装箱运货大计划 查询 -->
+  <form name="autoform_TPT16_TPT_LPLAN_HEAD_001">
+    <grid>grid_TPT16_TPT_LPLAN_HEAD_004_middle</grid>
+    <userclass></userclass>
+    <addform></addform>
+    <modiform></modiform>
+    <!-- 详细数据窗口 -->
+    <detailform>TPT.Frm_TPT_TPT_LPLAN_HEAD_004</detailform>
+    <toolbar>toolbar.FrmToolBarEdit</toolbar>
+    <title>{autoform_TPT16_TPT_LPLAN_HEAD_001.title}</title>
+    <pagesize>100</pagesize>
+    <!-- 简便查询对应的用户控件名称 -->
+    <simplesearch>Common.FormSearchTemplate?QueryName=Query_TPT16_TPT_LPLAN_HEAD_001</simplesearch>
+    <width>990</width>
+    <height>600</height>
+  </form>
+</autoforms>

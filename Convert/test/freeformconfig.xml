@@ -1,0 +1,2978 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<freeforms>
+  <!--装运申请表头-->
+  <form name="Frm_TPT_SHIP_HEAD" startx="10" starty="15" showgridline="false">
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="I_E_FLAG" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="I_E_FLAG" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="D_L" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="D_L" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="75" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="SHIP_CODE" x="5" y="10" width="75" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_CODE" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="75" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="CUSTOMS_CODE" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+        <col width="60">
+          <label  controltype="UltraLabel" dbname="TASK_TIME" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+        </col>
+        <col width="200">
+          <editor controltype="UltraDateTimeEditor"  dbname="TASK_TIME" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+        </col>
+    </row>
+      <row height="27">
+        <col width="60">
+          <label  controltype="UltraLabel" dbname="TASK_PLACE" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+        </col>
+        <col width="200">
+          <editor controltype="UltraTextEditor"  dbname="TASK_PLACE" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+        </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="TASK_CONTENT" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="TASK_CONTENT" x="35" y="5" width="400" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>   
+    </row>
+    <row height="40">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="GOODS_NAME" x="5" y="4" width="75" height="27" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="GOODS_NAME" x="35" y="5" width="660" height="24"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="DEC_TIME" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="INPUT_COP_NAME" x="5" y="4" width="75" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="INPUT_COP_NAME" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="RET_CHANNEL" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="RET_CHANNEL" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="CHK_STATUS" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="CHK_STATUS" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+  <!--装运申请 提货单-->
+  <form name="Frm_TPT_SHIP_BILL" startx="10" starty="10" showgridline="false">
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="ENTRY_ID" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="ENTRY_ID" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="OWNER_NAME" x="5" y="4" width="85" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="OWNER_NAME" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="CODE_T" x="5" y="4" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="CODE_T" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="G_NAME" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="G_NAME" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="TO_USER" x="5" y="4" width="85" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="TO_USER" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="NOTIFY_PARTY" x="5" y="5" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="NOTIFY_PARTY" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="DECLARE_CODE" x="5" y="5" width="85" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="DECLARE_CODE" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="DECLARE_NAME" x="5" y="5" width="85" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="DECLARE_NAME" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="WRAP_TYPE" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="WRAP_TYPE" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="PACK_NO" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraNumericEditor"  dbname="PACK_NO" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="CARGO_NW" x="5" y="10" width="85" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="CARGO_NW_D" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW_D" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="CARGO_NW_R" x="5" y="10" width="75" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW_R" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+  <!--装运申请 集装箱-->
+  <form name="Frm_TPT_SHIP_CONA" startx="10" starty="10" showgridline="false">
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="CONTA_ID" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_ID" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="CONTA_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="CONTA_TYPE" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="CONTA_SIZE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_SIZE" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="SEAL_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_NO" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="SEAL_CLASS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_CLASS" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="27">
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="SEAL_PERSON" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_PERSON" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="60">
+        <label  controltype="UltraLabel" dbname="CONTA_STATUS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="CONTA_STATUS" x="35" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+  <!--到货通知 明细表头-->
+  <form name="FormReachNotice.head" startx="5" starty="15" showgridline="false">
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRADE_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="TRADE_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="EMPTY_SIGN" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="EMPTY_SIGN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRAF_MODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="TRAF_MODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CUSTOMS_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="WRAP_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="WRAP_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PACK_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="PACK_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="26">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="80" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="G_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="G_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="OWNER_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="OWNER_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TO_USER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="TO_USER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="NOTIFY_PARTY" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="NOTIFY_PARTY" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CARGO_NW" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RECV_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="RECV_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="{date} {time}" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="UNLOAD_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="UNLOAD_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="{date} {time}" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_NOTE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="330">
+        <editor controltype="UltraTextEditor"  dbname="CHK_NOTE" x="5" y="5" width="320" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="I_SHIP_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="I_SHIP_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="I_VOY_NO" x="5" y="10" width="80" height="25" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="I_VOY_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DOCUMENT_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="DOCUMENT_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="ENTRY_NUM" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="ENTRY_NUM" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DOC_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="DOC_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_STATUS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CHK_STATUS" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BUSINESS_STEP" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="BUSINESS_STEP" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RET_CHANNEL" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="RET_CHANNEL" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUT_COP_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="INPUT_COP_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="DEC_TIME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="USER_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="USER_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+
+  </form>
+
+
+
+
+
+
+
+  <!--到货通知 明细表体-->
+  <form name="FormReachNotice.list" startx="5" starty="15" showgridline="false">
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CONTA_ID" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_ID" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CONTA_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PLACE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="330">
+        <editor controltype="UltraTextEditor"  dbname="PLACE" x="5" y="5" width="320" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEAL_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CONTA_STATUS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CONTA_STATUS" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="STORAGENO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="STORAGENO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEAL_CLASS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_CLASS" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEAL_PERSON" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_PERSON" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="UNLOAD_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="UNLOAD_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RECV_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="RECV_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DTP_DNGCD" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="DTP_DNGCD" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark=""/>
+      </col>
+    </row>
+  </form>
+
+  <!--到货通知 明细表头 三列加左面板-->
+  <form name="FormReachNotice.headC3" startx="5" starty="25" showgridline="false">
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRADE_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="TRADE_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="EMPTY_SIGN" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="EMPTY_SIGN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRAF_MODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="TRAF_MODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="WRAP_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="WRAP_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="OWNER_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="OWNER_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TO_USER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="TO_USER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="NOTIFY_PARTY" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="NOTIFY_PARTY" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="G_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="G_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PACK_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="PACK_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CARGO_NW" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RECV_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="RECV_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="UNLOAD_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="UNLOAD_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_NOTE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="CHK_NOTE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="I_SHIP_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="I_SHIP_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="I_VOY_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="I_VOY_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CUSTOMS_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DOC_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="DOC_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_STATUS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CHK_STATUS" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BUSINESS_STEP" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="BUSINESS_STEP" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RET_CHANNEL" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="RET_CHANNEL" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUT_COP_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="INPUT_COP_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="DEC_TIME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <leftpanel>
+      <link name ="result" x="5" y="100" text ="link.button.result.text" formname=""></link>
+      <link name ="history" x="5" y="125" text ="link.button.history.text" formname=""></link>
+      <link name ="tuidan" x="5" y="200" text ="link.button.tuidan.text" formname=""></link>
+      <link name ="deliver" x="5" y="225" text ="link.button.deliver.text" formname=""></link>
+      <link name ="pass" x="5" y="250" text ="link.button.pass.text" formname=""></link>
+      <link name ="throw" x="5" y="275" text="link.button.throw.text" formname=""></link>
+    </leftpanel>
+  </form>
+
+  <!--到货通知 散货退运-->
+  <form name="FormReachNotice.bulk" startx="5" starty="25" showgridline="false">
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRADE_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="TRADE_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="EMPTY_SIGN" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="EMPTY_SIGN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRAF_MODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="TRAF_MODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CUSTOMS_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RECV_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="RECV_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="{date} {time}" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="UNLOAD_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="UNLOAD_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="{date} {time}" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="WRAP_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="WRAP_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PACK_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="PACK_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CARGO_NW" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="G_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="G_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="OWNER_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="OWNER_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TO_USER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="TO_USER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="NOTIFY_PARTY" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="NOTIFY_PARTY" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+      </col>
+      <col width="120">
+      </col>
+      <col width="90">
+      </col>
+      <col width="120">
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CARGO_NW_D" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW_D" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CARGO_NW_R" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW_R" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DOC_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="DOC_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_STATUS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CHK_STATUS" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BUSINESS_STEP" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="BUSINESS_STEP" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RET_CHANNEL" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="RET_CHANNEL" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUT_COP_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="INPUT_COP_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="DEC_TIME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_NOTE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="CHK_NOTE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+  <!--到货通知 明细表头 三列加左面板-->
+  <form name="FormReachNotice.bulkC3" startx="5" starty="25" showgridline="false">
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRADE_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="TRADE_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="EMPTY_SIGN" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="EMPTY_SIGN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRAF_MODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="TRAF_MODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="WRAP_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="WRAP_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="OWNER_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="OWNER_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TO_USER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="TO_USER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="NOTIFY_PARTY" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="NOTIFY_PARTY" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="G_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="G_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PACK_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="PACK_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CARGO_NW" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CARGO_NW_D" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW_D" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CARGO_NW_R" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW_R" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RECV_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="RECV_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="UNLOAD_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="UNLOAD_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CUSTOMS_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DOC_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="DOC_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_STATUS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CHK_STATUS" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BUSINESS_STEP" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="BUSINESS_STEP" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RET_CHANNEL" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="RET_CHANNEL" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUT_COP_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="INPUT_COP_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="DEC_TIME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_NOTE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="CHK_NOTE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <leftpanel>
+      <link name ="result" x="5" y="100" text ="link.button.result.text" formname=""></link>
+      <link name ="history" x="5" y="125" text ="link.button.history.text" formname=""></link>
+      <link name ="tuidan" x="5" y="200" text ="link.button.tuidan.text" formname=""></link>
+      <link name ="deliver" x="5" y="225" text ="link.button.deliver.text" formname=""></link>
+      <link name ="pass" x="5" y="250" text ="link.button.pass.text" formname=""></link>
+      <link name ="throw" x="5" y="275" text="link.button.throw.text" formname=""></link>
+    </leftpanel>
+  </form>
+
+  <!-- 集装箱提货申报 -->
+  <form name="Frm_TPT_APPR" startx="20" starty="10" showgridline="false">
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="TRADE_TYPE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="TRADE_TYPE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="EMPTY_SIGN" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="EMPTY_SIGN" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="TRAF_MODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="TRAF_MODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="I_E_AREA" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="I_E_AREA" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="SHIP_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="PLAN_DATE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraDateTimeEditor"  dbname="PLAN_DATE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CONTA_ID1" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_ID1" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CONTA_TYPE1" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_TYPE1" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="DTP_DNGCD1" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="DTP_DNGCD1" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CONTA_ID2" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_ID2" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CONTA_TYPE2" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_TYPE2" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="DTP_DNGCD2" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="DTP_DNGCD2" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="TRN_COP_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="460">
+        <editor controltype="UltraComboEditor"  dbname="TRN_COP_CODE" x="5" y="5" width="420" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="VE_TUOJIA_NAME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="VE_TUOJIA_NAME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="VE_NAME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="VE_NAME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="VE_WT" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="VE_WT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="VE_TUOJIA_WT" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="VE_TUOJIA_WT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="32">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="QTY_WT" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="QTY_WT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CARRY_TYPE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CARRY_TYPE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CUSTOMS_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CHK_STATUS" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CHK_STATUS" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="DEC_TIME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="RET_CHANNEL" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="RET_CHANNEL" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+  <!-- 散货提货申报 -->
+  <form name="Frm_TPT_APPR_BULK" startx="20" starty="20" showgridline="false">
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="TRADE_TYPE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="TRADE_TYPE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="EMPTY_SIGN" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="EMPTY_SIGN" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="TRAF_MODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="TRAF_MODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="I_E_AREA" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="I_E_AREA" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CUSTOMS_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CARRY_TYPE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CARRY_TYPE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="SHIP_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="PLAN_DATE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraDateTimeEditor"  dbname="PLAN_DATE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="QTY_WT" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="QTY_WT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="TRN_COP_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="460">
+        <editor controltype="UltraComboEditor"  dbname="TRN_COP_CODE" x="5" y="5" width="420" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="VE_TUOJIA_NAME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="VE_TUOJIA_NAME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="40">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="VE_NAME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="VE_NAME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="VE_WT" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="VE_WT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="VE_TUOJIA_WT" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="VE_TUOJIA_WT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CHK_STATUS" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CHK_STATUS" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="BUSINESS_STEP" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="BUSINESS_STEP" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="DEC_TIME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="RET_CHANNEL" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="RET_CHANNEL" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="DOC_TYPE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="DOC_TYPE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+
+  <!-- 进出境舱单动态表头 -->
+  <form name="Frm_MFT_MENIFEST_HEAD" startx="10" starty="10" showgridline="false">
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="NO_SERIAL" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="NO_SERIAL" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DEST_CUS_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="DEST_CUS_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="90" height="25" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_EN" x="5" y="10" width="90" height="25" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_EN" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_ID" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_ID" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PORT_LOADING" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="PORT_LOADING" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PORT_DISCHARGE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="PORT_DISCHARGE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="START_DATES" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraDateTimeEditor"  dbname="START_DATES" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="GROSS_TONNAGE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_TONNAGE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="NET_TONNAGE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraNumericEditor"  dbname="NET_TONNAGE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DWT" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraNumericEditor"  dbname="DWT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TOTAL_INFO" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="TOTAL_INFO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CARRIER_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="CARRIER_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CARRIER_NAME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="CARRIER_NAME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DECLARE_DATE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraDateTimeEditor"  dbname="DECLARE_DATE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="NOTICE_DATE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraDateTimeEditor"  dbname="NOTICE_DATE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="I_O_FLAG" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="I_O_FLAG" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BERTH_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="BERTH_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_STATUS" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="CHK_STATUS" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RET_CHANNEL" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="RET_CHANNEL" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DECLARE_MARK" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="DECLARE_MARK" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="CUSTOMS_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="POS_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="POS_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_TIME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraDateTimeEditor"  dbname="CHK_TIME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraDateTimeEditor"  dbname="DEC_TIME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUT_COP_NO" x="5" y="10" width="90" height="25" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="INPUT_COP_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUT_COP_NAME" x="5" y="10" width="90" height="25" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="INPUT_COP_NAME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+  <!-- 进出境舱单动态表体 -->
+  <form name="Frm_MFT_MENIFEST_BILL" startx="10" starty="10" showgridline="false">
+    <row height="25">
+
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="NO_SERIAL" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="NO_SERIAL" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="TRADE_TYPE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="TRADE_TYPE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="EMPTY_SIGN" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="EMPTY_SIGN" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="GOODS_NAME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="GOODS_NAME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="OWNER_NAME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="OWNER_NAME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="TO_USER" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="TO_USER" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="NOTIFY_PARTY" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="NOTIFY_PARTY" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="PACK_TYPE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="PACK_TYPE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="PACK_NO" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="PACK_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CARGO_NW" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CONTA_QTY" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraNumericEditor"  dbname="CONTA_QTY" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="LOADING_PLACE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="LOADING_PLACE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="DESTINATION_PLACE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="DESTINATION_PLACE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="LOADING_DATE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraDateTimeEditor"  dbname="LOADING_DATE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="ARRIVAL_TIME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraDateTimeEditor"  dbname="ARRIVAL_TIME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="DECLARE_ORG_CODE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="DECLARE_ORG_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="DECLARE_ORG_NAME" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="DECLARE_ORG_NAME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+  <!-- 进出境舱单动态集装箱 -->
+  <form name="Frm_MFT_MENIFEST_CONA_TPT" startx="10" starty="10" showgridline="false">
+    <row height="25">
+
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="NO_SERIAL" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="NO_SERIAL" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="DTP_DNGCD" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="DTP_DNGCD" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CONTA_ID" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_ID" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CONTA_TYPE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_TYPE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="CONTA_SIZE" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_SIZE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="SEAL_NO" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="SEAL_CLASS" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_CLASS" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="100">
+        <label  controltype="UltraLabel" dbname="SEAL_PERSON" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_PERSON" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+  <!-- 集装箱提货大计划申请 -->
+  <form name="Frm_TPT12_TPT_LPLAN_HEAD_001" startx="20" starty="10" showgridline="false">
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="PLAN_CODE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="PLAN_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="TRADE_TYPE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="TRADE_TYPE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="I_E_AREA" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="I_E_AREA" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="PLANDATE_BEGIN" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraDateTimeEditor"  dbname="PLANDATE_BEGIN" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="PLANDATE_END" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraDateTimeEditor"  dbname="PLANDATE_END" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="DELIVERY_UNIT" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="DELIVERY_UNIT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="TRN_COP_CODE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="480">
+        <editor controltype="UltraTextEditor"  dbname="TRN_COP_CODE" x="5" y="5" width="440" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="TRN_COP_NAME" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="780">
+        <editor controltype="UltraTextEditor"  dbname="TRN_COP_NAME" x="5" y="5" width="740" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="CHK_STATUS" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CHK_STATUS" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="NOTE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="480">
+        <editor controltype="UltraTextEditor"  dbname="NOTE" x="5" y="5" width="440" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CUSTOMS_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="INPUT_COP_NAME" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="INPUT_COP_NAME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="DEC_TIME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="RET_CHANNEL" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="RET_CHANNEL" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="PACK_NO" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="PACK_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+  
+  <!-- 集装箱提货大计划申请 表体-->
+  <form name="Frm_TPT12_TPT_LPLAN_LIST_001" startx="20" starty="10" showgridline="false">
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="SHIP_CODE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_CODE" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="120" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="CONTA_ID" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_ID" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="CONTA_TYPE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CONTA_TYPE" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="DTP_DNGCD" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="DTP_DNGCD" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="OWNER_NAME" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="OWNER_NAME" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="TO_USER" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="TO_USER" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="CONTA_WT" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="CONTA_WT" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="GOODS_WT" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="GOODS_WT" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="G_QTY" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="G_QTY" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="WRAP_TYPE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="WRAP_TYPE" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="CUS_STATUS" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CUS_STATUS" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+    <!--整车到货通知 明细表头-->
+  <form name="Frm_TPT11_MFT_ARR_HEAD_001.head" startx="5" starty="15" showgridline="false">
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRADE_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="TRADE_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="EMPTY_SIGN" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="EMPTY_SIGN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRAF_MODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="TRAF_MODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CUSTOMS_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="WRAP_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="WRAP_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PACK_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="PACK_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="26">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="80" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="G_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="G_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="OWNER_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="OWNER_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TO_USER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="TO_USER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="NOTIFY_PARTY" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="NOTIFY_PARTY" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CARGO_NW" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="CARGO_NW" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RECV_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="RECV_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="{date} {time}" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="UNLOAD_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="UNLOAD_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="{date} {time}" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_NOTE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="330">
+        <editor controltype="UltraTextEditor"  dbname="CHK_NOTE" x="5" y="5" width="320" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="I_SHIP_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="I_SHIP_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="I_VOY_NO" x="5" y="10" width="80" height="25" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="I_VOY_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DOCUMENT_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="DOCUMENT_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="ENTRY_NUM" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="ENTRY_NUM" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DOC_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="DOC_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_STATUS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CHK_STATUS" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BUSINESS_STEP" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="BUSINESS_STEP" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RET_CHANNEL" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="RET_CHANNEL" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUT_COP_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="INPUT_COP_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="DEC_TIME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="USER_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="USER_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+
+  </form>
+
+  <!--整车到货通知 明细表体-->
+  <form name="Frm_TPT11_MFT_ARR_HEAD_001.list" startx="5" starty="15" showgridline="false">
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CONTA_ID" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_ID" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CONTA_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="CONTA_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PLACE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="330">
+        <editor controltype="UltraTextEditor"  dbname="PLACE" x="5" y="5" width="320" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEAL_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CONTA_STATUS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CONTA_STATUS" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="STORAGENO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="STORAGENO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEAL_CLASS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_CLASS" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEAL_PERSON" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEAL_PERSON" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="UNLOAD_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="UNLOAD_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RECV_DATE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="RECV_DATE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DTP_DNGCD" x="5" y="10" width="90" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="200">
+        <editor controltype="UltraComboEditor"  dbname="DTP_DNGCD" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark=""/>
+      </col>
+    </row>
+  </form>
+
+  <!--整车提货大计划 表头-->
+  <form name="Frm_TPT14_TPT_LPLAN_HEAD_001" startx="5" starty="15" showgridline="false">
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PLAN_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="PLAN_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRADE_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="TRADE_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="I_E_AREA" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="I_E_AREA" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="35">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DELIVERY_UNIT" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="330">
+        <editor controltype="UltraTextEditor"  dbname="DELIVERY_UNIT" x="5" y="5" width="320" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PLANDATE_BEGIN" x="5" y="10" width="80" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="PLANDATE_BEGIN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PLANDATE_END" x="5" y="10" width="80" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraDateTimeEditor"  dbname="PLANDATE_END" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRN_COP_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="330">
+        <editor controltype="UltraTextEditor"  dbname="TRN_COP_CODE" x="5" y="5" width="320" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TRN_COP_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="330">
+        <editor controltype="UltraTextEditor"  dbname="TRN_COP_NAME" x="5" y="5" width="320" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="26">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="NOTE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="750">
+        <editor controltype="UltraTextEditor"  dbname="NOTE" x="5" y="5" width="740" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CUSTOMS_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUT_COP_NAME" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="330">
+        <editor controltype="UltraTextEditor"  dbname="INPUT_COP_NAME" x="5" y="5" width="320" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="80" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="80" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="DEC_TIME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="{date} {time}" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CHK_STATUS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="CHK_STATUS" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="RET_CHANNEL" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="RET_CHANNEL" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="PACK_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="PACK_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+  <!--整车提货大计划 表体-->
+  <form name="Frm_TPT14_TPT_LPLAN_GLIST_001" startx="5" starty="15" showgridline="false">
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_CODE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_CODE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="80" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="80" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="VEHICLE_BRAND" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="VEHICLE_BRAND" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="FRAME_NAMBER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="FRAME_NAMBER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="ENGINE_NUMBER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="ENGINE_NUMBER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="COLOR" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="COLOR" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="26">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="GOODS_WT" x="5" y="10" width="80" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraNumericEditor"  dbname="GOODS_WT" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="OWNER_NAME" x="5" y="10" width="80" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="OWNER_NAME" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="TO_USER" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="TO_USER" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="G_QTY" x="5" y="10" width="80" height="26" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="G_QTY" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="WRAP_TYPE" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraComboEditor"  dbname="WRAP_TYPE" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="90">
+        <label  controltype="UltraLabel" dbname="CUS_STATUS" x="5" y="10" width="80" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="120">
+        <editor controltype="UltraTextEditor"  dbname="CUS_STATUS" x="5" y="5" width="110" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+  <!-- 散货提货大计划申请 -->
+  <form name="Frm_TPT13_TPT_LPLAN_HEAD_003" startx="20" starty="10" showgridline="false">
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="SEQ_NO" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SEQ_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="PLAN_CODE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="PLAN_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="TRADE_TYPE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="TRADE_TYPE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="I_E_AREA" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="I_E_AREA" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="PLANDATE_BEGIN" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraDateTimeEditor"  dbname="PLANDATE_BEGIN" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="PLANDATE_END" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraDateTimeEditor"  dbname="PLANDATE_END" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="DELIVERY_UNIT" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="DELIVERY_UNIT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="TRN_COP_CODE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="480">
+        <editor controltype="UltraTextEditor"  dbname="TRN_COP_CODE" x="5" y="5" width="440" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="TRN_COP_NAME" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="780">
+        <editor controltype="UltraTextEditor"  dbname="TRN_COP_NAME" x="5" y="5" width="740" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="NOTE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="780">
+        <editor controltype="UltraTextEditor"  dbname="NOTE" x="5" y="5" width="740" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="AREA_CODE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="AREA_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="CUSTOMS_CODE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CUSTOMS_CODE" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="INPUT_COP_NAME" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="INPUT_COP_NAME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="INPUTER" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="INPUTER" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="DEC_TIME" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="DEC_TIME" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="PACK_NO" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="PACK_NO" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+     
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="GROSS_WT" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="GROSS_WT" x="5" y="5" width="140" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+
+  <!-- 散货提货大计划申请 表体-->
+  <form name="Frm_TPT13_TPT_LPLAN_LIST_003" startx="20" starty="10" showgridline="false">
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="SHIP_CODE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_CODE" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="SHIP_NAME_CN" x="5" y="10" width="120" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="SHIP_NAME_CN" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="VOY_NO" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="VOY_NO" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="BILL_NO" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="BILL_NO" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="G_NAME" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="G_NAME" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="G_MODEL" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="G_MODEL" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="OWNER_NAME" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="OWNER_NAME" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="TO_USER" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraTextEditor"  dbname="TO_USER" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="CONTA_WT" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="CONTA_WT" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="GOODS_WT" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="GOODS_WT" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="G_QTY" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraNumericEditor"  dbname="G_QTY" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="WRAP_TYPE" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="WRAP_TYPE" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+    <row height="25">
+      <col width="120">
+        <label  controltype="UltraLabel" dbname="CUS_STATUS" x="5" y="10" width="110" height="20" font="宋体" size="9" align="l" border="" text="" />
+      </col>
+      <col width="180">
+        <editor controltype="UltraComboEditor"  dbname="CUS_STATUS" x="5" y="5" width="160" height="21"  font="宋体" size="9" align="l" border="" defaultvalue="" mark="" />
+      </col>
+    </row>
+  </form>
+</freeforms>

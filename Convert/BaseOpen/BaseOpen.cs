@@ -37,6 +37,8 @@ namespace Convert.Other
         /// </summary>
         protected DbHelper db;
 
+        protected OpenXMl openXml = new OpenXMl();
+
         protected Dictionary<int, string> GetEnumToDic<T>()
         {
             Dictionary<int, string> obj = new Dictionary<int, string>();
@@ -46,6 +48,20 @@ namespace Convert.Other
             }
             return obj;
         }
+
+        protected virtual void Binding()
+        {
+        }
+
+        protected virtual  void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                Binding();
+            }
+        }
+
+
 
     }
 }

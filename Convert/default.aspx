@@ -9,16 +9,24 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        <asp:TextBox ID="text1" runat="server" Height="600px" Width="43%"  TextMode="MultiLine"></asp:TextBox>
+        <div >
+        <asp:TextBox ID="text1" runat="server" Height="600px" Width="40%"   TextMode="MultiLine"></asp:TextBox>
+        </div>
 
-        <asp:DropDownList ID="type" runat="server">
-            <asp:ListItem Text="查询页面" Value="head"></asp:ListItem>
-            <asp:ListItem Text="编辑页面" Value="list"></asp:ListItem>
-        </asp:DropDownList>
+
+        <div  style="width:15%; ">
+
+         <asp:TextBox ID="txt_tb" runat="server"></asp:TextBox><p />
+        <asp:DropDownList ID="dd_time" runat="server" DataValueField="Key" DataTextField="Value">        </asp:DropDownList><p />
+        <asp:DropDownList ID="dd_type" runat="server" DataValueField="Key" DataTextField="Value">        </asp:DropDownList>
         <asp:Button ID="Button1" runat="server" Text="转换" OnClick="Button1_Click" />
-        <asp:TextBox ID="text2" runat="server" Height="600px" Width="43%" TextMode="MultiLine"></asp:TextBox>    
-    </div>
+
+        </div>
+
+        <div >
+        <asp:TextBox ID="text2" runat="server" Height="600px" Width="40%" TextMode="MultiLine"></asp:TextBox>    
+        </div>
+
 
     </form>
 

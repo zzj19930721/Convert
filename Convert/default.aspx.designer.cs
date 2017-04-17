@@ -31,13 +31,31 @@ namespace Convert {
         protected global::System.Web.UI.WebControls.TextBox text1;
         
         /// <summary>
-        /// type 控件。
+        /// txt_tb 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList type;
+        protected global::System.Web.UI.WebControls.TextBox txt_tb;
+        
+        /// <summary>
+        /// dd_time 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dd_time;
+        
+        /// <summary>
+        /// dd_type 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dd_type;
         
         /// <summary>
         /// Button1 控件。

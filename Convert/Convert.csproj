@@ -146,6 +146,7 @@
     <Content Include="Fac.aspx" />
     <Content Include="Content\Javascript\bootstrap.min.js" />
     <Content Include="Content\Javascript\jquery-1.7.1.min.js" />
+    <Content Include="index.html" />
     <Content Include="MessageToSql.aspx" />
     <Content Include="replace.txt" />
     <Content Include="Tem\Controller\HEAD_2LIST.TXT" />
@@ -153,6 +154,12 @@
     <Content Include="Tem\TemModel\HModel.TXT" />
     <Content Include="Tem\XML\OBJECT.TXT" />
     <Content Include="Tem\XML\BIZ.TXT" />
+    <Content Include="test\autoform.xml" />
+    <Content Include="test\freeformconfig.xml" />
+    <Content Include="test\grids.xml" />
+    <Content Include="test\messageconfig.xml" />
+    <Content Include="test\QueryField.xml" />
+    <Content Include="test\tableconfig.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -193,6 +200,7 @@
     <Compile Include="MessageToSql.aspx.designer.cs">
       <DependentUpon>MessageToSql.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Model\DtXml.cs" />
     <Compile Include="Model\HeadAndListTem.cs" />
     <Content Include="Tem\Controller\HEAD_LIST.TXT" />
     <Content Include="Tem\DAO\HEAD_LIST.TXT" />
@@ -216,6 +224,7 @@
     <Compile Include="Fac.aspx.designer.cs">
       <DependentUpon>Fac.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OpenXMl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
@@ -227,9 +236,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Fakes Include="Fakes\log4net.fakes" />
     <None Include="Properties\PublishProfiles\ConvertTem.pubxml" />
     <Content Include="Tem\CSHTML\EditHead.TXT" />

@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Grids>
+  <Grid name="grids_TPT_SHIP_HEAD" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_SHIP_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_SHIP_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|I_E_FLAG|SHIP_CODE|SHIP_NAME_CN|VOY_NO|TASK_TIME|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|I_E_FLAG|SHIP_CODE|SHIP_NAME_CN|VOY_NO|TASK_TIME|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>145|100|135|100|135|135|100|100|100|135|135</VisibleColumnLength>
+        <sql>SELECT * FROM TPT_SHIP_HEAD ORDER BY DEC_TIME DESC</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!--定义表之间的关系-->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <Grid name="grid_TPT_SHIP_HEAD" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_SHIP_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_SHIP_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|I_E_FLAG|SHIP_NAME_CN|SHIP_CODE|VOY_NO|TASK_TIME|CHK_STATUS|RET_CHANNEL|INPUT_COP_NAME|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|I_E_FLAG|SHIP_CODE|SHIP_NAME_CN|VOY_NO|TASK_TIME|CHK_STATUS|RET_CHANNEL|INPUT_COP_NAME|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>145|100|135|100|100|100|135|135|100|100|165|100|135|135</VisibleColumnLength>
+        <sql>SELECT * FROM TPT_SHIP_HEAD ORDER BY DEC_TIME DESC</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!--定义表之间的关系-->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+  
+  <Grid name="grid_TPT_SHIP_BILL" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_SHIP_BILL" fontsize = "9">
+    <Bands>
+      <Band name="TPT_SHIP_BILL" UseRowLayout="false">
+        <ReadOnlyColumns>BILL_NO|CHK_STATUS|G_NAME|PACK_NO|WRAP_TYPE|GROSS_WT|CARGO_NW|OWNER_NAME|TO_USER</ReadOnlyColumns>
+        <VisibleColumns>BILL_NO|CHK_STATUS|G_NAME|PACK_NO|WRAP_TYPE|GROSS_WT|CARGO_NW|OWNER_NAME|TO_USER</VisibleColumns>
+        <VisibleColumnLength>145|100|100|135|100|100|100|100|100</VisibleColumnLength>
+          <sql>SELECT * FROM TPT_SHIP_BILL</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!--定义表之间的关系-->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <Grid name="grid_TPT_SHIP_CONA" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_SHIP_CONA" fontsize = "9">
+    <Bands>
+      <Band name="TPT_SHIP_CONA" UseRowLayout="false">
+        <ReadOnlyColumns>BILL_NO|CONTA_ID|CONTA_SIZE|CONTA_TYPE|CONTA_STATUS|SEAL_NO</ReadOnlyColumns>
+        <VisibleColumns>BILL_NO|CONTA_ID|CONTA_SIZE|CONTA_TYPE|CONTA_STATUS|SEAL_NO</VisibleColumns>
+        <VisibleColumnLength>145|135|100|100|100|135</VisibleColumnLength>
+        <sql>SELECT * FROM TPT_SHIP_CONA</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!--定义表之间的关系-->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <Grid name="grid_TPT_CHK_HEAD" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|SHIP_NAME_CN|VOY_NO|CONTA_ID1|CONTA_ID2|TRADE_TYPE|EMPTY_SIGN|CHK_STATUS|RET_CHANNEL|INPUT_COP_NAME|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|SHIP_NAME_CN|VOY_NO|CONTA_ID1|CONTA_ID2|TRADE_TYPE|EMPTY_SIGN|CHK_STATUS|RET_CHANNEL|INPUT_COP_NAME|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>145|100|130|130|100|100|100|100|100|100|100|165|100|135|135</VisibleColumnLength>
+        <sql>SELECT * FROM TPT_CHK_HEAD  ORDER BY DEC_TIME DESC</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!--定义表之间的关系-->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <Grid name="grid_TPT_CHK_HEAD_modi" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|SHIP_NAME_CN|VOY_NO|CONTA_ID1|CONTA_ID2|TRADE_TYPE|EMPTY_SIGN|CHK_STATUS|RET_CHANNEL|INPUT_COP_NAME|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|SHIP_NAME_CN|VOY_NO|CONTA_ID1|CONTA_ID2|TRADE_TYPE|EMPTY_SIGN|CHK_STATUS|RET_CHANNEL|INPUT_COP_NAME|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>145|100|130|130|100|100|100|100|100|100|100|165|100|135|135</VisibleColumnLength>
+        <sql>SELECT * FROM TPT_CHK_HEAD   ORDER BY DEC_TIME DESC</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!--定义表之间的关系-->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+  
+  <Grid name="grid_TPT_CHK_HEAD_middle" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="JGPT_MIDDLE.TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|SHIP_NAME_CN|VOY_NO|CONTA_ID1|CONTA_ID2|TRADE_TYPE|EMPTY_SIGN|INPUT_COP_NAME|INPUTER|DEC_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|SHIP_NAME_CN|VOY_NO|CONTA_ID1|CONTA_ID2|TRADE_TYPE|EMPTY_SIGN|INPUT_COP_NAME|INPUTER|DEC_TIME</VisibleColumns>
+        <VisibleColumnLength>145|100|130|130|100|100|100|100|100|165|100|135</VisibleColumnLength>
+        <sql>SELECT * FROM JGPT_MIDDLE.TPT_CHK_HEAD ORDER BY DEC_TIME DESC</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!--定义表之间的关系-->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <Grid name="grid_TPT_CHK_HEAD_middle" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|SHIP_NAME_CN|VOY_NO|CONTA_ID1|CONTA_ID2|TRADE_TYPE|EMPTY_SIGN|CHK_STATUS|RET_CHANNEL|INPUT_COP_NAME|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|SHIP_NAME_CN|VOY_NO|CONTA_ID1|CONTA_ID2|TRADE_TYPE|EMPTY_SIGN|CHK_STATUS|RET_CHANNEL|INPUT_COP_NAME|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>145|100|130|130|100|100|100|100|100|100|100|165|100|135|135</VisibleColumnLength>
+        <sql>SELECT * FROM JGPT_MIDDLE.TPT_CHK_HEAD ORDER BY DEC_TIME DESC</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!--定义表之间的关系-->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <Grid name="grid_TPT_CHK_HEAD_BULK" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|EMPTY_SIGN|CHK_STATUS|RET_CHANNEL|INPUT_COP_NAME|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|EMPTY_SIGN|CHK_STATUS|RET_CHANNEL|INPUT_COP_NAME|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>145|100|135|100|100|100|100|165|100|135|135</VisibleColumnLength>
+          <sql>SELECT * FROM TPT_CHK_HEAD ORDER BY DEC_TIME DESC</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!--定义表之间的关系-->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <Grid name="grid_TPT_CHK_GLIST" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_GLIST" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_GLIST" UseRowLayout="false">
+        <ReadOnlyColumns></ReadOnlyColumns>
+        <VisibleColumns>BILL_NO|G_NAME|OWNER_NAME|TO_USER|NOTIFY_PARTY|GROSS_WT|QTY_WT|G_QTY|WRAP_TYPE</VisibleColumns>
+        <VisibleColumnLength>145|100|100|135|100|100|100|100|100</VisibleColumnLength>
+        <sql>SELECT * FROM TPT_CHK_GLIST</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!--定义表之间的关系-->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <Grid name="grid_reachnotice_tpt" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|BILL_NO|TRADE_TYPE|VE_NAME|SHIP_NAME_CN|VOY_NO|SHIP_CODE|BILL_NO|INPUT_COP_NAME|EMPTY_SIGN|RECV_DATE|CHK_STATUS|RET_CHANNEL|CUS_STATUS|RSK_FLAG|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|BILL_NO|TRADE_TYPE|VE_NAME|SHIP_NAME_CN|VOY_NO|SHIP_CODE|BILL_NO|INPUT_COP_NAME|EMPTY_SIGN|RECV_DATE|CHK_STATUS|RET_CHANNEL|CUS_STATUS|RSK_FLAG|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>145|100|130|100|165|100|100|100|100|100|100|100|135|100|100|135|100|100|135|135</VisibleColumnLength>
+        <sql>  SELECT distinct A.*,A.RECV_DATE AS RECV_DATE1 FROM MFT_ARR_HEAD A left join  MFT_ARR_CONA B on A.SEQ_NO=B.SEQ_NO ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+
+  <Grid name="grid_reachnotice_tpt_middle" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="JGPT_MIDDLE.MFT_ARR_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|VE_NAME|SHIP_NAME_CN|VOY_NO|SHIP_CODE|BILL_NO|INPUT_COP_NAME|EMPTY_SIGN|RECV_DATE|INPUTER|DEC_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|VE_NAME|SHIP_NAME_CN|VOY_NO|SHIP_CODE|BILL_NO|INPUT_COP_NAME|EMPTY_SIGN|RECV_DATE|INPUTER|DEC_TIME</VisibleColumns>
+        <VisibleColumnLength>145|100|130|100|100|100|100|100|100|165|100|135|100|135</VisibleColumnLength>
+        <sql>  SELECT distinct A.*,A.RECV_DATE AS RECV_DATE1 FROM JGPT_MIDDLE.MFT_ARR_HEAD A left join  JGPT_MIDDLE.MFT_ARR_CONA B on A.SEQ_NO=B.SEQ_NO ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+  
+  <Grid name="grid_reachnoticeList" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_CONA" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_CONA" UseRowLayout="false">
+        <ReadOnlyColumns>CONTA_ID|CONTA_TYPE|PLACE|SEAL_NO|CONTA_STATUS|STORAGENO|SEAL_CLASS|SEAL_PERSON|UNLOAD_DATE|RECV_DATE</ReadOnlyColumns>
+        <VisibleColumns>CONTA_ID|CONTA_TYPE|PLACE|SEAL_NO|CONTA_STATUS|STORAGENO|SEAL_CLASS|SEAL_PERSON|UNLOAD_DATE|RECV_DATE</VisibleColumns>
+        <VisibleColumnLength>145|100|100|135|100|135|100|100|135|135</VisibleColumnLength>
+        <sql>SELECT t.* FROM MFT_ARR_CONA t</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+<!--到货通知 并单-->
+  <Grid name="grid_reachnotice_tpt_SELECT" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>BILL_NO|SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|VE_NAME|SHIP_NAME_CN|VOY_NO|SHIP_CODE|INPUT_COP_NAME|EMPTY_SIGN|RECV_DATE|CHK_STATUS|RET_CHANNEL|CUS_STATUS|RSK_FLAG|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>CHECKFLAG|BILL_NO|SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|VE_NAME|SHIP_NAME_CN|VOY_NO|SHIP_CODE|INPUT_COP_NAME|EMPTY_SIGN|RECV_DATE|CHK_STATUS|RET_CHANNEL|CUS_STATUS|RSK_FLAG|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>35|145|100|130|100|165|100|100|100|100|100|100|100|135|100|135|100|100|135|135</VisibleColumnLength>
+        <sql>  SELECT distinct A.*,A.RECV_DATE AS RECV_DATE1 FROM MFT_ARR_HEAD A left join  MFT_ARR_CONA B on A.SEQ_NO=B.SEQ_NO ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+          <BandColumn name ="CHECKFLAG" dbname="" Caption ="" colType="check" controlname="" ddlb="" MergedCell="false" Format="" CellMultiLine="false" VisiblePosition="">
+            <Position SpanX="" SpanY="" OriginX="" OriginY=""></Position>
+          </BandColumn>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_reachnoticeList_TPT_SELECT" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_CONA" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_CONA" UseRowLayout="false">
+        <ReadOnlyColumns>CONTA_ID|CONTA_TYPE|PLACE|SEAL_NO|CONTA_STATUS|STORAGENO|SEAL_CLASS|SEAL_PERSON|UNLOAD_DATE|RECV_DATE</ReadOnlyColumns>
+        <VisibleColumns>CHECKFLAG|CONTA_ID|CONTA_TYPE|PLACE|SEAL_NO|CONTA_STATUS|STORAGENO|SEAL_CLASS|SEAL_PERSON|UNLOAD_DATE|RECV_DATE</VisibleColumns>
+        <VisibleColumnLength>35|145|100|100|145|100|100|100|100|135|135</VisibleColumnLength>
+        <sql>SELECT t.* FROM MFT_ARR_CONA t</sql>
+        <BandColumns>
+          <BandColumn name ="CHECKFLAG" dbname="" Caption ="" colType="check" controlname="" ddlb="" MergedCell="false" Format="" CellMultiLine="false" VisiblePosition="">
+            <Position SpanX="" SpanY="" OriginX="" OriginY=""></Position>
+          </BandColumn>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+  <!--运抵报告 并单-->
+  <Grid name="grid_reachnotice_arr_tpt_SELECT" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>BILL_NO|SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|SHIP_NAME_CN|VOY_NO|SHIP_CODE|INPUT_COP_NAME|RECV_DATE|CHK_STATUS|RET_CHANNEL|CUS_STATUS|RSK_FLAG|DOCUMENT_TYPE|DOCUMENT_STATUS|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>CHECKFLAG|BILL_NO|SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|SHIP_NAME_CN|VOY_NO|SHIP_CODE|INPUT_COP_NAME|RECV_DATE|CHK_STATUS|RET_CHANNEL|CUS_STATUS|RSK_FLAG|DOCUMENT_TYPE|DOCUMENT_STATUS|DEC_TIME|CHK_TIME</VisibleColumns>
+        <sql>SELECT distinct A.*,A.RECV_DATE AS RECV_DATE1 FROM MFT_ARR_HEAD A left join  MFT_ARR_CONA B on A.SEQ_NO=B.SEQ_NO ORDER BY DEC_TIME DESC</sql>
+        <VisibleColumnLength>35|145|100|100|100|100|100|100|100|165|135|100|100|135|100|100|100|135|135</VisibleColumnLength>
+        <BandColumns>
+          <BandColumn name ="CUS_STATUS" dbname="" Caption ="" colType="" controlname="" ddlb="ddl_std_pass_status" MergedCell="false" Format="" CellMultiLine="false" VisiblePosition="">
+            <Position SpanX="" SpanY="" OriginX="" OriginY=""></Position>
+          </BandColumn>
+          <BandColumn name ="CHECKFLAG" dbname="" Caption ="" colType="check" controlname="" ddlb="" MergedCell="false" Format="" CellMultiLine="false" VisiblePosition="">
+            <Position SpanX="" SpanY="" OriginX="" OriginY=""></Position>
+          </BandColumn>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+  
+  <Grid name="grid_reachnoticeList_TPT" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_CONA" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_CONA" UseRowLayout="false">
+        <ReadOnlyColumns>CONTA_ID|CONTA_TYPE|PLACE|SEAL_NO|CONTA_STATUS|STORAGENO|SEAL_CLASS|SEAL_PERSON|UNLOAD_DATE|RECV_DATE</ReadOnlyColumns>
+        <VisibleColumns>CONTA_ID|CONTA_TYPE|PLACE|SEAL_NO|CONTA_STATUS|STORAGENO|SEAL_CLASS|SEAL_PERSON|UNLOAD_DATE|RECV_DATE</VisibleColumns>
+        <VisibleColumnLength>145|100|100|145|100|100|100|100|135|135</VisibleColumnLength>
+        <sql>SELECT t.* FROM MFT_ARR_CONA t</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_reachnoticeList2_TPT" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_ENTRY" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_ENTRY" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|BILL_NO|ENTRY_ID</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|BILL_NO|ENTRY_ID</VisibleColumns>
+        <VisibleColumnLength>145|100|140</VisibleColumnLength>
+        <sql>SELECT t.* FROM MFT_ARR_ENTRY t</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_reachnoticeList_TPT_middle" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_CONA" fontsize = "9">
+    <Bands>
+      <Band name="JGPT_MIDDLE.MFT_ARR_CONA" UseRowLayout="false">
+        <ReadOnlyColumns>CONTA_ID|CONTA_TYPE|PLACE|SEAL_NO|CONTA_STATUS|STORAGENO|SEAL_CLASS|SEAL_PERSON|UNLOAD_DATE|RECV_DATE</ReadOnlyColumns>
+        <VisibleColumns>CONTA_ID|CONTA_TYPE|PLACE|SEAL_NO|CONTA_STATUS|STORAGENO|SEAL_CLASS|SEAL_PERSON|UNLOAD_DATE|RECV_DATE</VisibleColumns>
+        <VisibleColumnLength>145|100|100|145|100|100|100|100|135|135</VisibleColumnLength>
+        <sql>SELECT t.* FROM JGPT_MIDDLE.MFT_ARR_CONA t</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_reachnotice.ListForAdd" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_CONA" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_CONA" UseRowLayout="false">
+        <ReadOnlyColumns>CONTA_ID|CONTA_SIZE|CONTA_TYPE</ReadOnlyColumns>
+        <VisibleColumns>CHECKFLAG|CONTA_ID|CONTA_SIZE|CONTA_TYPE</VisibleColumns>
+        <VisibleColumnLength>100|135|100|100</VisibleColumnLength>
+        <sql>SELECT * FROM MFT_ARR_CONA</sql>
+        <BandColumns>
+          <BandColumn name ="checkflag" dbname="" Caption ="" colType="check" controlname="" ddlb="" MergedCell="false" Format="" CellMultiLine="false" VisiblePosition="">
+            <Position SpanX="" SpanY="" OriginX="" OriginY=""></Position>
+          </BandColumn>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_MFT_ARR_HEAD.onlyusefortpt" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>BILL_NO|G_NAME|PACK_NO</ReadOnlyColumns>
+        <VisibleColumns>CHECKFLAG|BILL_NO|G_NAME|PACK_NO</VisibleColumns>
+        <VisibleColumnLength>60|145|100|145</VisibleColumnLength>
+        <sql>SELECT 'FALSE' CHECKFLAG, * FROM MFT_ARR_HEAD</sql>
+        <BandColumns>
+          <BandColumn name ="checkflag" dbname="" Caption ="" colType="check" controlname="" ddlb="" MergedCell="false" Format="" CellMultiLine="false" VisiblePosition="">
+            <Position SpanX="" SpanY="" OriginX="" OriginY=""></Position>
+          </BandColumn>
+        </BandColumns>
+      </Band>
+    </Bands>
+    <!--定义表之间的关系-->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <Grid name="grid_reachnotice_arr_tpt_middle" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|SHIP_NAME_CN|VOY_NO|SHIP_CODE|BILL_NO|INPUT_COP_NAME|RECV_DATE|DOCUMENT_TYPE|DOCUMENT_STATUS|DEC_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|SHIP_NAME_CN|VOY_NO|SHIP_CODE|BILL_NO|INPUT_COP_NAME|RECV_DATE|DOCUMENT_TYPE|DOCUMENT_STATUS|DEC_TIME</VisibleColumns>
+        <sql>SELECT distinct A.*,A.RECV_DATE AS RECV_DATE1 FROM JGPT_MIDDLE.MFT_ARR_HEAD A left join  JGPT_MIDDLE.MFT_ARR_CONA B on A.SEQ_NO=B.SEQ_NO ORDER BY DEC_TIME DESC</sql>
+        <VisibleColumnLength>145|100|135|100|100|100|100|100|165|135|100|100|135</VisibleColumnLength>
+        <BandColumns>
+          <BandColumn name ="CUS_STATUS" dbname="" Caption ="" colType="" controlname="" ddlb="ddl_std_pass_status" MergedCell="false" Format="" CellMultiLine="false" VisiblePosition="">
+            <Position SpanX="" SpanY="" OriginX="" OriginY=""></Position>
+          </BandColumn>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_reachnotice_arr_tpt" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|SHIP_NAME_CN|VOY_NO|SHIP_CODE|BILL_NO|INPUT_COP_NAME|RECV_DATE|CHK_STATUS|RET_CHANNEL|CUS_STATUS|RSK_FLAG|DOCUMENT_TYPE|DOCUMENT_STATUS|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|SHIP_NAME_CN|VOY_NO|SHIP_CODE|BILL_NO|INPUT_COP_NAME|RECV_DATE|CHK_STATUS|RET_CHANNEL|CUS_STATUS|RSK_FLAG|DOCUMENT_TYPE|DOCUMENT_STATUS|DEC_TIME|CHK_TIME</VisibleColumns>
+        <sql>SELECT distinct A.*,A.RECV_DATE AS RECV_DATE1 FROM MFT_ARR_HEAD A left join  MFT_ARR_CONA B on A.SEQ_NO=B.SEQ_NO ORDER BY DEC_TIME DESC</sql>
+        <VisibleColumnLength>145|100|100|100|100|100|100|100|165|135|100|100|135|100|100|100|135|135</VisibleColumnLength>
+        <BandColumns>
+          <BandColumn name ="CUS_STATUS" dbname="" Caption ="" colType="" controlname="" ddlb="ddl_std_pass_status" MergedCell="false" Format="" CellMultiLine="false" VisiblePosition="">
+            <Position SpanX="" SpanY="" OriginX="" OriginY=""></Position>
+          </BandColumn>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+  <!-- 进出境舱单动态表头 -->
+  <Grid name="grid_MFT_MENIFEST_HEAD" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_MENIFEST_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="MFT_MENIFEST_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>NO_SERIAL|CUSTOMS_CODE|AREA_CODE|DEST_CUS_CODE|SHIP_NAME_CN|SHIP_NAME_EN|SHIP_ID|VOY_NO|PORT_LOADING|PORT_DISCHARGE|START_DATES|GROSS_TONNAGE|NET_TONNAGE|DWT|TOTAL_INFO|CARRIER_CODE|CARRIER_NAME</ReadOnlyColumns>
+        <VisibleColumns>NO_SERIAL|CUSTOMS_CODE|AREA_CODE|DEST_CUS_CODE|SHIP_NAME_CN|SHIP_NAME_EN|SHIP_ID|VOY_NO|PORT_LOADING|PORT_DISCHARGE|START_DATES|GROSS_TONNAGE|NET_TONNAGE|DWT|TOTAL_INFO|CARRIER_CODE|CARRIER_NAME</VisibleColumns>
+        <VisibleColumnLength>145|100|135|100|100|100|135|135|100|100|135|100|100|100|100|100|100</VisibleColumnLength>
+        <sql>SELECT * FROM MFT_MENIFEST_HEAD</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!-- 定义表之间的关系 -->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <!-- 进出境舱单动态表体 -->
+  <Grid name="grid_MFT_MENIFEST_BILL" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_MENIFEST_BILL" fontsize = "9">
+    <Bands>
+      <Band name="MFT_MENIFEST_BILL" UseRowLayout="false">
+        <ReadOnlyColumns>NO_SERIAL|BILL_NO|TRADE_TYPE|EMPTY_SIGN|GOODS_NAME|OWNER_NAME|TO_USER|NOTIFY_PARTY|PACK_TYPE|PACK_NO|GROSS_WT|CARGO_NW|CONTA_QTY|LOADING_PLACE|DESTINATION_PLACE|LOADING_DATE|ARRIVAL_TIME|DECLARE_ORG_CODE|DECLARE_ORG_NAME</ReadOnlyColumns>
+        <VisibleColumns>NO_SERIAL|BILL_NO|TRADE_TYPE|EMPTY_SIGN|GOODS_NAME|OWNER_NAME|TO_USER|NOTIFY_PARTY|PACK_TYPE|PACK_NO|GROSS_WT|CARGO_NW|CONTA_QTY|LOADING_PLACE|DESTINATION_PLACE|LOADING_DATE|ARRIVAL_TIME|DECLARE_ORG_CODE|DECLARE_ORG_NAME</VisibleColumns>
+        <VisibleColumnLength>145|145|100|100|100|100|100|100|100|135|100|100|100|100|100|135|135|100|100</VisibleColumnLength>
+          <sql>SELECT * FROM MFT_MENIFEST_BILL</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!-- 定义表之间的关系 -->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <!-- 进出境舱单动态集装箱 -->
+  <Grid name="grid_MFT_MENIFEST_CONA" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_MENIFEST_CONA" fontsize = "9">
+    <Bands>
+      <Band name="MFT_MENIFEST_CONA" UseRowLayout="false">
+        <ReadOnlyColumns>NO_SERIAL|BILL_NO|CONTA_ID|CONTA_TYPE|CONTA_SIZE|DTP_DNGCD|SEAL_NO|SEAL_CLASS|SEAL_PERSON</ReadOnlyColumns>
+        <VisibleColumns>NO_SERIAL|BILL_NO|CONTA_ID|CONTA_TYPE|CONTA_SIZE|DTP_DNGCD|SEAL_NO|SEAL_CLASS|SEAL_PERSON</VisibleColumns>
+        <VisibleColumnLength>145|135|100|100|100|100|100|100|100</VisibleColumnLength>
+        <sql>SELECT * FROM MFT_MENIFEST_CONA</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!-- 定义表之间的关系 -->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+  <!-- 到货通知合并选择 -->
+  <Grid name="grid_ReachNoticeMerger" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>AREA_CODE|SEQ_NO|BILL_NO|SHIP_NAME_CN|SHIP_CODE|VOY_NO|G_NAME</ReadOnlyColumns>
+        <VisibleColumns>CHECKFLAG|AREA_CODE|SEQ_NO|BILL_NO|SHIP_NAME_CN|SHIP_CODE|100|100</VisibleColumns>
+        <VisibleColumnLength>100|145|145|145|100|100|100|G_NAME</VisibleColumnLength>
+          <sql>SELECT * FROM MFT_ARR_CONA</sql>
+        <BandColumns>
+          <BandColumn name ="checkflag" dbname="" Caption ="" colType="check" controlname="" ddlb="" MergedCell="false" Format="" CellMultiLine="false" VisiblePosition="">
+            <Position SpanX="" SpanY="" OriginX="" OriginY=""></Position>
+          </BandColumn>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+
+  <!-- 无纸化通关502报文历史单证状态 -->
+  <Grid name="grid_mft_arr_documentstatus_history" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_DOCUMENTSTATUS_HISTORY" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_DOCUMENTSTATUS_HISTORY" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|DOCUMENT_STATUS_STEP_ID|INPUT_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|DOCUMENT_STATUS_STEP_ID|INPUT_TIME</VisibleColumns>
+        <VisibleColumnLength>145|120|135</VisibleColumnLength>
+        <sql>SELECT * FROM MFT_ARR_DOCUMENTSTATUS_HISTORY</sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!-- 定义表之间的关系 -->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <!-- 散货提货大计划申请 -->
+  <Grid name="grid_TPT13_TPT_LPLAN_HEAD_002" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_LPLAN_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_LPLAN_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|120</VisibleColumnLength>
+        <sql>SELECT distinct * FROM TPT_LPLAN_HEAD </sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!-- 定义表之间的关系 -->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <!-- 散货提货大计划申请 -->
+  <Grid name="grid_TPT16_TPT_LPLAN_HEAD_002" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_LPLAN_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_LPLAN_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|120</VisibleColumnLength>
+        <sql>SELECT distinct * FROM TPT_LPLAN_HEAD </sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!-- 定义表之间的关系 -->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+  <Grid name="grid_TPT_LPLAN_GLIST_BULK" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_LPLAN_GLIST" fontsize = "9">
+    <Bands>
+      <Band name="TPT_LPLAN_GLIST" UseRowLayout="false">
+        <ReadOnlyColumns>SHIP_CODE|SHIP_NAME_CN|VOY_NO|BILL_NO|G_NAME|OWNER_NAME|TO_USER|GROSS_WT|QTY_WT|G_QTY|WRAP_TYPE|CUS_STATUS</ReadOnlyColumns>
+        <VisibleColumns>SHIP_CODE|SHIP_NAME_CN|VOY_NO|BILL_NO|G_NAME|OWNER_NAME|TO_USER|GROSS_WT|QTY_WT|G_QTY|WRAP_TYPE|CUS_STATUS</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|120|135</VisibleColumnLength>
+        <sql>SELECT distinct * FROM TPT_LPLAN_GLIST </sql>
+        <BandColumns></BandColumns>
+      </Band>
+    </Bands>
+    <!-- 定义表之间的关系 -->
+    <Relations>
+      <Relation name="" mastertable ="" mastercolumn="" detailtable ="" detailcolumn="" />
+    </Relations>
+  </Grid>
+
+    <Grid name="grid_TPT11_MFT_ARR_HEAD_001" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="MFT_ARR_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="MFT_ARR_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|VE_NAME|SHIP_NAME_CN|VOY_NO|SHIP_CODE|BILL_NO|INPUT_COP_NAME|EMPTY_SIGN|RECV_DATE|CHK_STATUS|RET_CHANNEL|CUS_STATUS|RSK_FLAG|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|CUSTOMS_CODE|AREA_CODE|TRADE_TYPE|VE_NAME|SHIP_NAME_CN|VOY_NO|SHIP_CODE|BILL_NO|INPUT_COP_NAME|EMPTY_SIGN|RECV_DATE|CHK_STATUS|RET_CHANNEL|CUS_STATUS|RSK_FLAG|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>145|100|130|100|100|100|100|100|100|165|100|135|100|100|135|100|100|135|135</VisibleColumnLength>
+        <sql>  SELECT distinct A.*,A.RECV_DATE AS RECV_DATE1 FROM MFT_ARR_HEAD A left join  MFT_ARR_CONA B on A.SEQ_NO=B.SEQ_NO  where A.DOC_TYPE='TPT11' ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_TPT14_TPT_LPLAN_HEAD_001" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|120</VisibleColumnLength>
+        <sql>SELECT distinct A.* FROM TPT_CHK_HEAD A left join TPT_CHK_GLIST B on A.SEQ_NO=B.SEQ_NO where A.DOC_TYPE='TPT14' ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_TPT14_TPT_LPLAN_GLIST_001" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_GLIST" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_GLIST" UseRowLayout="false">
+        <ReadOnlyColumns>SHIP_CODE|SHIP_NAME_CN|VOY_NO|BILL_NO|VEHICLE_BRAND|FRAME_NAMBER|ENGINE_NUMBER|COLOR|OWNER_NAME|TO_USER|G_QTY|WRAP_TYPE|CUS_STATUS</ReadOnlyColumns>
+        <VisibleColumns>SHIP_CODE|SHIP_NAME_CN|VOY_NO|BILL_NO|VEHICLE_BRAND|FRAME_NAMBER|ENGINE_NUMBER|COLOR|OWNER_NAME|TO_USER|G_QTY|WRAP_TYPE|CUS_STATUS</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|120|120|135</VisibleColumnLength>
+        <sql>SELECT B.* FROM TPT_CHK_HEAD A left join TPT_CHK_GLIST B on A.SEQ_NO=B.SEQ_NO ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_TPT12_TPT_LPLAN_HEAD_001" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|120</VisibleColumnLength>
+        <sql>SELECT distinct A.* FROM TPT_CHK_HEAD A left join TPT_CHK_GLIST B on A.SEQ_NO=B.SEQ_NO AND A.DOC_TYPE='TPT12' ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_TPT12_TPT_LPLAN_HEAD_001_middle" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120</VisibleColumnLength>
+        <sql>SELECT distinct A.* FROM JGPT_MIDDLE.TPT_CHK_HEAD A left join JGPT_MIDDLE.TPT_CHK_GLIST B on A.SEQ_NO=B.SEQ_NO AND A.DOC_TYPE='TPT12' ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+  <Grid name="grid_TPT15_TPT_LPLAN_HEAD_001" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|120</VisibleColumnLength>
+        <sql>SELECT distinct A.* FROM TPT_CHK_HEAD A left join TPT_CHK_GLIST B on A.SEQ_NO=B.SEQ_NO  AND A.DOC_TYPE='TPT15' ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_TPT15_TPT_LPLAN_HEAD_001_middle" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120</VisibleColumnLength>
+        <sql>SELECT distinct A.* FROM JGPT_MIDDLE.TPT_CHK_HEAD A left join JGPT_MIDDLE.TPT_CHK_GLIST B on A.SEQ_NO=B.SEQ_NO  AND A.DOC_TYPE='TPT15' ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+  <Grid name="grid_TPT12_TPT_LPLAN_GLIST_001" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_GLIST" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_GLIST" UseRowLayout="false">
+        <ReadOnlyColumns>SHIP_CODE|SHIP_NAME_CN|VOY_NO|BILL_NO|CONTA_ID|CONTA_TYPE|DTP_DNGCD|OWNER_NAME|TO_USER|CONTA_WT|GOODS_WT|G_QTY|WRAP_TYPE|CUS_STATUS</ReadOnlyColumns>
+        <VisibleColumns>SHIP_CODE|SHIP_NAME_CN|VOY_NO|BILL_NO|CONTA_ID|CONTA_TYPE|DTP_DNGCD|OWNER_NAME|TO_USER|CONTA_WT|GOODS_WT|G_QTY|WRAP_TYPE|CUS_STATUS</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|135</VisibleColumnLength>
+        <sql>SELECT * FROM TPT_CHK_GLIST </sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+  <Grid name="grid_TPT13_TPT_LPLAN_HEAD_003" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|120</VisibleColumnLength>
+        <sql>SELECT distinct A.* FROM TPT_CHK_HEAD A left join TPT_CHK_GLIST B on A.SEQ_NO=B.SEQ_NO AND A.DOC_TYPE='TPT13' ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_TPT13_TPT_LPLAN_HEAD_003_middle" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|DELIVERY_UNIT|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|120</VisibleColumnLength>
+        <sql>SELECT distinct A.* FROM JGPT_MIDDLE.TPT_CHK_HEAD A left join JGPT_MIDDLE.TPT_CHK_GLIST B on A.SEQ_NO=B.SEQ_NO AND A.DOC_TYPE='TPT13' ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+  <Grid name="grid_TPT13_TPT_LPLAN_GLIST_003" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_GLIST" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_GLIST" UseRowLayout="false">
+        <ReadOnlyColumns>SHIP_CODE|SHIP_NAME_CN|VOY_NO|BILL_NO|G_NAME|OWNER_NAME|TO_USER|CONTA_WT|GOODS_WT|G_QTY|WRAP_TYPE|CUS_STATUS</ReadOnlyColumns>
+        <VisibleColumns>SHIP_CODE|SHIP_NAME_CN|VOY_NO|BILL_NO|G_NAME|OWNER_NAME|TO_USER|CONTA_WT|GOODS_WT|G_QTY|WRAP_TYPE|CUS_STATUS</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|135</VisibleColumnLength>
+        <sql>SELECT * FROM TPT_CHK_GLIST </sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  
+  <Grid name="grid_TPT16_TPT_LPLAN_HEAD_004_middle" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|TRN_COP_NAME|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|TRN_COP_NAME|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|120</VisibleColumnLength>
+        <sql>SELECT distinct A.* FROM JGPT_MIDDLE.TPT_CHK_HEAD A left join JGPT_MIDDLE.TPT_CHK_GLIST B on A.SEQ_NO=B.SEQ_NO  AND A.DOC_TYPE='TPT16' ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+  <Grid name="grid_TPT16_TPT_LPLAN_HEAD_004" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_HEAD" fontsize = "9">
+    <Bands>
+      <Band name="TPT_CHK_HEAD" UseRowLayout="false">
+        <ReadOnlyColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|TRN_COP_NAME|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</ReadOnlyColumns>
+        <VisibleColumns>SEQ_NO|TRADE_TYPE|PLAN_CODE|TRN_COP_NAME|PLANDATE_BEGIN|PLANDATE_END|CHK_STATUS|RET_CHANNEL|INPUTER|DEC_TIME|CHK_TIME</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|120|120|120</VisibleColumnLength>
+        <sql>SELECT distinct A.* FROM TPT_CHK_HEAD A left join TPT_CHK_GLIST B on A.SEQ_NO=B.SEQ_NO  AND A.DOC_TYPE='TPT16' ORDER BY DEC_TIME DESC</sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_SelectTrnCopCom" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="COP_COM" fontsize = "9">
+    <Bands>
+      <Band name="COP_COM" UseRowLayout="false">
+        <ReadOnlyColumns>TRADE_CO|FULL_NAME</ReadOnlyColumns>
+        <VisibleColumns>TO_SELECT|TRADE_CO|FULL_NAME</VisibleColumns>
+        <VisibleColumnLength>50|120|280</VisibleColumnLength>
+        <sql>select 'False' TO_SELECT,t.* from COP_COM t</sql>
+        <BandColumns>
+          <BandColumn name ="TO_SELECT" dbname="" Caption ="" colType="check" controlname="ultraCheckEditor" ddlb="" MergedCell="false" Format="" CellMultiLine="false" VisiblePosition="">
+            <Position SpanX="" SpanY="" OriginX="" OriginY=""></Position>
+          </BandColumn>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+
+  <Grid name="grid_TPT13_TPT_LPLAN_GLIST_003_middle" ViewStyle="SingleBand" ViewStyleBand="Vertical" masterband="TPT_CHK_GLIST" fontsize = "9">
+    <Bands>
+      <Band name="JGPT_MIDDLE.TPT_CHK_GLIST" UseRowLayout="false">
+        <ReadOnlyColumns>SHIP_CODE|SHIP_NAME_CN|VOY_NO|BILL_NO|G_NAME|OWNER_NAME|TO_USER|CONTA_WT|GOODS_WT|G_QTY|WRAP_TYPE|CUS_STATUS</ReadOnlyColumns>
+        <VisibleColumns>SHIP_CODE|SHIP_NAME_CN|VOY_NO|BILL_NO|G_NAME|OWNER_NAME|TO_USER|CONTA_WT|GOODS_WT|G_QTY|WRAP_TYPE|CUS_STATUS</VisibleColumns>
+        <VisibleColumnLength>120|120|120|120|120|120|120|120|135</VisibleColumnLength>
+        <sql>SELECT * FROM JGPT_MIDDLE.TPT_CHK_GLIST </sql>
+        <BandColumns>
+        </BandColumns>
+      </Band>
+    </Bands>
+  </Grid>
+</Grids>

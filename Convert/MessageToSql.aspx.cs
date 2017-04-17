@@ -16,31 +16,37 @@ namespace Convert
     /// <summary>
     /// 用于指定文件转换
     /// </summary>
-    public partial class MessageToSql : BaseOpen
+    public partial class MessageToSql  : BaseOpen
     {
         
         private string IFilePath ;
         private string OFilePath ;
-        protected void Page_Load(object sender, EventArgs e)
+        protected override void Binding()
         {
-            if (!IsPostBack)
-            {
-                fileDir.Text = "/test";
-                fileName.Text = "/test/1.txt";
-            }
-           
+            fileDir.Text = "/test";
+            fileName.Text = "/test/1.txt";
         }
         private class DtXml
         {
             public string TableName { get; set; }
             public string ColumnName { get; set; }
-            public string Text { get; set; }
-            public string Key { get; set; }
+
+
+            #region table
+            public string Type { get; set; }
+            public string DDL { get; set; }
+            #endregion
+
+            #region meessage
+            public string value { get; set; }
+            public string key { get; set; }
+            #endregion
+
             public string GetSql
             {
                 get
                 {
-                    return string.Format("Comment on column  {0}.{1} is '{2}';" + Environment.NewLine, TableName, ColumnName, Text);
+                    return string.Format("Comment on column  {0}.{1} is '{2}';" + Environment.NewLine, TableName, ColumnName, value);
                 }
             }
         }
@@ -60,9 +66,9 @@ namespace Convert
                 foreach (XmlNode xmlNode in list)
                 {
                     DtXml model = new DtXml();
-                    model.Key = xmlNode.Attributes["key"].Value;
-                    model.Text = xmlNode.Attributes["value"].Value;
-                    string[] name = model.Key.Split('.');
+                    model.key = xmlNode.Attributes["key"].Value;
+                    model.value = xmlNode.Attributes["value"].Value;
+                    string[] name = model.key.Split('.');
                     if (name.Count() < 3) continue;
                     model.TableName = name[1];
                     model.ColumnName = name[2];
@@ -71,6 +77,8 @@ namespace Convert
             }
             return entity;
         }
+
+
         private bool TestConn()
         {
             bool isVal = true;

@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<tables>
+  <!-- 装运申请_表头 -->
+  <table name="TPT_SHIP_HEAD" callback="">
+    <!-- 非空检查 -->
+    <notnullcol>I_E_FLAG,D_L,SHIP_CODE,SHIP_NAME_CN,VOY_NO,AREA_CODE,CUSTOMS_CODE,TASK_TIME,TASK_PLACE</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="RET_CHANNEL" text="" mark ="" ddlb ="ddl_std_channel_codes" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="CHK_STATUS" text="" mark ="" ddlb ="ddl_std_status_codes" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="I_E_FLAG" text="" mark ="" ddlb ="ddl_STD_I_E_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="D_L" text="" mark ="" ddlb ="ddl_STD_D_L" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="TRADE_TYPE" text="" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="AREA_CODE" text="" mark ="" ddlb ="ddl_std_biz_areas" dbtype="char" len="15" regexp="" regexpmsg="" />
+      <column name="CUSTOMS_CODE" text="" mark ="" ddlb ="ddl_std_i_e_port" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_CN" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="SHIP_CODE" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="VOY_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="TASK_TIME" text="" mark="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="TASK_CONTENT" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="GOODS_NAME" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="TASK_PLACE" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="CHK_USERCODE" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CHK_TIME" text="" mark="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="CHK_NOTES" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="DEC_TIME" text="" mark="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="INPUTER" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NO" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 装运申请_表体 -->
+  <table name="TPT_SHIP_BILL" callback="">
+    <!-- 非空检查 -->
+    <notnullcol>BILL_NO</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="CHK_STATUS" text="" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="ENTRY_ID" text="" mark ="" ddlb ="" dbtype="char" len="18" regexp="" regexpmsg="" />
+      <column name="BILL_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="G_NAME" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="CODE_T" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="OWNER_NAME" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="TO_USER" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="NOTIFY_PARTY" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="DECLARE_CODE" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="DECLARE_NAME" text="" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="WRAP_TYPE" text="" mark ="" ddlb ="ddl_std_wrap_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="PACK_NO" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="GROSS_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="CARGO_NW" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="CARGO_NW_D" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="CARGO_NW_R" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="CUS_STATUS" text="" mark ="" ddlb ="ddl_std_pass_status" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CIQ_STATUS" text="" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="REG_STATUS" text="" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 装运申请_集装箱 -->
+  <table name="TPT_SHIP_CONA" callback="">
+    <!-- 非空检查 -->
+    <notnullcol>BILL_NO</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="POID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="BILL_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="CONTA_ID" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="CONTA_TYPE" text="" mark ="" ddlb ="ddl_STD_ContaMode" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="CONTA_SIZE" text="" mark ="" ddlb ="" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="SEAL_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_CLASS" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_PERSON" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="CONTA_STATUS" text="" mark ="" ddlb ="ddl_STD_CONTA_STATUS" dbtype="char" len="1" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 核放单表头 -->
+  <table name="TPT_CHK_HEAD" callback="">
+    <!-- 非空检查 -->
+    <notnullcol>CUSTOMS_CODE,TRAF_MODE,CARRY_TYPE,EMPTY_SIGN,PLAN_DATE,SHIP_CODE,VOY_NO,CONTA_ID1,CONTA_TYPE1,AREA_CODE,I_E_FLAG,TRN_COP_CODE,GROSS_WT,SHIP_NAME_CN</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CHK_STATUS" text="" mark ="" ddlb ="ddl_STD_STATUS" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="RET_CHANNEL" text="" mark ="" ddlb ="ddl_STD_CHANNEL" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="DECLARE_MARK" text="" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="DOC_TYPE" text="" mark ="" ddlb ="ddl_std_biz_codes" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="REF_FLAG" text="" mark ="" ddlb ="ddl_STD_REF_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="BUSINESS_STEP" text="" mark ="" ddlb ="ddl_STD_BUSINESS_TYPE" dbtype="char" len="2" regexp="" regexpmsg="" />
+      <column name="EMS_NO" text="" mark ="" ddlb ="" dbtype="char" len="12" regexp="" regexpmsg="" />
+      <column name="REF_DOC_NO" text="" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="AREA_CODE" text="" mark ="" ddlb ="ddl_std_biz_areas" dbtype="char" len="15" regexp="" regexpmsg="" />
+      <column name="CUSTOMS_CODE" text="" mark ="" ddlb ="ddl_std_i_e_port" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="I_E_AREA" text="" mark ="" ddlb ="ddl_STD_I_E_AREA" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="OPERATION_TYPE" text="" mark ="" ddlb ="" dbtype="char" len="2" regexp="" regexpmsg="" />
+      <column name="TRADE_TYPE" text="" mark ="" ddlb ="ddl_STD_TRADE_TYPE" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="TRAF_MODE" text="" mark ="" ddlb ="ddl_std_traf_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="IS_TRANSIT" text="" mark ="" ddlb ="ddl_STD_YES_NO" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="IC_REG_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="IC_CODE" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CARRY_TYPE" text="" mark ="" ddlb ="ddl_STD_CARRY_TYPE" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="EMPTY_SIGN" text="" mark ="" ddlb ="ddl_STD_EMPTY_SIGN" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="VE_NAME" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="DRIVER_NAME" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="DRIVER_TEL" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="PLAN_DATE" text="" mark ="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="CONTA_ID1" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="CONTA_TYPE1" text="" mark ="" ddlb ="" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="SEAL_NO1" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_CLASS1" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_PERSON1" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="CONTA_ID2" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="CONTA_TYPE2" text="" mark ="" ddlb ="" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="SEAL_NO2" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_CLASS2" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_PERSON2" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="PACK_NO" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="WRAP_TYPE" text="" mark ="" ddlb ="ddl_std_wrap_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="GROSS_WT" text="" mark ="n,nnn,nnn,nnn.nnn" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="QTY_WT" text="" mark ="n,nnn,nnn,nnn.nnn" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_EN" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_CN" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_CODE" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="VOY_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="NOTE" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="TRADE_CODE" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="TRADE_NAME" text="" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="OWER_CODE" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="OWER_NAME" text="" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="CHK_TIME" text="" mark="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="DEC_TIME" text="" mark="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="INPUTER" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NO" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="BIZ_TYPE" text="" mark ="" ddlb ="ddl_std_biz_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="DEC_MODE" text="" mark ="" ddlb ="ddl_std_dec_mode" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="FLOW_TYPE" text="" mark ="" ddlb ="ddl_std_flow_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="POS_CODE" text="" mark ="" ddlb ="" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="VE_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="VE_TUOJIA_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="VE_TUOJIA_NAME" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="TRN_COP_CODE" text="" mark ="" ddlb ="ddl_std_cop_com" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="TRN_COP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="DTP_DNGCD1" text="" mark ="" ddlb ="ddl_std_conta_dtp_dngcd" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="DTP_DNGCD2" text="" mark ="" ddlb ="ddl_std_conta_dtp_dngcd" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <!-- 大计划 新增字段 -->
+      <column name="PLAN_CODE" text="码头计划编号" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="DELIVERY_UNIT" text="提货单位" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="PLANDATE_BEGIN" text="预计提/运日期起" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="PLANDATE_END" text="预计提/运日期止" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 核放单表体 -->
+  <table name="TPT_CHK_GLIST" callback="">
+    <!-- 非空检查 -->
+    <notnullcol>OWNER_NAME,TO_USER</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="POID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="G_NO" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="CODE_TS" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="ITEM_NO" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="G_NAME" text="" mark ="" ddlb ="" dbtype="char" len="60" regexp="" regexpmsg="" />
+      <column name="G_MODEL" text="" mark ="" ddlb ="" dbtype="char" len="60" regexp="" regexpmsg="" />
+      <column name="CONTA_ID" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="BILL_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="OWNER_NAME" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="TO_USER" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="NOTIFY_PARTY" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="G_QTY" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="19" regexp="" regexpmsg="" />
+      <column name="G_UNIT" text="" mark ="" ddlb ="" dbtype="char" len="3" regexp="" regexpmsg="" />
+      <column name="DECL_PRICE" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="19" regexp="" regexpmsg="" />
+      <column name="DECL_TOTAL" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="18" regexp="" regexpmsg="" />
+      <column name="CURR" text="" mark ="" ddlb ="" dbtype="char" len="3" regexp="" regexpmsg="" />
+      <column name="GROSS_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="QTY_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="WRAP_TYPE" text="" mark ="" ddlb ="ddl_std_cod_water_wrap" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <!-- 大计划 新增字段 -->
+      <column name="SHIP_NAME_EN" text="运输工具英文名称" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_CN" text="运输工具中文文名称" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_CODE" text="运输工具代码" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="VEHICLE_BRAND" text="车辆品牌" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="FRAME_NAMBER" text="车架号" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="ENGINE_NUMBER" text="发动机号" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="COLOR" text="车辆颜色" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CONTA_TYPE" text="尺寸/类型" mark ="" ddlb ="ddl_STD_ContaMode" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="DTP_DNGCD" text="危险品标识" mark ="" ddlb ="ddl_std_conta_dtp_dngcd" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="CONTA_WT" text="集装箱空重" mark ="nnnnnnnnnn.nnnnn" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+      <column name="GOODS_WT" text="货物重量" mark ="nnnnnnnnnn.nnnnn" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+      <column name="PLAN_CODE" text="码头计划编号" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="VOY_NO" text="航次/班号/车次" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="CUS_STATUS" text="海关放行状态" mark ="" ddlb ="ddl_std_pass_status" dbtype="char" len="1" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!--到货通知-->
+  <table name="MFT_ARR_HEAD" callback="">
+    <!-- 非空检查 -->
+    <notnullcol>TRADE_TYPE,EMPTY_SIGN,TRAF_MODE,SHIP_NAME_CN,SHIP_CODE,VOY_NO,BILL_NO,WRAP_TYPE,G_NAME,PACK_NO,GROSS_WT,CARGO_NW,RECV_DATE,UNLOAD_DATE,AREA_CODE,CUSTOMS_CODE,DOCUMENT_TYPE,ENTRY_NUM</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="REF_SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CHK_STATUS" text="" mark ="" ddlb ="ddl_STD_STATUS" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="RET_CHANNEL" text="" mark ="" ddlb ="ddl_STD_CHANNEL" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="BUSINESS_STEP" text="" mark ="" ddlb ="ddl_STD_BUSINESS_TYPE" dbtype="char" len="2" regexp="" regexpmsg="" />
+      <column name="TRN_TYPE" text="" mark ="" ddlb ="ddl_STD_TRN_TYPE" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="EMPTY_SIGN" text="" mark ="" ddlb ="ddl_STD_EMPTY_SIGN" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="TRAF_MODE" text="" mark ="" ddlb ="ddl_std_traf_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="IS_TRANSIT" text="" mark ="" ddlb ="ddl_STD_YES_NO" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="DOC_TYPE" text="" mark ="" ddlb ="ddl_std_biz_codes" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="AREA_CODE" text="" mark ="" ddlb ="ddl_std_biz_areas" dbtype="char" len="15" regexp="" regexpmsg="" />
+      <column name="CUSTOMS_CODE" text="" mark ="" ddlb ="ddl_std_i_e_port" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="TRADE_TYPE" text="" mark ="" ddlb ="ddl_STD_TRADE_TYPE" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="I_E_FLAG" text="" mark ="" ddlb ="ddl_STD_I_E_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="OPERATION_TYPE" text="" mark ="" ddlb ="" dbtype="char" len="2" regexp="" regexpmsg="" />
+      <column name="TRADE_MODE" text="" mark ="" ddlb ="ddl_std_trade_mode" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_EN" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_CN" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_CODE" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="VOY_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="ENTRY_ID" text="" mark ="" ddlb ="" dbtype="char" len="500" regexp="" regexpmsg="" />
+      <column name="BILL_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="G_NAME" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="CODE_T" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="OWNER_NAME" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="TO_USER" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="NOTIFY_PARTY" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="WRAP_TYPE" text="" mark ="" ddlb ="ddl_std_cod_water_wrap" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="PACK_NO" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="GROSS_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="CARGO_NW" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="CARGO_NW_D" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="CARGO_NW_R" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="RECV_DATE" text="" mark="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="UNLOAD_DATE" text="" mark="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="COM_OP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="COM_OP_TIME" text="" mark ="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="CHK_TIME" text="" mark="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="CUS_STATUS" text="" mark ="" ddlb ="ddl_std_pass_status" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CIQ_STATUS" text="" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="REG_STATUS" text="" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CHK_NOTE" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="REF_FLAG" text="" mark ="" ddlb ="ddl_STD_REF_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CHK_FLAG" text="" mark ="" ddlb ="ddl_STD_CHK_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="DEC_TIME" text="" mark="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="INPUTER" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NO" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="I_SHIP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="I_VOY_NO" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="DOCUMENT_TYPE" text="" mark ="" ddlb ="ddl_std_document_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="DOCUMENT_STATUS" text="" mark ="" ddlb ="ddl_std_document_status" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="IC_STATUS" text="放行状态" mark ="" ddlb ="ddl_std_icstatus" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="RSK_FLAG" text="布控状态" mark ="" ddlb ="ddl_std_rskflag" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="ALTER_NUMBER" text="变更次数" mark ="" ddlb ="" dbtype="int" len="3" regexp="" regexpmsg="" />
+      <column name="ENTRY_NUM" text="报关单数量" mark ="" ddlb ="" dbtype="int" len="3" regexp="" regexpmsg="" />
+      <column name="USER_NO" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="DRFAULT_VALUE" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 到货通知 集装箱表体 -->
+  <table name="MFT_ARR_CONA" callback="">
+    <!-- 非空检查 -->
+    <notnullcol>CONTA_ID</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>      
+      <column name="YARD" text="堆场" mark =""  ddlb =""  dbtype="char" len="20" regexp=""  regexpmsg=""  />
+      <column name="A_HEAP" text="堆位" mark =""  ddlb =""  dbtype="char" len="20" regexp=""  regexpmsg=""  />
+      <column name="HIERARCHY" text="层次" mark =""  ddlb =""  dbtype="char" len="20" regexp=""  regexpmsg=""  />
+      <column name="LEAVE_DATE" text="预计提离时间" mark =""  ddlb =""  dbtype="char" len="20" regexp=""  regexpmsg=""  />
+      <column name="BILL_NO" text="提运单号" mark =""  ddlb =""  dbtype="char" len="32" regexp=""  regexpmsg=""  />
+      <column name="CONTA_ID" text="集装箱号" mark =""  ddlb =""  dbtype="char" len="32" regexp=""  regexpmsg=""  />
+      <column name="CONTA_TYPE" text="集装箱类型" mark =""  ddlb ="ddl_STD_ContaMode"  dbtype="char" len="4" regexp=""  regexpmsg=""  />
+      <column name="CONTA_SIZE" text="集装箱尺寸" mark =""  ddlb =""  dbtype="char" len="20" regexp=""  regexpmsg=""  />
+      <column name="SEAL_NO" text="封志号" mark =""  ddlb =""  dbtype="char" len="32" regexp=""  regexpmsg=""  />
+      <column name="SEAL_CLASS" text="封志类型" mark =""  ddlb =""  dbtype="char" len="32" regexp=""  regexpmsg=""  />
+      <column name="SEAL_PERSON" text="施封人" mark =""  ddlb =""  dbtype="char" len="40" regexp=""  regexpmsg=""  />
+      <column name="PLACE" text="存放位置" mark =""  ddlb =""  dbtype="char" len="20" regexp=""  regexpmsg=""  />
+      <column name="NOTE" text="备注" mark =""  ddlb =""  dbtype="char" len="100" regexp=""  regexpmsg=""  />
+      <column name="STORAGENO" text="入库单号" mark =""  ddlb =""  dbtype="char" len="20" regexp=""  regexpmsg=""  />
+      <column name="CONTA_STATUS" text="拼箱标识" mark =""  ddlb ="ddl_STD_CONTA_STATUS"  dbtype="char" len="1" regexp=""  regexpmsg=""  />
+      <column name="REF_FLAG" text="引用标识" mark =""  ddlb ="ddl_STD_REPORT_FLAG"  dbtype="char" len="1" regexp=""  regexpmsg=""  />
+      <column name="CHK_FLAG" text="核销标识" mark =""  ddlb ="ddl_STD_CHECK_FLAG"  dbtype="char" len="1" regexp=""  regexpmsg=""  />
+      <column name="SEQ_NO" text="关联主表" mark =""  ddlb =""  dbtype="char" len="20" regexp=""  regexpmsg=""  />
+      <column name="TRADE_TYPE" text="贸易类型" mark =""  ddlb =""  dbtype="char" len="1" regexp=""  regexpmsg=""  />
+      <column name="EMPTY_SIGN" text="空重标识" mark =""  ddlb =""  dbtype="char" len="1" regexp=""  regexpmsg=""  />
+      <column name="TARE_WEIGHT" text="" mark =""  ddlb =""  dbtype="int" len="22" regexp=""  regexpmsg=""  />
+      <column name="CUS_STATUS" text="放行状态（海关端）" mark =""  ddlb ="ddl_std_pass_status"  dbtype="char" len="1" regexp=""  regexpmsg=""  />
+      <column name="SHIP_CODE" text="运输工具代码" mark =""  ddlb =""  dbtype="char" len="50" regexp=""  regexpmsg=""  />
+      <column name="SHIP_NAME_CN" text="运输工具名称/中" mark =""  ddlb =""  dbtype="char" len="50" regexp=""  regexpmsg=""  />
+      <column name="VOY_NO" text="航/班/车次" mark =""  ddlb =""  dbtype="char" len="50" regexp=""  regexpmsg=""  />
+      <column name="MERGER_SEQ_NO" text="" mark =""  ddlb =""  dbtype="char" len="50" regexp=""  regexpmsg=""  />
+      <column name="DTP_DNGCD" text="危险品标识" mark =""  ddlb ="ddl_std_conta_dtp_dngcd"  dbtype="char" len="50" regexp=""  regexpmsg=""  />
+      <column name="IC_STATUS" text="" mark =""  ddlb ="ddl_std_icstatus"  dbtype="char" len="1" regexp=""  regexpmsg=""  />
+      <column name="ALTER_NUMBER" text="变更次数" mark =""  ddlb =""  dbtype="int" len="22" regexp=""  regexpmsg=""  />
+      <column name="OID" text="OID" mark =""  ddlb =""  dbtype="char" len="40" regexp=""  regexpmsg=""  />
+      <column name="RECV_DATE" text="运抵时间" mark =""  ddlb =""  dbtype="char" len="20" regexp=""  regexpmsg=""  />
+      <column name="UNLOAD_DATE" text="施封时间" mark =""  ddlb =""  dbtype="char" len="20" regexp=""  regexpmsg=""  />
+      <column name="TPT_CHK_SEQ_NO" text="承接核放单号" mark =""  ddlb =""  dbtype="char" len="20" regexp=""  regexpmsg=""  />
+      <column name="IF_UNDERTAKE" text="是否承接" mark =""  ddlb =""  dbtype="char" len="1" regexp=""  regexpmsg=""  />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 到货通知 报关单 -->
+  <table name="MFT_ARR_ENTRY" callback="">
+    <!-- 非空检查 -->
+    <notnullcol></notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="BILL_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="ENTRY_ID" text="" mark ="" ddlb ="" dbtype="char" len="18" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+
+  <!--到货通知-->
+  <table name="JGPT_MIDDLE.MFT_ARR_HEAD" callback="">
+    <!-- 非空检查 -->
+    <notnullcol>TRADE_TYPE,EMPTY_SIGN,TRAF_MODE,SHIP_NAME_CN,SHIP_CODE,VOY_NO,BILL_NO,WRAP_TYPE,G_NAME,PACK_NO,GROSS_WT,CARGO_NW,RECV_DATE,UNLOAD_DATE,AREA_CODE,CUSTOMS_CODE,DOCUMENT_TYPE,ENTRY_NUM</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="REF_SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CHK_STATUS" text="" mark ="" ddlb ="ddl_STD_STATUS" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="RET_CHANNEL" text="" mark ="" ddlb ="ddl_STD_CHANNEL" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="BUSINESS_STEP" text="" mark ="" ddlb ="ddl_STD_BUSINESS_TYPE" dbtype="char" len="2" regexp="" regexpmsg="" />
+      <column name="TRN_TYPE" text="" mark ="" ddlb ="ddl_STD_TRN_TYPE" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="EMPTY_SIGN" text="" mark ="" ddlb ="ddl_STD_EMPTY_SIGN" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="TRAF_MODE" text="" mark ="" ddlb ="ddl_std_traf_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="IS_TRANSIT" text="" mark ="" ddlb ="ddl_STD_YES_NO" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="DOC_TYPE" text="" mark ="" ddlb ="ddl_std_biz_codes" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="AREA_CODE" text="" mark ="" ddlb ="ddl_std_biz_areas" dbtype="char" len="15" regexp="" regexpmsg="" />
+      <column name="CUSTOMS_CODE" text="" mark ="" ddlb ="ddl_std_i_e_port" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="TRADE_TYPE" text="" mark ="" ddlb ="ddl_STD_TRADE_TYPE" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="I_E_FLAG" text="" mark ="" ddlb ="ddl_STD_I_E_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="OPERATION_TYPE" text="" mark ="" ddlb ="" dbtype="char" len="2" regexp="" regexpmsg="" />
+      <column name="TRADE_MODE" text="" mark ="" ddlb ="ddl_std_trade_mode" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_EN" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_CN" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_CODE" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="VOY_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="ENTRY_ID" text="" mark ="" ddlb ="" dbtype="char" len="500" regexp="" regexpmsg="" />
+      <column name="BILL_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="G_NAME" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="CODE_T" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="OWNER_NAME" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="TO_USER" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="NOTIFY_PARTY" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="WRAP_TYPE" text="" mark ="" ddlb ="ddl_std_cod_water_wrap" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="PACK_NO" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="GROSS_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="CARGO_NW" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="CARGO_NW_D" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="CARGO_NW_R" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="RECV_DATE" text="" mark="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="UNLOAD_DATE" text="" mark="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="COM_OP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="COM_OP_TIME" text="" mark ="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="CHK_TIME" text="" mark="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="CUS_STATUS" text="" mark ="" ddlb ="ddl_std_pass_status" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CIQ_STATUS" text="" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="REG_STATUS" text="" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CHK_NOTE" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="REF_FLAG" text="" mark ="" ddlb ="ddl_STD_REF_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CHK_FLAG" text="" mark ="" ddlb ="ddl_STD_CHK_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="DEC_TIME" text="" mark="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="INPUTER" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NO" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="I_SHIP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="I_VOY_NO" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="DOCUMENT_TYPE" text="" mark ="" ddlb ="ddl_std_document_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="DOCUMENT_STATUS" text="" mark ="" ddlb ="ddl_std_document_status" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="IC_STATUS" text="放行状态" mark ="" ddlb ="ddl_std_icstatus" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="RSK_FLAG" text="布控状态" mark ="" ddlb ="ddl_std_rskflag" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="ALTER_NUMBER" text="变更次数" mark ="" ddlb ="" dbtype="int" len="3" regexp="" regexpmsg="" />
+      <column name="ENTRY_NUM" text="报关单数量" mark ="" ddlb ="" dbtype="int" len="3" regexp="" regexpmsg="" />
+      <column name="USER_NO" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="DRFAULT_VALUE" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 到货通知 集装箱表体 -->
+  <table name="JGPT_MIDDLE.MFT_ARR_CONA" callback="">
+    <!-- 非空检查 -->
+    <notnullcol>CONTA_ID</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="BILL_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="CONTA_ID" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="CONTA_TYPE" text="" mark ="" ddlb ="ddl_STD_CONTA_TYPE" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="CONTA_SIZE" text="" mark ="" ddlb ="" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="SEAL_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_CLASS" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_PERSON" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="RECV_DATE" text="" mark="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="PLACE" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="UNLOAD_DATE" text="" mark="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="NOTE" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="STORAGENO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CONTA_STATUS" text="" mark ="" ddlb ="ddl_STD_CONTA_STATUS" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="REF_FLAG" text="" mark ="" ddlb ="ddl_STD_REPORT_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CHK_FLAG" text="" mark ="" ddlb ="ddl_STD_CHECK_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="DTP_DNGCD" text="" mark ="" ddlb ="ddl_std_conta_dtp_dngcd" dbtype="char" len="50" regexp="" regexpmsg="" />
+
+      <column name="IC_STATUS" text="放行状态" mark ="" ddlb ="ddl_std_icstatus" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="ALTER_NUMBER" text="变更次数" mark ="" ddlb ="" dbtype="int" len="3" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+  <!-- 进出境舱单动态表头 -->
+  <table name="MFT_MENIFEST_HEAD" callback="">
+    <!-- 非空检查 -->
+    <notnullcol></notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where="">NO_SERIAL</notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->CUSTOMS_CODE
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="NO_SERIAL" text="" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="DEST_CUS_CODE" text="" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_CN" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_EN" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="SHIP_ID" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="VOY_NO" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="PORT_LOADING" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="PORT_DISCHARGE" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="START_DATES" text="" mark="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="GROSS_TONNAGE" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="15" regexp="" regexpmsg="" />
+      <column name="NET_TONNAGE" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="15" regexp="" regexpmsg="" />
+      <column name="DWT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="15" regexp="" regexpmsg="" />
+      <column name="TOTAL_INFO" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="CARRIER_CODE" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="CARRIER_NAME" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="DECLARE_DATE" text="" mark ="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="NOTICE_DATE" text="" mark ="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="I_O_FLAG" text="" mark ="" ddlb ="ddl_STD_I_E_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="BERTH_CODE" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="CHK_STATUS" text="" mark ="" ddlb ="ddl_std_status_codes" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="RET_CHANNEL" text="" mark ="" ddlb ="ddl_std_channel_codes" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="DECLARE_MARK" text="" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CUSTOMS_CODE" text="" mark ="" ddlb ="ddl_std_i_e_port" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="AREA_CODE" text="" mark ="" ddlb ="ddl_std_biz_areas" dbtype="char" len="15" regexp="" regexpmsg="" />
+      <column name="DOC_TYPE" text="" mark ="" ddlb ="ddl_std_doc_type" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="POS_CODE" text="" mark ="" ddlb ="" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="CHK_TIME" text="" mark="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="DEC_TIME" text="" mark ="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="INPUTER" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NO" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 进出境舱单动态表体 -->
+  <table name="MFT_MENIFEST_BILL" callback="">
+    <!-- 非空检查 -->
+    <notnullcol></notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="NO_SERIAL" text="" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="BILL_NO" text="" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="TRADE_TYPE" text="" mark ="" ddlb ="ddl_std_trade_type" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="EMPTY_SIGN" text="" mark ="" ddlb ="ddl_std_container_status" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="GOODS_NAME" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="OWNER_NAME" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="TO_USER" text="" mark ="" ddlb ="" dbtype="char" len="1000" regexp="" regexpmsg="" />
+      <column name="NOTIFY_PARTY" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="PACK_TYPE" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="PACK_NO" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="GROSS_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="15" regexp="" regexpmsg="" />
+      <column name="CARGO_NW" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="16" regexp="" regexpmsg="" />
+      <column name="CONTA_QTY" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="16" regexp="" regexpmsg="" />
+      <column name="LOADING_PLACE" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="DESTINATION_PLACE" text="" mark ="" ddlb ="" dbtype="char" len="400" regexp="" regexpmsg="" />
+      <column name="LOADING_DATE" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="ARRIVAL_TIME" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="DECLARE_ORG_CODE" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="DECLARE_ORG_NAME" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 进出境舱单动态集装箱 -->
+  <table name="MFT_MENIFEST_CONA" callback="">
+    <!-- 非空检查 -->
+    <notnullcol></notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="NO_SERIAL" text="" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="BILL_NO" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="CONTA_ID" text="" mark ="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+      <column name="CONTA_TYPE" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="CONTA_SIZE" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="SEAL_NO" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="SEAL_CLASS" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="SEAL_PERSON" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="DTP_DNGCD" text="" mark ="" ddlb ="ddl_std_conta_dtp_dngcd" dbtype="char" len="70" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 无纸化通关502报文历史单证状态表 -->
+  <table name="MFT_ARR_DOCUMENTSTATUS_HISTORY" callback="">
+    <!-- 非空检查 -->
+    <notnullcol></notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="ENTRY_ID" text="" mark ="" ddlb ="" dbtype="char" len="18" regexp="" regexpmsg="" />
+      <column name="DOCUMENT_STATUS_STEP_ID" text="" mark ="" ddlb ="ddl_std_document_status_step_id" dbtype="char" len="2" regexp="" regexpmsg="" />
+      <column name="INPUT_TIME" text="" mark="" ddlb ="" dbtype="char" len="200" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>PRAMA_NAME</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 大提货计划表头 -->
+  <table name="TPT_LPLAN_HEAD" callback="">
+    <!-- 非空检查 -->
+	<notnullcol>SEQ_NO,PLANDATE_BEGIN,PLANDATE_END</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <!--TPT_LPLAN_HEAD大提货计划表头-->
+      <column name="OID" text="OID" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="单据编号" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CHK_STATUS" text="单据状态" mark ="" ddlb ="ddl_STD_STATUS" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="RET_CHANNEL" text="全程通道" mark ="" ddlb ="ddl_STD_CHANNEL" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="DECLARE_MARK" text="申报标志" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="AREA_CODE" text="监管场所" mark ="" ddlb ="ddl_std_biz_areas" dbtype="char" len="15" regexp="" regexpmsg="" />
+      <column name="CUSTOMS_CODE" text="关区代码" mark ="" ddlb ="ddl_std_i_e_port" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="DOC_TYPE" text="业务类型" mark ="" ddlb ="ddl_std_biz_codes" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="REF_FLAG" text="引用标识" mark ="" ddlb ="ddl_STD_REF_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="BUSINESS_STEP" text="业务环节" mark ="" ddlb ="ddl_STD_BUSINESS_TYPE" dbtype="char" len="2" regexp="" regexpmsg="" />
+      <column name="REF_DOC_NO" text="关联单据号" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="I_E_AREA" text="进出区标识" mark ="" ddlb ="ddl_STD_I_E_AREA" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="OPERATION_TYPE" text="作业方式代码" mark ="" ddlb ="" dbtype="char" len="2" regexp="" regexpmsg="" />
+      <column name="TRADE_TYPE" text="贸易类型" mark ="" ddlb ="ddl_STD_TRADE_TYPE" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="EMPTY_SIGN" text="集装箱空重标识" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="PLAN_CODE" text="码头计划编号" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="DELIVERY_UNIT" text="提货单位" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="PLANDATE_BEGIN" text="预计提/运日期起" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="PLANDATE_END" text="预计提/运日期止" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="NOTE" text="备注" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="POS_CODE" text="审批岗位" mark ="" ddlb ="" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="CHK_TIME " text="审批时间" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="DEC_TIME" text="操作时间" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="INPUTER" text="操作人" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NO" text="申报单位组织机构代码" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NAME" text="申报单位名称" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="CONFIRM_TIME" text="确认时间" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CONFIRM_ER" text="确认人" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="CONFIRM_COP_NO" text="确认单位组织机构代码" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="CONFIRM_COP_NAME" text="确认单位名称" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="TRN_COP_CODE" text="运输单位代码" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="TRN_COP_NAME" text="运输单位名称" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 大提货计划商品表体 -->
+  <table name="TPT_LPLAN_GLIST" callback="">
+    <!-- 非空检查 -->
+    <notnullcol></notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <!--TPT_LPLAN_GLIST大提货计划商品表体-->
+      <column name="OID" text="OID" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="单据编号" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="G_NO" text="序号" mark ="" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_EN" text="运输工具英文名称" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_CN" text="运输工具中文文名称" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_CODE" text="运输工具代码" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="VOY_NO" text="航次/班号/车次" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="BILL_NO" text="提单号" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="G_NAME" text="商品名称" mark ="" ddlb ="" dbtype="char" len="255" regexp="" regexpmsg="" />
+      <column name="G_MODEL" text="商品规格" mark ="" ddlb ="" dbtype="char" len="255" regexp="" regexpmsg="" />
+      <column name="VEHICLE_BRAND" text="车辆品牌" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="FRAME_NAMBER" text="车架号" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="ENGINE_NUMBER" text="发动机号" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="COLOR" text="车辆颜色" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="OWNER_NAME" text="发货人" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="TO_USER" text="收货人" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="NOTIFY_PARTY" text="通知人" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="G_QTY" text="数量/货物件数" mark ="" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+      <column name="G_UNIT" text="单位" mark ="" ddlb ="" dbtype="char" len="3" regexp="" regexpmsg="" />
+      <column name="DECL_PRICE" text="单价" mark ="nnnnnnnnnn.nnnnn" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+      <column name="DECL_TOTAL" text="总价" mark ="nnnnnnnnnn.nnnnn" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+      <column name="CURR" text="币制" mark ="" ddlb ="" dbtype="char" len="3" regexp="" regexpmsg="" />
+      <column name="GROSS_WT" text="毛重" mark ="nnnnnnnnnn.nnnnn" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+      <column name="QTY_WT" text="净重" mark ="nnnnnnnnnn.nnnnn" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+      <column name="WRAP_TYPE" text="包装方式" mark ="" ddlb ="ddl_std_wrap_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CUS_STATUS" text="海关放行状态" mark ="" ddlb ="ddl_std_pass_status" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CIQ_STATUS" text="国检放行状态" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="REG_STATUS" text="监管放行状态" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="CONTA_ID" text="集装箱号" mark ="" ddlb ="" dbtype="char" len="11" regexp="" regexpmsg="" />
+      <column name="CONTA_TYPE" text="尺寸/类型" mark ="" ddlb ="ddl_STD_ContaMode" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="DTP_DNGCD" text="危险品标识" mark ="" ddlb ="ddl_std_conta_dtp_dngcd" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="CONTA_WT" text="集装箱空重" mark ="nnnnnnnnnn.nnnnn" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+      <column name="GOODS_WT" text="货物重量" mark ="nnnnnnnnnn.nnnnn" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+
+  <!-- 核放单表头 -->
+  <table name="JGPT_MIDDLE.TPT_CHK_HEAD" callback="">
+    <!-- 非空检查 -->
+    <notnullcol>CUSTOMS_CODE,TRAF_MODE,CARRY_TYPE,EMPTY_SIGN,PLAN_DATE,SHIP_CODE,VOY_NO,CONTA_ID1,CONTA_TYPE1,AREA_CODE,I_E_FLAG,TRN_COP_CODE,GROSS_WT</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="SEQ_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CHK_STATUS" text="" mark ="" ddlb ="ddl_STD_STATUS" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="RET_CHANNEL" text="" mark ="" ddlb ="ddl_STD_CHANNEL" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="DECLARE_MARK" text="" mark ="" ddlb ="" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="DOC_TYPE" text="" mark ="" ddlb ="ddl_std_biz_codes" dbtype="char" len="8" regexp="" regexpmsg="" />
+      <column name="REF_FLAG" text="" mark ="" ddlb ="ddl_STD_REF_FLAG" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="BUSINESS_STEP" text="" mark ="" ddlb ="ddl_STD_BUSINESS_TYPE" dbtype="char" len="2" regexp="" regexpmsg="" />
+      <column name="EMS_NO" text="" mark ="" ddlb ="" dbtype="char" len="12" regexp="" regexpmsg="" />
+      <column name="REF_DOC_NO" text="" mark ="" ddlb ="" dbtype="char" len="36" regexp="" regexpmsg="" />
+      <column name="AREA_CODE" text="" mark ="" ddlb ="ddl_std_biz_areas" dbtype="char" len="15" regexp="" regexpmsg="" />
+      <column name="CUSTOMS_CODE" text="" mark ="" ddlb ="ddl_std_i_e_port" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="I_E_AREA" text="" mark ="" ddlb ="ddl_STD_I_E_AREA" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="OPERATION_TYPE" text="" mark ="" ddlb ="" dbtype="char" len="2" regexp="" regexpmsg="" />
+      <column name="TRADE_TYPE" text="" mark ="" ddlb ="ddl_STD_TRADE_TYPE" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="TRAF_MODE" text="" mark ="" ddlb ="ddl_std_traf_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="IS_TRANSIT" text="" mark ="" ddlb ="ddl_STD_YES_NO" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="IC_REG_NO" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="IC_CODE" text="" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CARRY_TYPE" text="" mark ="" ddlb ="ddl_STD_CARRY_TYPE" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="EMPTY_SIGN" text="" mark ="" ddlb ="ddl_STD_EMPTY_SIGN" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="VE_NAME" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="DRIVER_NAME" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="DRIVER_TEL" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="PLAN_DATE" text="" mark ="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="CONTA_ID1" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="CONTA_TYPE1" text="" mark ="" ddlb ="" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="SEAL_NO1" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_CLASS1" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_PERSON1" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="CONTA_ID2" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="CONTA_TYPE2" text="" mark ="" ddlb ="" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="SEAL_NO2" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_CLASS2" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="SEAL_PERSON2" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="PACK_NO" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="WRAP_TYPE" text="" mark ="" ddlb ="ddl_std_wrap_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="GROSS_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="QTY_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_EN" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_CN" text="" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_CODE" text="" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="VOY_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="NOTE" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="TRADE_CODE" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="TRADE_NAME" text="" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="OWER_CODE" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="OWER_NAME" text="" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="CHK_TIME" text="" mark="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="DEC_TIME" text="" mark="" ddlb ="" dbtype="char" len="23" regexp="" regexpmsg="" />
+      <column name="INPUTER" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NO" text="" mark ="" ddlb ="" dbtype="char" len="13" regexp="" regexpmsg="" />
+      <column name="INPUT_COP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="70" regexp="" regexpmsg="" />
+      <column name="BIZ_TYPE" text="" mark ="" ddlb ="ddl_std_biz_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="DEC_MODE" text="" mark ="" ddlb ="ddl_std_dec_mode" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="FLOW_TYPE" text="" mark ="" ddlb ="ddl_std_flow_type" dbtype="char" len="1" regexp="" regexpmsg="" />
+      <column name="POS_CODE" text="" mark ="" ddlb ="" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="VE_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="VE_TUOJIA_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="VE_TUOJIA_NAME" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="TRN_COP_CODE" text="" mark ="" ddlb ="ddl_std_cop_com" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="TRN_COP_NAME" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="DTP_DNGCD1" text="" mark ="" ddlb ="ddl_std_conta_dtp_dngcd" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="DTP_DNGCD2" text="" mark ="" ddlb ="ddl_std_conta_dtp_dngcd" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <!-- 大计划 新增字段 -->
+      <column name="PLAN_CODE" text="码头计划编号" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="DELIVERY_UNIT" text="提货单位" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="PLANDATE_BEGIN" text="预计提/运日期起" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="PLANDATE_END" text="预计提/运日期止" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+
+  <!-- 核放单表体 -->
+  <table name="JGPT_MIDDLE.TPT_CHK_GLIST" callback="">
+    <!-- 非空检查 -->
+    <notnullcol>OWNER_NAME,TO_USER</notnullcol>
+    <!--重复检查列 列 ", "表示在一起检查 -->
+    <notrepeats>
+      <notrepeat where=""></notrepeat>
+    </notrepeats>
+    <!-- todo 实现下拉，风格（check） 对齐 -->
+    <columns>
+      <column name="OID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="POID" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="G_NO" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="CODE_TS" text="" mark ="" ddlb ="" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <column name="ITEM_NO" text="" mark ="" ddlb ="" dbtype="int" len="10" regexp="" regexpmsg="" />
+      <column name="G_NAME" text="" mark ="" ddlb ="" dbtype="char" len="60" regexp="" regexpmsg="" />
+      <column name="G_MODEL" text="" mark ="" ddlb ="" dbtype="char" len="60" regexp="" regexpmsg="" />
+      <column name="CONTA_ID" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="BILL_NO" text="" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="OWNER_NAME" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="TO_USER" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="NOTIFY_PARTY" text="" mark ="" ddlb ="" dbtype="char" len="100" regexp="" regexpmsg="" />
+      <column name="G_QTY" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="19" regexp="" regexpmsg="" />
+      <column name="G_UNIT" text="" mark ="" ddlb ="" dbtype="char" len="3" regexp="" regexpmsg="" />
+      <column name="DECL_PRICE" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="19" regexp="" regexpmsg="" />
+      <column name="DECL_TOTAL" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="18" regexp="" regexpmsg="" />
+      <column name="CURR" text="" mark ="" ddlb ="" dbtype="char" len="3" regexp="" regexpmsg="" />
+      <column name="GROSS_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="QTY_WT" text="" mark ="nnn,nnn,nnn,nnn.nnnn" ddlb ="" dbtype="int" len="14" regexp="" regexpmsg="" />
+      <column name="WRAP_TYPE" text="" mark ="" ddlb ="ddl_std_cod_water_wrap" dbtype="char" len="10" regexp="" regexpmsg="" />
+      <!-- 大计划 新增字段 -->
+      <column name="SHIP_NAME_EN" text="运输工具英文名称" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_NAME_CN" text="运输工具中文文名称" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="SHIP_CODE" text="运输工具代码" mark ="" ddlb ="" dbtype="char" len="40" regexp="" regexpmsg="" />
+      <column name="VEHICLE_BRAND" text="车辆品牌" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="FRAME_NAMBER" text="车架号" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="ENGINE_NUMBER" text="发动机号" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="COLOR" text="车辆颜色" mark ="" ddlb ="" dbtype="char" len="20" regexp="" regexpmsg="" />
+      <column name="CONTA_TYPE" text="尺寸/类型" mark ="" ddlb ="ddl_STD_ContaMode" dbtype="char" len="4" regexp="" regexpmsg="" />
+      <column name="DTP_DNGCD" text="危险品标识" mark ="" ddlb ="ddl_std_conta_dtp_dngcd" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="CONTA_WT" text="集装箱空重" mark ="nnnnnnnnnn.nnnnn" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+      <column name="GOODS_WT" text="货物重量" mark ="nnnnnnnnnn.nnnnn" ddlb ="" dbtype="int" len="1" regexp="" regexpmsg="" />
+      <column name="PLAN_CODE" text="码头计划编号" mark ="" ddlb ="" dbtype="char" len="50" regexp="" regexpmsg="" />
+      <column name="VOY_NO" text="航次/班号/车次" mark ="" ddlb ="" dbtype="char" len="32" regexp="" regexpmsg="" />
+      <column name="CUS_STATUS" text="海关放行状态" mark ="" ddlb ="ddl_std_pass_status" dbtype="char" len="1" regexp="" regexpmsg="" />
+    </columns>
+    <cninputcol></cninputcol>
+    <keycolumn>OID</keycolumn>
+    <keycolumnvalueservice></keycolumnvalueservice>
+  </table>
+</tables>

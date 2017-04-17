@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Querys>
+  <!--装运申请-->
+  <Query QueryName="LoadDecQuery" ORG_CODE="INPUT_COP_NO">
+    <column TableName="TPT_SHIP_HEAD" TableNameShort="" FieldCode="SHIP_CODE" FieldName="运输工具代码" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_SHIP_HEAD" TableNameShort="" FieldCode="SHIP_NAME_CN" FieldName="运输工具名称" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_SHIP_HEAD" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_SHIP_HEAD" TableNameShort="" FieldCode="SEQ_NO" FieldName="单据编号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_SHIP_HEAD" TableNameShort="" FieldCode="CHK_STATUS" FieldName="单据状态" QueryType="ddl" DropdownName="ddl_std_status_codes" />
+    <column TableName="TPT_SHIP_HEAD" TableNameShort="" FieldCode="RET_CHANNEL" FieldName="回执状态" QueryType="ddl" DropdownName="ddl_STD_CHANNEL" />
+    <column TableName="TPT_SHIP_HEAD" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+  </Query>
+
+  <!--转关物流申报-->
+  <Query QueryName="TptApprQuery" ORG_CODE="INPUT_COP_NO">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="SEQ_NO" FieldName="单据编号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="CHK_STATUS" FieldName="单据状态" QueryType="ddl" DropdownName="ddl_std_status_codes" />
+  </Query>
+
+  <!--散货提货申请-->
+  <Query QueryName="TptApprQueryBulk" AREA_CODE="AREA_CODE" ORG_CODE="INPUT_COP_NO">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="SHIP_NAME_CN" FieldName="运输工具名称/中" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="CHK_STATUS" FieldName="单据状态" QueryType="ddl" DropdownName="ddl_std_status_codes" />
+  </Query>
+
+  <!--散货提货查询-->
+  <Query QueryName="TptApprImpQueryBulk" AREA_CODE="AREA_CODE" >
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="SHIP_NAME_CN" FieldName="运输工具名称/中" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="CHK_STATUS" FieldName="单据状态" QueryType="ddl" DropdownName="ddl_std_status_codes" />
+  </Query>
+
+  <!--散货提货维护-->
+  <Query QueryName="TptChkQueryBulk"  AREA_CODE="AREA_CODE" ORG_CODE="TRN_COP_CODE">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="SHIP_NAME_CN" FieldName="运输工具名称/中" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="CHK_STATUS" FieldName="单据状态" QueryType="ddl" DropdownName="ddl_std_status_codes" />
+  </Query>
+  
+  
+  <!--集装箱提货维护-->
+  <Query QueryName="TptCHKCOPQuery"  AREA_CODE="AREA_CODE" ORG_CODE="INPUT_COP_NO">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="SHIP_NAME_CN" FieldName="运输工具名称/中" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="CONTA_ID" FieldName="集装箱号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="CHK_STATUS" FieldName="单据状态" QueryType="ddl" DropdownName="ddl_std_status_codes" />
+  </Query>
+  
+  <!--集装箱运货查询-->
+  <Query QueryName="TptApprOnlyQuery" ORG_CODE="INPUT_COP_NO">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="SEQ_NO" FieldName="单据编号" QueryType="txt" DropdownName="" />
+  </Query>
+  <!--到货通知-->
+  <Query QueryName="ReachNotice" AREA_CODE="AREA_CODE">
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SHIP_CODE" FieldName="运输工具代码" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SHIP_NAME_CN" FieldName="运输工具名称" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SEQ_NO" FieldName="单据编号" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.ENTRY_ID" FieldName="报关单号" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_CONA" TableNameShort="" FieldCode="B.CONTA_ID" FieldName="集装箱号" QueryType="txt" DropdownName="" />
+  </Query>
+
+  <!--到货通知-->
+  <Query QueryName="ReachNotice_JGPT_MIDDLE" AREA_CODE="AREA_CODE">
+    <column TableName="JGPT_MIDDLE.MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SHIP_CODE" FieldName="运输工具代码" QueryType="txt" DropdownName="" />
+    <column TableName="JGPT_MIDDLE.MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SHIP_NAME_CN" FieldName="运输工具名称" QueryType="txt" DropdownName="" />
+    <column TableName="JGPT_MIDDLE.MFT_ARR_HEAD" TableNameShort="" FieldCode="A.VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="JGPT_MIDDLE.MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SEQ_NO" FieldName="单据编号" QueryType="txt" DropdownName="" />
+    <column TableName="JGPT_MIDDLE.MFT_ARR_HEAD" TableNameShort="" FieldCode="A.DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="JGPT_MIDDLE.MFT_ARR_HEAD" TableNameShort="" FieldCode="A.ENTRY_ID" FieldName="报关单号" QueryType="txt" DropdownName="" />
+    <column TableName="JGPT_MIDDLE.MFT_ARR_HEAD" TableNameShort="" FieldCode="A.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="JGPT_MIDDLE.MFT_ARR_CONA" TableNameShort="" FieldCode="B.CONTA_ID" FieldName="集装箱号" QueryType="txt" DropdownName="" />
+  </Query>
+  <!--到货通知维护-->
+  <Query QueryName="ReachNoticeAlter" ORG_CODE="INPUT_COP_NO" AREA_CODE="AREA_CODE">
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SHIP_CODE" FieldName="运输工具代码" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SHIP_NAME_CN" FieldName="运输工具名称" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SEQ_NO" FieldName="单据编号" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.ENTRY_ID" FieldName="报关单号" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_CONA" TableNameShort="" FieldCode="B.CONTA_ID" FieldName="集装箱号" QueryType="txt" DropdownName="" />
+  </Query>
+
+  <!--到货通知确认-->
+  <Query QueryName="ReachNoticeConfirm" ORG_CODE="INPUT_COP_NO">
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="SHIP_CODE" FieldName="运输工具代码" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="SHIP_NAME_CN" FieldName="运输工具名称" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="SEQ_NO" FieldName="单据编号" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="CHK_STATUS" FieldName="单据状态" QueryType="ddl" DropdownName="ddl_std_status_codes" />
+  </Query>
+
+  <!--到货通知确认-->
+  <Query QueryName="ReachNoticeConfirm_TPT" AREA_CODE="AREA_CODE">
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SHIP_CODE" FieldName="运输工具代码" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SHIP_NAME_CN" FieldName="运输工具名称" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.SEQ_NO" FieldName="单据编号" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_ARR_HEAD" TableNameShort="" FieldCode="A.CHK_STATUS" FieldName="单据状态" QueryType="ddl" DropdownName="ddl_std_status_codes" />
+    <column TableName="MFT_ARR_CONA" TableNameShort="" FieldCode="B.CONTA_ID" FieldName="集装箱号" QueryType="txt" DropdownName="" />
+  </Query>
+
+
+  <!--运抵报告申报-->
+  <Query QueryName="ExpReach" ORG_CODE="INPUT_COP_NO">
+    <column TableName="TPT_REPORT_MANAGER" TableNameShort="" FieldCode="SHIP_CODE" FieldName="运输工具代码" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_REPORT_MANAGER" TableNameShort="" FieldCode="SHIP_NAME_CN" FieldName="运输工具名称" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_REPORT_MANAGER" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_REPORT_MANAGER" TableNameShort="" FieldCode="SEQ_NO" FieldName="单据编号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_REPORT_MANAGER" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="TPT_REPORT_MANAGER" TableNameShort="" FieldCode="BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_REPORT_MANAGER" TableNameShort="" FieldCode="CHK_STATUS" FieldName="单据状态" QueryType="ddl" DropdownName="ddl_std_status_codes" />
+  </Query>
+
+  <!--进出境舱单动态-->
+  <Query QueryName="MenifestQuery" AREA_CODE="AREA_CODE">
+    <column TableName="MFT_MENIFEST_HEAD" TableNameShort="" FieldCode="SHIP_NAME_CN" FieldName="运输工具名称/中" QueryType="txt" DropdownName="" />
+    <column TableName="MFT_MENIFEST_HEAD" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date"  DropdownName="" />
+    <column TableName="MFT_MENIFEST_HEAD" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+  </Query>
+
+  <!--集装箱提货-->
+  <Query QueryName="TptApprQueryConta" AREA_CODE="AREA_CODE" ORG_CODE="INPUT_COP_NO">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="SHIP_NAME_CN" FieldName="运输工具名称/中" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="CONTA_ID" FieldName="集装箱号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="CHK_STATUS" FieldName="单据状态" QueryType="ddl" DropdownName="ddl_std_status_codes" />
+  </Query>
+
+  <!--集装箱提货查询-->
+  <Query QueryName="TptApprOnlyQueryConta" AREA_CODE="AREA_CODE">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="SHIP_NAME_CN" FieldName="运输工具名称/中" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="VOY_NO" FieldName="航/班/车次" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="CONTA_ID" FieldName="集装箱号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="DEC_TIME" FieldName="操作时间" QueryType="date" DropdownName="" />
+  </Query>
+
+  <!--散货提货大计划申请-->
+  <Query QueryName="grid_TPT13_TPT_LPLAN_HEAD_002" AREA_CODE="AREA_CODE">
+    <column TableName="TPT_LPLAN_HEAD" TableNameShort="" FieldCode="PLAN_CODE" FieldName="码头计划编号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_LPLAN_HEAD" TableNameShort="" FieldCode="TRN_COP_NAME" FieldName="运货单位" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_LPLAN_GLIST" TableNameShort="" FieldCode="BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_LPLAN_HEAD" TableNameShort="" FieldCode="PLANDATE_BEGIN" FieldName="预计提/运日期起" QueryType="date" DropdownName="" />
+    <column TableName="TPT_LPLAN_GLIST" TableNameShort="" FieldCode="G_NAME" FieldName="货物名称" QueryType="txt" DropdownName="" />
+  </Query>
+
+  <!--散货提货大计划申请-->
+  <Query QueryName="grid_TPT16_TPT_LPLAN_HEAD_002" AREA_CODE="AREA_CODE">
+    <column TableName="TPT_LPLAN_HEAD" TableNameShort="" FieldCode="PLAN_CODE" FieldName="码头计划编号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_LPLAN_HEAD" TableNameShort="" FieldCode="TRN_COP_NAME" FieldName="运货单位" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_LPLAN_GLIST" TableNameShort="" FieldCode="BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_LPLAN_HEAD" TableNameShort="" FieldCode="PLANDATE_BEGIN" FieldName="预计提/运日期起" QueryType="date" DropdownName="" />
+    <column TableName="TPT_LPLAN_GLIST" TableNameShort="" FieldCode="G_NAME" FieldName="货物名称" QueryType="txt" DropdownName="" />
+  </Query>
+  <!--集装箱提货大计划-->
+  <Query QueryName="Query_TPT12_TPT_LPLAN_HEAD_001" AREA_CODE="AREA_CODE" ORG_CODE="INPUT_COP_NO">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLAN_CODE" FieldName="码头计划号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.DELIVERY_UNIT" FieldName="提货单位" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_BEGIN" FieldName="预计提货时间起" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_END" FieldName="预计提货时间止" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.CONTA_ID" FieldName="集装箱号" QueryType="txt" DropdownName="" />
+  </Query>
+  <!--整车提货大计划 -->
+  <Query QueryName="Query_TPT14_TPT_LPLAN_HEAD_001" AREA_CODE="AREA_CODE" ORG_CODE="INPUT_COP_NO">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="A.PLAN_CODE" FieldName="码头计划号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="A.DELIVERY_UNIT" FieldName="提货单位" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="B.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="A.PLANDATE_BEGIN" FieldName="预计提货时间起" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="A.PLANDATE_END" FieldName="预计提货时间止" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="B.VEHICLE_BRAND" FieldName="车辆品牌" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="B.FRAME_NAMBER" FieldName="车架号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="B.ENGINE_NUMBER" FieldName="发动机号" QueryType="txt" DropdownName="" />
+  </Query>
+  <!--整车提货大计划查询 -->
+  <Query QueryName="Query_TPT14_TPT_LPLAN_HEAD_001_query" >
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="A.PLAN_CODE" FieldName="码头计划号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="A.DELIVERY_UNIT" FieldName="提货单位" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="B.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="A.PLANDATE_BEGIN" FieldName="预计提货时间起" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="A.PLANDATE_END" FieldName="预计提货时间止" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="B.VEHICLE_BRAND" FieldName="车辆品牌" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="B.FRAME_NAMBER" FieldName="车架号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="B.ENGINE_NUMBER" FieldName="发动机号" QueryType="txt" DropdownName="" />
+  </Query>
+  <!--散货提货大计划-->
+  <Query QueryName="Query_TPT13_TPT_LPLAN_HEAD_003" AREA_CODE="AREA_CODE" ORG_CODE="INPUT_COP_NO">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLAN_CODE" FieldName="码头计划号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.DELIVERY_UNIT" FieldName="提货单位" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_BEGIN" FieldName="预计提货时间起" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_END" FieldName="预计提货时间止" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.G_NAME" FieldName="商品名称" QueryType="txt" DropdownName="" />
+  </Query>
+  <Query QueryName="Query_TPT16_TPT_LPLAN_HEAD_004" AREA_CODE="AREA_CODE" ORG_CODE="INPUT_COP_NO">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLAN_CODE" FieldName="码头计划号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.TRN_COP_NAME" FieldName="运输单位名称" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_BEGIN" FieldName="预计提货时间起" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_END" FieldName="预计提货时间止" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.G_NAME" FieldName="商品名称" QueryType="txt" DropdownName="" />
+  </Query>
+
+  <!--集装箱提货大计划 查询-->
+  <Query QueryName="Query_TPT12_TPT_LPLAN_HEAD_002" AREA_CODE="AREA_CODE">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLAN_CODE" FieldName="码头计划号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.DELIVERY_UNIT" FieldName="提货单位" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_BEGIN" FieldName="预计提货时间起" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_END" FieldName="预计提货时间止" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.CONTA_ID" FieldName="集装箱号" QueryType="txt" DropdownName="" />
+  </Query>
+  <!--散货提货大计划查询-->
+  <Query QueryName="Query_TPT13_TPT_LPLAN_HEAD_001" AREA_CODE="AREA_CODE">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLAN_CODE" FieldName="码头计划号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.DELIVERY_UNIT" FieldName="提货单位" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_BEGIN" FieldName="预计提货时间起" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_END" FieldName="预计提货时间止" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.G_NAME" FieldName="商品名称" QueryType="txt" DropdownName="" />
+  </Query>
+  <Query QueryName="Query_TPT16_TPT_LPLAN_HEAD_001" AREA_CODE="AREA_CODE">
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLAN_CODE" FieldName="码头计划号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.TRN_COP_NAME" FieldName="运输单位名称" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.BILL_NO" FieldName="提运单号" QueryType="txt" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_BEGIN" FieldName="预计提货时间起" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_HEAD" TableNameShort="" FieldCode="a.PLANDATE_END" FieldName="预计提货时间止" QueryType="date" DropdownName="" />
+    <column TableName="TPT_CHK_GLIST" TableNameShort="" FieldCode="b.G_NAME" FieldName="商品名称" QueryType="txt" DropdownName="" />
+  </Query>
+</Querys>
