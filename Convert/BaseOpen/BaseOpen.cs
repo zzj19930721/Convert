@@ -12,6 +12,8 @@ namespace Convert.Other
 {
     public  class BaseOpen : System.Web.UI.Page
     {
+        #region 基本参数
+
         /// <summary>
         /// 类型生产工厂
         /// </summary>
@@ -38,16 +40,9 @@ namespace Convert.Other
         protected DbHelper db;
 
         protected OpenXMl openXml = new OpenXMl();
+        #endregion
 
-        protected Dictionary<int, string> GetEnumToDic<T>()
-        {
-            Dictionary<int, string> obj = new Dictionary<int, string>();
-            foreach (var i in Enum.GetValues(typeof(T)))
-            {
-                obj.Add((int)i, ((T)i).ToString());
-            }
-            return obj;
-        }
+        #region 基本方法
 
         protected virtual void Binding()
         {
@@ -60,8 +55,17 @@ namespace Convert.Other
                 Binding();
             }
         }
+        #endregion
 
-
+        protected Dictionary<int, string> GetEnumToDic<T>()
+        {
+            Dictionary<int, string> obj = new Dictionary<int, string>();
+            foreach (var i in Enum.GetValues(typeof(T)))
+            {
+                obj.Add((int)i, ((T)i).ToString());
+            }
+            return obj;
+        }
 
     }
 }

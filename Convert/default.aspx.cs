@@ -347,8 +347,6 @@ namespace Convert
             dataXml.TableXml  = openXml.GetTable() ;
         }
 
-
-
         public  string GetChina(string col, string table, DataXml data)
         {
             var china = data.MessageXml.Where(x => x.TableName == table && x.ColumnName == col).FirstOrDefault();
