@@ -16,6 +16,7 @@
 
         <div  style="width:15%; ">
 
+        <asp:DropDownList ID="dd_size" runat="server" DataValueField="Key" DataTextField="Value" /><p />
          <asp:TextBox ID="txt_tb" runat="server"></asp:TextBox><p />
         <asp:DropDownList ID="dd_time" runat="server" DataValueField="Key" DataTextField="Value">        </asp:DropDownList><p />
         <asp:DropDownList ID="dd_type" runat="server" DataValueField="Key" DataTextField="Value">        </asp:DropDownList>

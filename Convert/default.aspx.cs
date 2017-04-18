@@ -27,6 +27,12 @@ namespace Convert
         private DataXml dataXml = new DataXml();
         private string tableName ;
 
+        public enum EnSize
+        {
+            UP,
+            DOWN
+        }
+
         #region  tem
         public  class Tem
         {
@@ -185,7 +191,7 @@ namespace Convert
                         else
                         {
                             rowValue = edit.Select("col_ID = " + num + "")[0]["dbname"] as string;
-                            sb.AppendFormat(@"<td>  <input type=""text"" size=""10"" id=""{0}"" name=""{0}"" value=""<%=head.{0}%>""/> </td>", rowValue);
+                            sb.AppendFormat(@"<td>  <input type=""text"" size=""10"" id=""{0}"" name=""{0}"" value=""<%=model.{0}%>""/> </td>", rowValue);
                         }
 
                         sb.Append(Environment.NewLine);
@@ -208,7 +214,7 @@ namespace Convert
 
                 StringBuilder GetModel = new StringBuilder();
                 string DDL = "            yield return new NameValue() {{ Name = \"{0}\", Value = cod.GetDDLTextByValue(\"{1}\", entity.{0}) }};";
-                string noDDL = "            yield return new NameValue() {{ Name = \"{0}\", Value = entity.{0} }};";
+                string noDDL = "            yield return new NameValue() {{ Name = \"{0}\", Value = entity.{0}.ToString() }};";
 
                 var models = data.TableXml.Where(x => x.TableName == tableName);
                 foreach (var i in models)
@@ -319,6 +325,9 @@ namespace Convert
             //生成模块
             dd_type.DataSource = GetEnumToDic<EnType>();
             dd_type.DataBind();
+
+            dd_size.DataSource = GetEnumToDic<EnSize>();
+            dd_size.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
