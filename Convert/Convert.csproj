@@ -40,7 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net">
-      <HintPath>..\..\快速信息化系统开发框架V4.1\code\LeaRun.Framework V4.1\LeaRun.WebApp\bin\log4net.dll</HintPath>
+      <HintPath>C:\Users\Administrator\Desktop\log4net.dll</HintPath>
     </Reference>
     <Reference Include="log4net.1.2.10.0.Fakes">
       <HintPath>FakesAssemblies\log4net.1.2.10.0.Fakes.dll</HintPath>

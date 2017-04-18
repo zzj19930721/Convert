@@ -31,6 +31,15 @@ namespace Convert {
         protected global::System.Web.UI.WebControls.TextBox text1;
         
         /// <summary>
+        /// dd_size 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dd_size;
+        
+        /// <summary>
         /// txt_tb 控件。
         /// </summary>
         /// <remarks>
