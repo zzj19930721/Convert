@@ -20,12 +20,13 @@ namespace Convert
         //2.datagrid，free
         public class DataXml
         {
+            public EnSize size;
             public List<DtXml> MessageXml;
             public List<DtXml> TableXml;
         }
 
         private DataXml dataXml = new DataXml();
-        private string tableName ;
+        private string tableName;
 
         public enum EnSize
         {
@@ -34,14 +35,14 @@ namespace Convert
         }
 
         #region  tem
-        public  class Tem
+        public class Tem
         {
             public string COLS = @" var cols = [[    {0}    ]];";
             public string NewLine = Environment.NewLine;
             public virtual string ColText { get; }
-            public virtual string TableText  {get; }
-            public virtual string TableXml  {get; }
-            public virtual string MessageXml  {get; }
+            public virtual string TableText { get; }
+            public virtual string TableXml { get; }
+            public virtual string MessageXml { get; }
         }
         public class TemAdo : Tem
         {
@@ -51,8 +52,8 @@ namespace Convert
         public class TemMvc : Tem
         {
 
-            public override string ColText { get { return "{{ field: '{0}', title: '{1}', width: 100 }}"; } } 
-            public override string TableText { get { return "{{ field: '{0}', title: '@Html.DisplayNameFor(model => model.{1})', width: 100 }}";  } } 
+            public override string ColText { get { return "{{ field: '{0}', title: '{1}', width: 100 }}"; } }
+            public override string TableText { get { return "{{ field: '{0}', title: '@Html.DisplayNameFor(model => model.{1})', width: 100 }}"; } }
         }
         protected Tem GetTem(EnTime time)
         {
@@ -121,7 +122,7 @@ namespace Convert
         }
         public interface ITypeFac
         {
-            string CreateText(Tem tem, string msg,string tableName, DataXml data);
+            string CreateText(Tem tem, string msg, string tableName, DataXml data);
         }
         public class CreTypeDataGrid : ITypeFac
         {
@@ -129,23 +130,39 @@ namespace Convert
             {
                 string text = Environment.NewLine;
                 WebForm1 com = new WebForm1();
+                var modelList = data.TableXml.Where(x => x.TableName == tableName);
+                StringBuilder GetModel = new StringBuilder();
+                string DDL = "            yield return new NameValue() {{ Name = \"{0}\", Value = cod.GetDDLTextByValue(\"{1}\", entity.{0}) }};";
+                string noDDL = "            yield return new NameValue() {{ Name = \"{0}\", Value = entity.{0}.ToString() }};";
 
                 string[] model = msg.Split('|');
                 for (int i = 0; i < model.Length; i++)
                 {
                     if (string.IsNullOrEmpty(tableName))
                     {
-                        text += string.Format(tem.ColText, model[i], model[i]);
+                        text += string.Format(tem.ColText, com.GetSizeStatus(model[i],data.size), com.GetSizeStatus( model[i], data.size));
                     }
                     else
                     {
                         text += string.Format(tem.ColText, model[i], com.GetChina(model[i], tableName, data));
+                        var currData = modelList.Where(x => x.ColumnName == model[i]).FirstOrDefault();
+
+                        if (string.IsNullOrEmpty(currData.DDL))
+                        {
+                            GetModel.AppendFormat(noDDL, model[i]);
+                        }
+                        else
+                        {
+                            GetModel.AppendFormat(DDL, model[i], currData.DDL);
+                        }
+                        GetModel.Append(tem.NewLine);
+
                     }
                     if (i < model.Length - 1) text += ",";
                     text += tem.NewLine;
                 }
-
-                return string.Format(tem.COLS, text);
+                var ColText = string.Format(tem.COLS, text);
+                return ColText + tem.NewLine + GetModel.ToString();
             }
         }
         public class CreAdoTable : ITypeFac
@@ -161,11 +178,11 @@ namespace Convert
                 WebForm1 com = new WebForm1();
                 model.LoadXml(msg);
 
-                StringReader sRead = new StringReader(msg);
+                StringReader sRead = new StringReader(msg);         
                 DataSet ds = new DataSet();
                 ds.ReadXml(sRead, XmlReadMode.InferTypedSchema);
 
-                
+
                 StringBuilder sb = new StringBuilder();
                 DataTable row = ds.Tables["row"];
                 DataTable col = ds.Tables["col"];
@@ -186,7 +203,7 @@ namespace Convert
                         if (num % 2 == 0)
                         {
                             rowValue = lab.Select("col_ID = " + num + "")[0]["dbname"] as string;
-                            sb.AppendFormat(@"<td class=""label-bg"" style=""width: 100px; "">{0}</td>",com.GetChina( rowValue, tableName, data));
+                            sb.AppendFormat(@"<td class=""label-bg"" style=""width: 100px; "">{0}</td>", com.GetChina(rowValue, tableName, data));
                         }
                         else
                         {
@@ -230,7 +247,7 @@ namespace Convert
                     GetModel.AppendLine();
                 }
 
-                return  GetModel.ToString();
+                return GetModel.ToString();
             }
         }
 
@@ -317,6 +334,34 @@ namespace Convert
         }
         #endregion
 
+        #region baseFucntion
+
+        public string GetChina(string col, string table, DataXml data)
+        {
+            var china = data.MessageXml.Where(x => x.TableName == table && x.ColumnName == col).FirstOrDefault();
+            if (china == null) return col;
+            return china.value;
+        }
+
+        public string GetSizeStatus(string col, EnSize size)
+        {
+            if (string.IsNullOrEmpty(col)) return col;
+            switch (size)
+            {
+                case EnSize.DOWN: return col.ToLower();
+                case EnSize.UP: return col.ToUpper();
+                default: throw new Exception();
+            }
+        }
+
+        private void LoadXml()
+        {
+            dataXml.size = (EnSize)int.Parse(dd_size.SelectedValue);
+            dataXml.MessageXml = openXml.GetMessage();
+            dataXml.TableXml = openXml.GetTable();
+        }
+        #endregion
+
         protected override void Binding()
         {
             //生成类型           
@@ -341,7 +386,7 @@ namespace Convert
                 int currType = int.Parse(dd_type.SelectedValue);
                 var TimeFac = CreateTimeFac((EnTime)currTime);
                 var TypeFac = TimeFac.ConvertType((EnType)currType);
-                text2.Text = TypeFac.CreateText( GetTem((EnTime)currTime), text1.Text, tableName, dataXml);
+                text2.Text = TypeFac.CreateText(GetTem((EnTime)currTime), text1.Text, tableName, dataXml);
             }
             catch (Exception ex)
             {
@@ -350,18 +395,8 @@ namespace Convert
 
         }
 
-        private void LoadXml()
-        {
-            dataXml.MessageXml  = openXml.GetMessage();
-            dataXml.TableXml  = openXml.GetTable() ;
-        }
 
-        public  string GetChina(string col, string table, DataXml data)
-        {
-            var china = data.MessageXml.Where(x => x.TableName == table && x.ColumnName == col).FirstOrDefault();
-            if (china == null) return col;
-            return china.value;
-        }
+
 
     }
 }

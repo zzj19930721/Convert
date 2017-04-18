@@ -6,29 +6,32 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link href="Content/Css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div >
-        <asp:TextBox ID="text1" runat="server" Height="600px" Width="40%"   TextMode="MultiLine"></asp:TextBox>
+        <div class="row">
+
+        <div  class="col-md-5">
+        <asp:TextBox ID="text1" runat="server" Height="600px" Width="100%"   TextMode="MultiLine"></asp:TextBox>
         </div>
 
 
-        <div  style="width:15%; ">
+        <div class="col-md-2">
 
-        <asp:DropDownList ID="dd_size" runat="server" DataValueField="Key" DataTextField="Value" /><p />
-         <asp:TextBox ID="txt_tb" runat="server"></asp:TextBox><p />
-        <asp:DropDownList ID="dd_time" runat="server" DataValueField="Key" DataTextField="Value">        </asp:DropDownList><p />
-        <asp:DropDownList ID="dd_type" runat="server" DataValueField="Key" DataTextField="Value">        </asp:DropDownList>
-        <asp:Button ID="Button1" runat="server" Text="转换" OnClick="Button1_Click" />
+        <asp:DropDownList ID="dd_size" runat="server" DataValueField="Key" DataTextField="Value"  CssClass=" form-control"/><p />
+         <asp:TextBox ID="txt_tb" runat="server"  CssClass=" form-control" TextMode="MultiLine" >34234</asp:TextBox><p />
+        <asp:DropDownList ID="dd_time" runat="server" DataValueField="Key" DataTextField="Value"  CssClass=" form-control">        </asp:DropDownList><p />
+        <asp:DropDownList ID="dd_type" runat="server" DataValueField="Key" DataTextField="Value"  CssClass=" form-control">        </asp:DropDownList><p />
+        <asp:Button ID="Button1" runat="server" CssClass=" btn-success btn" Text="转换" OnClick="Button1_Click" />
 
         </div>
 
-        <div >
-        <asp:TextBox ID="text2" runat="server" Height="600px" Width="40%" TextMode="MultiLine"></asp:TextBox>    
+        <div  class="col-md-5">
+        <asp:TextBox ID="text2" runat="server" Height="600px" Width="100%" TextMode="MultiLine"></asp:TextBox>    
         </div>
 
-
+        </div>
     </form>
 
 </body>
